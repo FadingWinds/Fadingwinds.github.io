@@ -1,5 +1,5 @@
 ---
-title: Welcome
+title: Happy Not Dead
 date: 2019-09-15 23:40:05
 author: FadingWinds
 categories: ALive
@@ -7,5 +7,5 @@ tags:
 password: 2644be01dbb1cf2a6ad5eb51d3807a93942d159c1ef72117ba5fcc98dd237df8
 ---
 
-### No idea what to write here
-### Simply testing
+#### 今天是2019年9月17日。
+#### 一年前的今天，我与死亡擦肩而过。

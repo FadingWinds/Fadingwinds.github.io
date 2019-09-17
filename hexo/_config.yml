@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Dovecode
-subtitle: Dovecode
-description: Way towards a strong coder
+title: DoveCoDe
+subtitle: DoveCoDe
+description: Hi. Have you ever seen 2018-19-0227635?
 keywords: FadingWinds
 author: FadingWinds
-language: zh-CN #default:en 字体?
-timezone:
+language: default
+timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

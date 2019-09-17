@@ -1,14 +1,14 @@
 [{
   "name": "The Scale Theme",
   "artist": "Kan R. Gao",
-  "url": "http://static.blinkfox.com/music1.mp3",
-  "cover": "http://static.blinkfox.com/music-cover1.png"
-}/*, {
-  "name": "Take me hand",
-  "artist": "DAISHI DANCE,Cecile Corbel",
-  "url": "http://static.blinkfox.com/music2.mp3",
-  "cover": "http://static.blinkfox.com/music-cover2.png"
+  "url": "/themes/hexo-theme-matery/source/medias/music/TST.mp3",
+  "cover": ""
 }, {
+  "name": "A Bird Story",
+  "artist": "Kan R. Gao",
+  "url": "/themes/hexo-theme-matery/source/medias/music/ABS.mp3",
+  "cover": ""
+}/*, {
   "name": "Shape of You",
   "artist": "J.Fla",
   "url": "http://static.blinkfox.com/music3.mp3",
