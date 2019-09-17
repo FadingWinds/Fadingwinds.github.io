@@ -1,13 +1,13 @@
 [{
-  "name": "The Scale Theme",
-  "artist": "Kan R. Gao",
-  "url": "/themes/hexo-theme-matery/source/medias/music/TST.mp3",
-  "cover": ""
-}, {
   "name": "A Bird Story",
   "artist": "Kan R. Gao",
-  "url": "/themes/hexo-theme-matery/source/medias/music/ABS.mp3",
-  "cover": ""
+  "url": "https://od.lk/s/MzBfMTY5OTI0NThf/A%20Bird%20Story.mp3",
+  "cover": "https://od.lk/s/MzBfMTY5OTI0OTFf/Cover.jpg"
+}, {
+  "name": "The Scale Theme",
+  "artist": "Kan R Gao",
+  "url": "https://od.lk/s/MzBfMTY5OTI0NDdf/The%20Scale%20Theme.mp3",
+  "cover": "https://od.lk/s/MzBfMTY5OTI0OTFf/Cover.jpg"
 }/*, {
   "name": "Shape of You",
   "artist": "J.Fla",
