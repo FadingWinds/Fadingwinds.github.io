@@ -434,12 +434,12 @@ $(function () {
 $(function () {
     new APlayer({
         container: document.getElementById('aplayer'),
-        fixed: 'true' === 'true',
+        fixed: 'false' === 'true',
         autoplay: 'true' === 'true',
         theme: '#00BFFF',
         loop: 'all',
         order: 'list',
-        preload: 'auto',
+        preload: 'metadata',
         volume: Number('0.7'),
         listFolded: 'false' === 'true',
         listMaxHeight: '',
