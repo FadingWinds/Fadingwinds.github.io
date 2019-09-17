@@ -385,13 +385,8 @@ header .go-back i {
     z-index: 2;
 }
 
-/*CHANGES HERE!*/
-@import url(https://fonts.googleapis.com/css?family=Sofia);
-
 .bg-cover .title {
-    font-size: 4rem;
-    /*CHANGES HERE!*/
-    font-family: 'Sofia'
+    font-size: 4rem;    
     color: #778899
     font-weight: 700;
     line-height: 1.85em;
