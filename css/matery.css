@@ -28,7 +28,7 @@
 }
 
 body {
-    background-color: #eaeaea;
+    background-color: #708090/*#eaeaea*/;
     margin: 0;
     color: #34495e;
 }
@@ -86,7 +86,7 @@ hr {
 }
 
 blockquote {
-    border-left: 5px solid #42b983;
+    border-left: 5px solid #DA70D6;
     padding: 1rem 0.8rem 0.2rem 0.8rem;
     color: #666;
     background-color: rgba(66, 185, 131, .1);
@@ -167,7 +167,7 @@ mark {
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: #DA70D6 !important;
 }
 
 .white-color {
@@ -385,8 +385,14 @@ header .go-back i {
     z-index: 2;
 }
 
+/*CHANGES HERE!*/
+@import url(https://fonts.googleapis.com/css?family=Sofia);
+
 .bg-cover .title {
     font-size: 4rem;
+    /*CHANGES HERE!*/
+    font-family: 'Sofia'
+    color: #778899
     font-weight: 700;
     line-height: 1.85em;
     margin-bottom: 20px;
@@ -1674,7 +1680,7 @@ footer .copy-right {
 }
 
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    background: linear-gradient(to bottom right, #FFFFE0 0%, #FFDEAD 100%);
     width: 48px;
     height: 48px;
 }
