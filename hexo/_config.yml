@@ -15,7 +15,7 @@ timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://FadingWinds.github.io/
+url: http://FadingWinds.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -84,15 +84,15 @@ deploy:
   repository: git@github.com:FadingWinds/FadingWinds.github.io.git
   branch: master
 
-# Search for articles
-search:
-  path: search.xml
-  field: post
-
 #emoji
 githubEmojis:
   enable: true
   className: github-emoji
   inject: true
   styles:
-  customEmojis:
+  customEmojis: 
+
+# Search for articles
+search:
+  path: search.xml
+  field: post
