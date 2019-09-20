@@ -28,7 +28,7 @@
 }
 
 body {
-    background-color: #708090/*#eaeaea*/;
+    background-color: #555555/*#eaeaea*/;
     margin: 0;
     color: #34495e;
 }
@@ -179,7 +179,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #87CEFA 0%, #00BFFF 100%);
     opacity: 0.8;
 }
 
@@ -290,6 +290,7 @@ header .side-nav .social-link {
     text-align: center;
 }
 
+/* Start 和 Fork Me部分*/
 .cover-btns a {
     margin: 10px 15px;
     padding: 0 35px;
@@ -387,7 +388,7 @@ header .go-back i {
 
 .bg-cover .title {
     font-size: 4rem;    
-    color: #778899
+    color: #FF0000;
     font-weight: 700;
     line-height: 1.85em;
     margin-bottom: 20px;
@@ -517,7 +518,7 @@ header .go-back i {
 
 .dream .text {
     opacity: .6;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 .music-player,

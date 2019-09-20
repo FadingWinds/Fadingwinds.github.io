@@ -57,11 +57,12 @@
     }
 }
 
-@font-face{
-    font-family: 'Sofia';
-    src: url('https://fonts.googleapis.com/css?family=Sofia');
+@font-face {
+    font-family: "Indieflower";
+    src: url("../myfont/Indieflower.woff2") format("woff2"),
+         url("../myfont/Indieflower.woff") format("woff");
 }
 
-.bannerdiy{
-    font-family: 'Sofia';
+body{
+    font-family: 'Indieflower';
 }
