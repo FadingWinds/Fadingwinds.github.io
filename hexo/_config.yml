@@ -3,9 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: DoveCoDe
-subtitle: DoveCoDe
-description: Hi. Have you ever seen 2018-19-0227635?
+title: DoveCode
+subtitle: DoveCode
+description: 
+  Everything could be a story to write. 
+  Every story has a whole world inside.
 keywords: FadingWinds
 author: FadingWinds
 language: default
@@ -13,7 +15,7 @@ timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://FadingWinds.github.io/
+url: http://FadingWinds.me/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -86,3 +88,11 @@ deploy:
 search:
   path: search.xml
   field: post
+
+#emoji
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:

@@ -2,10 +2,30 @@
   "name": "A Bird Story",
   "artist": "Kan R. Gao",
   "url": "https://od.lk/s/MzBfMTY5OTI0NThf/A%20Bird%20Story.mp3",
-  "cover": "https://od.lk/s/MzBfMTY5OTI0OTFf/Cover.jpg"
+  "cover": "https://od.lk/s/MzBfMTY5OTI0OTFf/1.png"
+}, {
+  "name": "Learn To Be Still",
+  "artist": "the Eagles",
+  "url": "https://od.lk/s/MzBfMTY5OTMwMzhf/Learn%20To%20Be%20Still.mp3",
+  "cover": ""
 }, {
   "name": "The Scale Theme",
   "artist": "Kan R. Gao",
   "url": "https://od.lk/s/MzBfMTY5OTI0NDdf/The%20Scale%20Theme.mp3",
-  "cover": "https://od.lk/s/MzBfMTY5OTI0OTFf/Cover.jpg"
+  "cover": "https://od.lk/s/MzBfMTY5OTI0OTFf/2.jpg"
+}, {
+  "name": "Wings of Piano",
+  "artist": "V.K.",
+  "url": "https://od.lk/s/MzBfMTY5OTkzODNf/Galen%20Crew%20-%20Lifter.mp3",
+  "cover": ""
+}, {
+  "name": "Lifter",
+  "artist": "Galen Crew",
+  "url": "https://od.lk/s/MzBfMTY5OTkzODlf/Wings%20of%20Piano.mp3",
+  "cover": ""
+}, {
+  "name": "Welcome to Mousewood",
+  "artist": "Tilo Alpermann",
+  "url": "https://od.lk/s/MzBfMTY5OTkzODZf/04.%20Welcome%20to%20Mousewood.mp3",
+  "cover": "https://od.lk/s/MzBfMTY5OTkzODdf/3.jpg"
 }]
