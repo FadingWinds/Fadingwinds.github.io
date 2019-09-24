@@ -7,5 +7,7 @@ tags:
 	- notes
 	- ctcourse
 summary:
-top:
+top: true
 ---
+
+#### A few things I learned. 
