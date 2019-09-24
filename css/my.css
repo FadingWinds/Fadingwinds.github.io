@@ -58,11 +58,13 @@
 }
 
 @font-face {
-    font-family: "Indieflower";
+    font-family: "banner-IF";
     src: url("../myfont/Indieflower.woff2") format("woff2"),
          url("../myfont/Indieflower.woff") format("woff");
 }
 
+/*
 body{
-    font-family: 'Indieflower';
+    font-family: "banner-IF";
 }
+*/
