@@ -59,9 +59,9 @@
 
 @font-face {
     font-family: "banner-IF";
-    src: url('.../font/IndieFlower.woff2') format('woff2'),
-         url('.../font/IndieFlower.woff') format("woff"),
-         url('.../font/IndieFlower.ttf') format('TrueType');
+    src: url('.../fonts/IndieFlower.woff2') format('woff2'),
+         url('.../fonts/IndieFlower.woff') format("woff"),
+         url('.../fonts/IndieFlower.ttf') format('TrueType');
 }
 
 /*
