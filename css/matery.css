@@ -28,7 +28,7 @@
 }
 
 body {
-    background-color: #555555/*#eaeaea*/;
+    background-color: #eaeaea;
     margin: 0;
     color: #34495e;
 }
@@ -387,7 +387,7 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 4rem;    
+    font-size: 5rem;    
     color: #F0FFFF;
     font-weight: 700;
     line-height: 1.85em;
@@ -399,9 +399,9 @@ header .go-back i {
 
 .bg-cover .description {
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.4em;
-    color: #eee;
+    color: #F0FFFF;
 }
 
 .bg-cover .post-title {
