@@ -59,12 +59,13 @@
 
 @font-face {
     font-family: "banner-IF";
-    src: url('.../fonts/IndieFlower.woff2') format('woff2'),
-         url('.../fonts/IndieFlower.woff') format("woff"),
-         url('.../fonts/IndieFlower.ttf') format('TrueType');
+    src: url('../fonts/IndieFlower.woff2') format('woff2'),
+         url('../fonts/IndieFlower.woff') format("woff"),
+         url('../fonts/IndieFlower.ttf') format('TrueType');
 }
 
 
 .bannerdiy{
     font-family: "banner-IF";
 }
+
