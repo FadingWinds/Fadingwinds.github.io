@@ -10,6 +10,7 @@ tags:
 summary: 一些关于如何讲演的思考和心得。Some thoughts and take-aways from a presentation workshop. 
 top: true
 password:
+toc: false
 ---
   Today I took part in a workshop related to presentation skills as a Studio session. Personally, when giving presentations, there's one thing that has always been difficult for me. Although I could remember all the content (let's say I could:neutral_face:) and present in front of people with some kind of confidence, somehow it feels like I'm just doing a perfect job in reciting or remembering all the gestures instead of really trying to convey or explain something I know about, even if it was created completely by myself. What I want to be is a presenter in freestyle -- well, like dancing to the music without choreography:wink:.
   

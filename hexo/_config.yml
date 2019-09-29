@@ -94,3 +94,7 @@ githubEmojis:
 search:
   path: search.xml
   field: post
+
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
