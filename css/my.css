@@ -71,7 +71,7 @@
 
 @font-face {
     font-family: "Tech";
-    src: url('../fonts/PoiretOne-Regular.otf') format('TryeType');
+    src: url('../fonts/PoiretOne-Regular.ttf') format('TrueType');
 }
 
 @font-face {
