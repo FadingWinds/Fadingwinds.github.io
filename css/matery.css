@@ -1437,14 +1437,14 @@ table tr:nth-child(2n), thead {
 
 .profile .author .title {
     margin-bottom: 0.1rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
     color: #3C4858;
 }
 
 .profile .author .career {
     margin: 8px 0;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #777;
 }
@@ -1457,6 +1457,7 @@ table tr:nth-child(2n), thead {
     margin: 1.5rem auto 3rem;
     max-width: 600px;
     color: #999;
+    font-size: 1rem;
 }
 
 .post-charts,
