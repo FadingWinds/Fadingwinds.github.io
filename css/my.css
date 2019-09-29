@@ -64,6 +64,21 @@
          url('../fonts/IndieFlower.ttf') format('TrueType');
 }
 
+@font-face {
+    font-family: "Noto";
+    src: url('../fonts/NotoSansSC-Light.otf') format('OpenType');
+}
+
+@font-face {
+    font-family: "Tech";
+    src: url('../fonts/PoiretOne-Regular.otf') format('TryeType');
+}
+
+@font-face {
+    font-family: "Handy";
+    src: url('../fonts/Handlee-Regular.ttf') format('TrueType');
+}
+
 
 .bannerdiy{
     font-family: "banner-IF";

@@ -28,7 +28,7 @@
 }
 
 body {
-    background-color: #eaeaea;
+    background-color: /*#eaeaea*/linear-gradient(#eaeaea, #fffafa);;
     margin: 0;
     color: #34495e;
 }
@@ -209,6 +209,7 @@ header .nav-transparent {
 
 header nav .brand-span {
     font-size: 1.45rem;
+    font-family: "banner-IF"
 }
 
 header .brand-logo .logo-img {
@@ -387,25 +388,26 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 5rem;    
-    color: #F0FFFF;
-    font-weight: 700;
-    line-height: 1.85em;
-    margin-bottom: 20px;
+    font-size: 4.5rem;    
+    color: #E6E6FA;
+    font-weight: 800;
+    line-height: 1.95em;
+    margin-bottom: 18px;
     position: relative;
     /*变动*/
-    font-family: "banner-IF"
+    font-family: "banner-IF";
 }
 
 .bg-cover .description {
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.4em;
+    line-height: 1.3em;
     color: #F0FFFF;
 }
 
 .bg-cover .post-title {
     font-size: 1.9rem;
+    font-weight: 700
 }
 
 @-webkit-keyframes rainbow {
@@ -515,14 +517,16 @@ header .go-back i {
 .video-player .title {
     margin-bottom: 20px;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 800;
     /*变动*/
-    font-family: "banner-IF"
+    font-family: "Tech";
 }
 
 .dream .text {
     opacity: .6;
     font-size: 1.5rem;
+    /*变动*/
+    font-family: "Handy";
 }
 
 .music-player,
@@ -574,8 +578,10 @@ header .go-back i {
     margin-bottom: 25px;
     text-align: center;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.8rem;
+    /*变动*/
+    font-family: "Tech";
 }
 
 .recommend .post-card:before {
