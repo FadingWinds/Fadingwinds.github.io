@@ -1438,14 +1438,15 @@ table tr:nth-child(2n), thead {
 .profile .author .title {
     margin-bottom: 0.1rem;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #3C4858;
 }
 
 .profile .author .career {
     margin: 8px 0;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: "Tech";
     color: #777;
 }
 
