@@ -3,7 +3,7 @@ title: Presentation in Freestyle
 date: 2019-09-24 20:48:25
 author: FadingWinds
 coverImg:
-categories: soft skills | 综合能力
+categories: Soft Skills | 综合能力
 tags:
 	- CT courses
 	- presentation
