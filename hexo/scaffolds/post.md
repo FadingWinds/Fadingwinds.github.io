@@ -2,7 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 author:
-coverImg: 
+img: 
 categories: 
 tags:
 summary:

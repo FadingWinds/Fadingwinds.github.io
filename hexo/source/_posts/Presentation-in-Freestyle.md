@@ -1,6 +1,6 @@
 ---
 title: Presentation in Freestyle
-date: 2019-09-24 20:48:25
+date: 2019-09-27 20:48:25
 author: FadingWinds
 coverImg:
 categories: Soft Skills | 综合能力
@@ -32,6 +32,4 @@ toc: false
   
   Okay, that's pretty much it. I'm running to do my AML homework now.
 
-  中文版的内容就不写了……
-  
-  我的真·第一篇发布的文章居然是这个主题=_=
+  Not a bad article for my first post...I guess?
