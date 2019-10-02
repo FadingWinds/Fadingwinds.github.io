@@ -694,7 +694,7 @@ article a {
 
 article a:hover {
     font-weight: bold;
-    color: #42b983;
+    color: #DA70D6;
     text-decoration: underline;
 }
 
@@ -873,12 +873,12 @@ article .article-tags .chip {
 
 #artDetail .post-cate {
     float: right;
-    color: #42b983;
+    color: #DA70D6;
 }
 
 #artDetail .post-cate a {
     padding-right: 5px;
-    color: #42b983;
+    color: #DA70D6;
     font-weight: 500;
 }
 
@@ -897,7 +897,7 @@ article .article-tags .chip {
 
 #artDetail .post-info .post-category:hover {
     font-weight: bold;
-    color: #42b983;
+    color: #DA70D6;
     text-decoration: underline;
 }
 
@@ -954,7 +954,7 @@ article .article-tags .chip {
 
 #artDetail .reprint a {
     font-size: 1.05rem;
-    color: #42b983;
+    color: #DA70D6;
     font-weight: 500;
 }
 
@@ -970,7 +970,7 @@ article .article-tags .chip {
 
 #articleContent a {
     padding: 0 2px;
-    color: #42b983;
+    color: #DA70D6;
     font-weight: 500;
     text-decoration: underline;
     word-wrap:break-word;
@@ -1392,7 +1392,7 @@ table tr:nth-child(2n), thead {
 }
 
 .post-statis .statis .count a {
-    color: #42b983;
+    color: #DA70D6;
 }
 
 .post-statis .statis .name {
@@ -1658,7 +1658,7 @@ footer .copy-right {
 
 .search-result-list .search-result-title {
     font-size: 1.4rem;
-    color: #42b983;
+    color: #DA70D6;
 }
 
 .search-result-list li {
