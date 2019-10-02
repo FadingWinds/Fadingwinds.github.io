@@ -2,13 +2,13 @@
 title: Presentation in Freestyle
 date: 2019-09-27 20:48:25
 author: FadingWinds
-coverImg:
+Img:
 categories: Soft Skills | 综合能力
 tags:
 	- CT courses
 	- presentation
 summary: 一些关于如何讲演的思考和心得。Some thoughts and take-aways from a presentation workshop. 
-top: true
+top: false
 password:
 toc: false
 ---
