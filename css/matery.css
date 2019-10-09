@@ -400,7 +400,7 @@ header .go-back i {
 
 .bg-cover .description {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.3em;
     color: #F0FFFF;
 }
@@ -1437,15 +1437,15 @@ table tr:nth-child(2n), thead {
 
 .profile .author .title {
     margin-bottom: 0.1rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: #3C4858;
 }
 
 .profile .author .career {
     margin: 8px 0;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 600;
     font-family: "Tech";
     color: #777;
 }
@@ -1458,7 +1458,7 @@ table tr:nth-child(2n), thead {
     margin: 1.5rem auto 3rem;
     max-width: 600px;
     color: #999;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .post-charts,

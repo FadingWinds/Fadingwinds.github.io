@@ -8,7 +8,7 @@
       <link href="/2019/09/29/yi-ge-te-bie-de-xin-shou-zhi-nan/"/>
       <url>/2019/09/29/yi-ge-te-bie-de-xin-shou-zhi-nan/</url>
       
-        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>个人。<br>巧妙地避开了。<br>特别说明：dead inside.</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><font color="#2cc4ff"><strong>前言</strong></font></h2><p>欢迎阅读这一特别的新手指南。</p><p>我想你应该不会否认你刚刚输入的密码所蕴含的词汇在近三年里变得越来越流行了起来。这也许是好事，虽然我不这样认为。有了这一愉快的共识之后，解释这篇指南的用意似乎容易了一些：它是写给你的——无论你是身边有抑郁症患者存在，还是本身便是持症一员。</p><p>个人。<br>巧妙地避开了。<br>特别说明：dead inside.</p><h2 id="基本事实与准则"><a href="#基本事实与准则" class="headerlink" title="基本事实与准则"></a><font color="#2cc4ff"><strong>基本事实与准则</strong></font></h2><p>心理疾病</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
@@ -20,7 +20,7 @@
       
         <tags>
             
-            <tag> what&#39;s in my mind </tag>
+            <tag> in my mind </tag>
             
         </tags>
       
