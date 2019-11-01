@@ -36,6 +36,8 @@ Reprint/reproduction is welcomed as long as under proper citation. If you would 
 2. There are a set of cover images that will be randomly assigned to an article if it doesn't have a specific one. Anyone is welcomed to submit their own photographs. The current set is as follows.
    <br>
    <div align = center><img src = "https://od.lk/s/MzBfMTcxNjM1NTdf/photos.png" title = "Photographed by FadingWinds"/></div>
+   <br>
+   <div align = center><img src = "https://od.lk/s/MzBfMTc0NzM0OTZf/Em..png" title = "Photographed by Emmanuel Li"/></div>
 
 3. The avatar image on the "About" page is drawn by ***FadingWinds***. 
    <br>
