@@ -5,7 +5,7 @@ author: FadingWinds
 img:
 categories: Design | 设计
 tags:
-	- ct courses
+	- CT courses
 	- notes
 	- research
 summary: The article is about two most common research methods -- surveys and interviews.
@@ -58,7 +58,8 @@ Qualitative research method.
 - Don't ask about general things and let the respondent answer on behalf of a group. 
 - Complete the scripts right after the interview. Don't wait for a long time.
 
-
+<br>
+<br>
 
 
 
