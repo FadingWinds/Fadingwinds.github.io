@@ -6,8 +6,8 @@ img:
 categories: Machine Learning | 机器学习
 tags:
 	- notes
-	- ct courses
-	- coding
+	- CT courses
+	- updating
 summary: Scribble notes of applied machine learning. Please do not click in if you are expecting some precise and profound things.
 top:
 password:
