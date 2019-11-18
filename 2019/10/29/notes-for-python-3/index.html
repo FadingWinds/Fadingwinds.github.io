@@ -5,8 +5,8 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Notes for Python 3, FadingWinds">
-    <meta name="description" content="Algorithms / Data structuresEasy Ways
-Remember to use lambda for simple functions and use [x for x in statement if state">
+    <meta name="description" content="Note: This post doesn’t include detailed theories. For those, please refer to other posts.
+Algorithms / Data structuresG">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -444,7 +444,7 @@ Remember to use lambda for simple functions and use [x for x in statement if sta
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        237
+                        276
                     </div>
                     
 
@@ -467,14 +467,23 @@ Remember to use lambda for simple functions and use [x for x in statement if sta
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Algorithms-Data-structures"><a href="#Algorithms-Data-structures" class="headerlink" title="Algorithms / Data structures"></a>Algorithms / Data structures</h3><h4 id="Easy-Ways"><a href="#Easy-Ways" class="headerlink" title="Easy Ways"></a>Easy Ways</h4><ul>
-<li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating.<h4 id="Possible-Mistakes"><a href="#Possible-Mistakes" class="headerlink" title="Possible Mistakes"></a>Possible Mistakes</h4></li>
+                <p><em>Note: This post doesn’t include detailed theories. For those, please refer to other posts.</em></p>
+<h3 id="Algorithms-Data-structures"><a href="#Algorithms-Data-structures" class="headerlink" title="Algorithms / Data structures"></a>Algorithms / Data structures</h3><h4 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h4><ul>
+<li><code>int()</code> returns the lower bound.</li>
+<li>Pay attention to the difference between <code>extend()</code> and <code>append()</code>, e.g. [1,2,4] vs. [[1,2],[4]].</li>
+</ul>
+<h4 id="Easy-Ways"><a href="#Easy-Ways" class="headerlink" title="Easy Ways"></a>Easy Ways</h4><ul>
+<li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating.</li>
+</ul>
+<h4 id="Possible-Mistakes"><a href="#Possible-Mistakes" class="headerlink" title="Possible Mistakes"></a>Possible Mistakes</h4><ul>
 <li><code>list.append()</code> will only return <strong>None</strong>, which indicates it has successfully complete the process. Use <code>list</code> to get to the changes.</li>
 <li>Things like a <code>range(0,n)</code> do NOT include n but do include 0.</li>
 </ul>
 <h3 id="Machine-Learning-Data-Science"><a href="#Machine-Learning-Data-Science" class="headerlink" title="Machine Learning / Data Science"></a>Machine Learning / Data Science</h3><h4 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h4><ul>
 <li>*”nltk”* is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li>
-<li>The famous *”sklearn”*.<h4 id="Frequently-Encountered"><a href="#Frequently-Encountered" class="headerlink" title="Frequently Encountered"></a>Frequently Encountered</h4></li>
+<li>The famous *”sklearn”*.</li>
+</ul>
+<h4 id="Frequently-Encountered"><a href="#Frequently-Encountered" class="headerlink" title="Frequently Encountered"></a>Frequently Encountered</h4><ul>
 <li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling.</li>
 <li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li>
 <li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li>
@@ -843,7 +852,7 @@ Remember to use lambda for simple functions and use [x for x in statement if sta
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">2.3k</span>&nbsp;
+                class="white-color">2.8k</span>&nbsp;
             
             
             
