@@ -3,8 +3,9 @@ title: 'Notes for Python 3'
 date: 2019-10-29 19:35:33
 author: FadingWinds
 img:
-categories: Python
+categories: Coding | 编程
 tags: 
+	- Python
 	- notes
 	- updating
 summary: Personal notebook for anything with python 3. Even the smallest thing is worth writing down. 
@@ -27,6 +28,9 @@ password:
 
 - `list.append()` will only return **None**, which indicates it has successfully complete the process. Use `list` to get to the changes.
 - Things like a `range(0,n)` do NOT include n but do include 0.
+
+#### Other in Doc
+- The time complexity for `sort()` is O(nlogn).
 
 
 ### Machine Learning / Data Science

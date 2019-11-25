@@ -55,7 +55,7 @@ Compared with actually "telling" a story, it's more direct and could convey more
 Some rules:
 
 - Only include necessary details. 
-- Be proud to be a terrible drawer.
+- Be proud to be a terrible painter.
 - The number of frames should be around six.
 
 ### Users Oriented
@@ -73,7 +73,7 @@ Two ways of prototyping:
 
 #### Low Fidelity: Paper Prototype
 
-Although it sounds more complicated, in fact it's **much easier and faster** to implement compared with prototyping with fancy tools, even if you're a terrible drawer.
+Although it sounds more complicated, in fact it's **much easier and faster** to implement compared with prototyping with fancy tools, even if you're a terrible painter.
 
 It helps designers and users **focus on big things**, e.g. interface logics, instead of spending hours trying to choose a perfect font (that's what I usually did...)
 
