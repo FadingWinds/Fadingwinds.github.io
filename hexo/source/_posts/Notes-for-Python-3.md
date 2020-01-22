@@ -28,6 +28,7 @@ password:
 
 - `list.append()` will only return **None**, which indicates it has successfully complete the process. Use `list` to get to the changes.
 - Things like a `range(0,n)` do NOT include n but do include 0.
+- If let `a = b` where a,b are both lists, when you change a it will affect b too. Try `copy.deepcopy`(needs import) or `new = old[:]`.
 
 #### Other in Doc
 - The time complexity for `sort()` is O(nlogn).

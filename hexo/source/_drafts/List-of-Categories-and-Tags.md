@@ -22,8 +22,8 @@ Categories:
 - Game Production | 游戏制作
 - 风所去往的方向
 - 只言片语
-- ♥A!C!E!♥
-- 蓝号与黄伞
+- Ace!
+- Blue and Yellow of HIMYM | 蓝号与黄伞
 
 Tags:
 
@@ -41,3 +41,4 @@ Tags:
 - in my mind
 - bilingual
 - self-taught
+- scribble

@@ -2,7 +2,7 @@
 title: References and Copyrights
 date: 2019-09-24 01:05:36
 author: FadingWinds
-img: 
+img: /medias/featureimages/17.jpg
 categories: 
 tags:
     - updating
