@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Notes for Behavioral Economics</title>
+      <link href="/2020/01/26/notes-for-behavioral-economics/"/>
+      <url>/2020/01/26/notes-for-behavioral-economics/</url>
+      
+        <content type="html"><![CDATA[<h4 id="Making-a-resolution"><a href="#Making-a-resolution" class="headerlink" title="Making a resolution?"></a>Making a resolution?</h4><p>A resolution may be wrong for one of three main reasons:</p><ul><li>It’s a resolution created based on what someone else (or society) is telling you to change.</li><li>It’s too vague.</li><li>You don’t have a realistic plan for achieving your resolution.</li></ul><p>Make <strong>SMART</strong> goals - Specific, Measurable, Achievable, Relevant and Time-bound.</p><p>To figure out how to change a habit, try breaking it down into three parts: a cue, a routine and a reward. It’s important to know why you do (or can’t do) something so you could control it.</p><details><summary>Example here</summary>Bad Habit: I don't get enough sleep at night.<p>Cue: I feel like I need time to myself in the evening.</p><p>Routine: I stay up too late watching TV.</p><p>Reward: I’m entertained.</p><p>Way to change the behavior: Instead of staying up late to watch TV, carve out special time each day to spend by yourself, even if that may mean asking for help with your children or taking a break from work each day.</p></details><p>A plan should allow some inevitable situations (slip days, or I would like to call “fault tolerance”) and prepare for them before they actually show up. Some useful technique include:</p><ul><li>Focus on the small one between what is done and what left.</li><li><strong>Don’t be too positive</strong> because who needs a real achievement if already enjoying a fantastic daydream? Try W.O.O.P.: Wish, Outcome, Obstacle, Plan.</li></ul><p>To keep up the resolution, other things might help are:</p><ul><li>Tell someone(or post on public platform even if nobody reads it) about your plan.</li><li>Make yourself lose something if you fail. Money is a good choice.</li><li>Find a group to get some good peer pressure.</li><li><strong>Do a “stress test” before it start to know how feasible it is.</strong></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Psychological Fun | 心理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> updating </tag>
+            
+            <tag> CT courses </tag>
+            
+            <tag> notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Making Aesthetic Interfaces</title>
       <link href="/2019/11/25/making-aesthetic-interfaces/"/>
       <url>/2019/11/25/making-aesthetic-interfaces/</url>
@@ -81,31 +110,6 @@
             <tag> CT courses </tag>
             
             <tag> research </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>如果我走在路上莫名其妙地开始笑起来</title>
-      <link href="/2019/11/01/ru-guo-wo-zou-zai-lu-shang-mo-ming-qi-miao-di-kai-shi-xiao-qi-lai/"/>
-      <url>/2019/11/01/ru-guo-wo-zou-zai-lu-shang-mo-ming-qi-miao-di-kai-shi-xiao-qi-lai/</url>
-      
-        <content type="html"><![CDATA[<details><summary>纯属自娱自乐<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/trollface.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/trollface.png?v8"> </span></summary>如果你能看懂，那么恭喜，你差不多和我一样精神<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/trollface.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/trollface.png?v8"> </span><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/trollface.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/trollface.png?v8"> </span><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/trollface.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/trollface.png?v8"> </span></details><br>如果Barney Stinson去玩Moba类游戏，他很可能永远完成不了超神。<p>抑郁症是值得尊敬的，否则我为什么要在说完Major Depression Disorder的时候会敬个礼呢。</p><p>关于松鼠是怎么到罗岛上的——“Ninja!”</p><p>鸭嘴兽玩偶是NP-Complete，复活节兔子星座是NP-Hard。</p><p>在猫头鹰和乌鸦以及各种其他奇奇怪怪的动物都能说话的世界里，哈维说不定真的是被变成的。</p><p>你的唱功犹如25周年版尚万强里的insolent boy——这一句话还真的不一定不是一种夸奖。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 只言片语 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> updating </tag>
             
         </tags>
       
