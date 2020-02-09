@@ -4,9 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Notes for Python 3, FadingWinds">
+    <meta name="keywords" content="Become Pythonic, FadingWinds">
     <meta name="description" content="Note: This post doesn’t include detailed theories. For those, please refer to other posts.
-Algorithms / Data structuresG">
+Built-inGrammar
+int() returns">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@ Algorithms / Data structuresG">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Notes for Python 3 | DoveCode</title>
+    <title>Become Pythonic | DoveCode</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -298,7 +299,7 @@ Algorithms / Data structuresG">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Notes for Python 3
+                        Become Pythonic
                     </div>
                 </div>
             </div>
@@ -448,14 +449,14 @@ Algorithms / Data structuresG">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        314
+                        327
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        1 Min
+                        2 Min
                     </div>
                     
                 
@@ -472,12 +473,13 @@ Algorithms / Data structuresG">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><em>Note: This post doesn’t include detailed theories. For those, please refer to other posts.</em></p>
-<h3 id="Algorithms-Data-structures"><a href="#Algorithms-Data-structures" class="headerlink" title="Algorithms / Data structures"></a>Algorithms / Data structures</h3><h4 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h4><ul>
+<h3 id="Built-in"><a href="#Built-in" class="headerlink" title="Built-in"></a>Built-in</h3><h4 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h4><ul>
 <li><code>int()</code> returns the lower bound.</li>
 <li>Pay attention to the difference between <code>extend()</code> and <code>append()</code>, e.g. [1,2,4] vs. [[1,2],[4]].</li>
 </ul>
 <h4 id="Easy-Ways"><a href="#Easy-Ways" class="headerlink" title="Easy Ways"></a>Easy Ways</h4><ul>
 <li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating.</li>
+<li>Python has a built-in dictionary <code>defaultdict()</code>, it provides default value given by the user </li>
 </ul>
 <h4 id="Possible-Mistakes"><a href="#Possible-Mistakes" class="headerlink" title="Possible Mistakes"></a>Possible Mistakes</h4><ul>
 <li><code>list.append()</code> will only return <strong>None</strong>, which indicates it has successfully complete the process. Use <code>list</code> to get to the changes.</li>
@@ -487,16 +489,19 @@ Algorithms / Data structuresG">
 <h4 id="Other-in-Doc"><a href="#Other-in-Doc" class="headerlink" title="Other in Doc"></a>Other in Doc</h4><ul>
 <li>The time complexity for <code>sort()</code> is O(nlogn).</li>
 </ul>
-<h3 id="Machine-Learning-Data-Science"><a href="#Machine-Learning-Data-Science" class="headerlink" title="Machine Learning / Data Science"></a>Machine Learning / Data Science</h3><h4 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h4><ul>
+<h3 id="Useful-Packages"><a href="#Useful-Packages" class="headerlink" title="Useful Packages"></a>Useful Packages</h3><h4 id="Package-List"><a href="#Package-List" class="headerlink" title="Package List"></a>Package List</h4><ul>
 <li>*”nltk”* is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li>
 <li>The famous *”sklearn”*.</li>
 </ul>
-<h4 id="Frequently-Encountered"><a href="#Frequently-Encountered" class="headerlink" title="Frequently Encountered"></a>Frequently Encountered</h4><ul>
+<h4 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h4><ul>
 <li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling.</li>
 <li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li>
 <li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li>
 <li><code>pandas.read_csv()</code> is good for loading a data file. The “csv” could be replaced with other type of file.</li>
 <li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>. </li>
+</ul>
+<h4 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h4><ul>
+<li></li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -547,7 +552,7 @@ Algorithms / Data structuresG">
                          src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
             </div>
             <br/><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
-                       property="dct:title" rel="dct:type">《Notes for Python 3》</span> by
+                       property="dct:title" rel="dct:type">《Become Pythonic》</span> by
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/29/notes-for-python-3/"
                property="cc:attributionName" rel="cc:attributionURL">FadingWinds
             </a> is licensed under a
@@ -589,7 +594,7 @@ Algorithms / Data structuresG">
     disqus_config = function () {
         this.page.url = 'https://FadingWinds.github.io/2019/10/29/notes-for-python-3/';
         this.page.identifier = '/2019/10/29/notes-for-python-3/';
-        this.page.title = 'Notes for Python 3';
+        this.page.title = 'Become Pythonic';
     };
     let disqus_shortname = 'dovecode';
 
@@ -692,12 +697,12 @@ Algorithms / Data structuresG">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CT-courses/" target="_blank">
-                        <span class="chip bg-color">CT courses</span>
-                    </a>
-                    
                     <a href="/tags/notes/" target="_blank">
                         <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                    <a href="/tags/CT-courses/" target="_blank">
+                        <span class="chip bg-color">CT courses</span>
                     </a>
                     
                     <a href="/tags/research/" target="_blank">
@@ -859,7 +864,7 @@ Algorithms / Data structuresG">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">3.7k</span>&nbsp;
+                class="white-color">3.9k</span>&nbsp;
             
             
             

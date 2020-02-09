@@ -22,9 +22,9 @@
             
             <tag> updating </tag>
             
-            <tag> CT courses </tag>
-            
             <tag> notes </tag>
+            
+            <tag> CT courses </tag>
             
         </tags>
       
@@ -49,11 +49,44 @@
       
         <tags>
             
+            <tag> notes </tag>
+            
             <tag> CT courses </tag>
+            
+            <tag> UI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Algorithms and Data Structures</title>
+      <link href="/2019/11/11/algorithms-and-data-structures/"/>
+      <url>/2019/11/11/algorithms-and-data-structures/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Theories-and-Methods"><a href="#Theories-and-Methods" class="headerlink" title="Theories and Methods"></a>Theories and Methods</h2><h3 id="Dynamic-Programming"><a href="#Dynamic-Programming" class="headerlink" title="Dynamic Programming"></a>Dynamic Programming</h3><h4 id="Situation"><a href="#Situation" class="headerlink" title="Situation"></a>Situation</h4><p>A duplicate process, overlapping subproblems</p><p>Recursion in brute force, optimal substructure</p><h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><ul><li>Memorization</li><li>Table filling</li></ul><h3 id="Other-Frequently-Encountered-Skills"><a href="#Other-Frequently-Encountered-Skills" class="headerlink" title="Other Frequently Encountered Skills"></a>Other Frequently Encountered Skills</h3><h4 id="“Walker”-and-“runner”-Solution"><a href="#“Walker”-and-“runner”-Solution" class="headerlink" title="“Walker” and “runner” Solution"></a>“Walker” and “runner” Solution</h4><p>The former move one step every time while the latter move two. Use to detect cycles.</p><h4 id="Prefix-Sums"><a href="#Prefix-Sums" class="headerlink" title="Prefix Sums"></a>Prefix Sums</h4><p>A new array in which <code>new[i] = sum(old[:i])</code>. Take O(n) to construct, but can make it constant time for the following operations.</p><p>e.g. Find subarrays of $k$ elements that has average value more than $t$.</p><h2 id="Examples-of-Problem-Solution"><a href="#Examples-of-Problem-Solution" class="headerlink" title="Examples of Problem/Solution"></a>Examples of Problem/Solution</h2><ul><li>Find the $N^{th}$ fibonacci number. [Dynamic Programming]</li><li>Given two strings s and t, find the longest subsequence (same order but can skip some letters) common to both strings. [Dynamic Programming]</li><li>Given array $a$ containing integers $[x_1, …, x_n]$, find integers $i, j$ such that $1 ≤ i ≤ j ≤ n$ and $\Sigma^{j}_{i}a$ is maximal. [Dynamic Programming]</li></ul><h2 id="Application-Reflex"><a href="#Application-Reflex" class="headerlink" title="Application Reflex"></a>Application Reflex</h2><h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul><li>Usually recursion takes more space and runs faster, while the “for” loop is the opposite.</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Coding | 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> updating </tag>
             
             <tag> notes </tag>
             
-            <tag> UI </tag>
+            <tag> CT courses </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Leetcode </tag>
             
         </tags>
       
@@ -78,9 +111,9 @@
       
         <tags>
             
-            <tag> CT courses </tag>
-            
             <tag> notes </tag>
+            
+            <tag> CT courses </tag>
             
             <tag> UX </tag>
             
@@ -137,11 +170,11 @@
     
     
     <entry>
-      <title>Notes for Python 3</title>
+      <title>Become Pythonic</title>
       <link href="/2019/10/29/notes-for-python-3/"/>
       <url>/2019/10/29/notes-for-python-3/</url>
       
-        <content type="html"><![CDATA[<p><em>Note: This post doesn’t include detailed theories. For those, please refer to other posts.</em></p><h3 id="Algorithms-Data-structures"><a href="#Algorithms-Data-structures" class="headerlink" title="Algorithms / Data structures"></a>Algorithms / Data structures</h3><h4 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h4><ul><li><code>int()</code> returns the lower bound.</li><li>Pay attention to the difference between <code>extend()</code> and <code>append()</code>, e.g. [1,2,4] vs. [[1,2],[4]].</li></ul><h4 id="Easy-Ways"><a href="#Easy-Ways" class="headerlink" title="Easy Ways"></a>Easy Ways</h4><ul><li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating.</li></ul><h4 id="Possible-Mistakes"><a href="#Possible-Mistakes" class="headerlink" title="Possible Mistakes"></a>Possible Mistakes</h4><ul><li><code>list.append()</code> will only return <strong>None</strong>, which indicates it has successfully complete the process. Use <code>list</code> to get to the changes.</li><li>Things like a <code>range(0,n)</code> do NOT include n but do include 0.</li><li>If let <code>a = b</code> where a,b are both lists, when you change a it will affect b too. Try <code>copy.deepcopy</code>(needs import) or <code>new = old[:]</code>.</li></ul><h4 id="Other-in-Doc"><a href="#Other-in-Doc" class="headerlink" title="Other in Doc"></a>Other in Doc</h4><ul><li>The time complexity for <code>sort()</code> is O(nlogn).</li></ul><h3 id="Machine-Learning-Data-Science"><a href="#Machine-Learning-Data-Science" class="headerlink" title="Machine Learning / Data Science"></a>Machine Learning / Data Science</h3><h4 id="Package"><a href="#Package" class="headerlink" title="Package"></a>Package</h4><ul><li>*”nltk”* is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li><li>The famous *”sklearn”*.</li></ul><h4 id="Frequently-Encountered"><a href="#Frequently-Encountered" class="headerlink" title="Frequently Encountered"></a>Frequently Encountered</h4><ul><li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling.</li><li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li><li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li><li><code>pandas.read_csv()</code> is good for loading a data file. The “csv” could be replaced with other type of file.</li><li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>. </li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p><em>Note: This post doesn’t include detailed theories. For those, please refer to other posts.</em></p><h3 id="Built-in"><a href="#Built-in" class="headerlink" title="Built-in"></a>Built-in</h3><h4 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h4><ul><li><code>int()</code> returns the lower bound.</li><li>Pay attention to the difference between <code>extend()</code> and <code>append()</code>, e.g. [1,2,4] vs. [[1,2],[4]].</li></ul><h4 id="Easy-Ways"><a href="#Easy-Ways" class="headerlink" title="Easy Ways"></a>Easy Ways</h4><ul><li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating.</li><li>Python has a built-in dictionary <code>defaultdict()</code>, it provides default value given by the user </li></ul><h4 id="Possible-Mistakes"><a href="#Possible-Mistakes" class="headerlink" title="Possible Mistakes"></a>Possible Mistakes</h4><ul><li><code>list.append()</code> will only return <strong>None</strong>, which indicates it has successfully complete the process. Use <code>list</code> to get to the changes.</li><li>Things like a <code>range(0,n)</code> do NOT include n but do include 0.</li><li>If let <code>a = b</code> where a,b are both lists, when you change a it will affect b too. Try <code>copy.deepcopy</code>(needs import) or <code>new = old[:]</code>.</li></ul><h4 id="Other-in-Doc"><a href="#Other-in-Doc" class="headerlink" title="Other in Doc"></a>Other in Doc</h4><ul><li>The time complexity for <code>sort()</code> is O(nlogn).</li></ul><h3 id="Useful-Packages"><a href="#Useful-Packages" class="headerlink" title="Useful Packages"></a>Useful Packages</h3><h4 id="Package-List"><a href="#Package-List" class="headerlink" title="Package List"></a>Package List</h4><ul><li>*”nltk”* is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li><li>The famous *”sklearn”*.</li></ul><h4 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h4><ul><li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling.</li><li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li><li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li><li><code>pandas.read_csv()</code> is good for loading a data file. The “csv” could be replaced with other type of file.</li><li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>. </li></ul><h4 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h4><ul><li></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
@@ -182,9 +215,9 @@
       
         <tags>
             
-            <tag> CT courses </tag>
-            
             <tag> notes </tag>
+            
+            <tag> CT courses </tag>
             
             <tag> research </tag>
             
