@@ -4,8 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="fonts, FadingWinds">
-    <meta name="description" content="fonts | DoveCode">
+    <meta name="keywords" content="Notes for Computer Vision, FadingWinds">
+    <meta name="description" content="Basic ConceptsImage: a grid(matrix) of intensity values
+Kernel: the filter/mask.
+Gradient(of an image): $▽f = [df/dx, df">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>fonts | DoveCode</title>
+    <title>Notes for Computer Vision | DoveCode</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -291,13 +293,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        fonts
+                        Notes for Computer Vision
                     </div>
                 </div>
             </div>
@@ -406,12 +408,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/updating/" target="_blank">
+                                <span class="chip bg-color">updating</span>
+                            </a>
+                        
+                            <a href="/tags/notes/" target="_blank">
+                                <span class="chip bg-color">notes</span>
+                            </a>
+                        
+                            <a href="/tags/CT-courses/" target="_blank">
+                                <span class="chip bg-color">CT courses</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Machine-Learning-机器学习/" class="post-category" target="_blank">
+                                Machine Learning | 机器学习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -419,21 +442,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-09-25
+                    2020-02-12
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        52
+                        885
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        1 Min
+                        5 Min
                     </div>
                     
                 
@@ -449,7 +472,120 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h3 id="Basic-Concepts"><a href="#Basic-Concepts" class="headerlink" title="Basic Concepts"></a>Basic Concepts</h3><p><strong>Image</strong>: a grid(matrix) of intensity values</p>
+<p><strong>Kernel</strong>: the filter/mask.</p>
+<p><strong>Gradient</strong>(of an image): $▽f = [df/dx, df/dy]$(partial derivative), points in the direction of the most rapid increase in intensity.</p>
+<h3 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h3><p>Form a new image whose pixels are a combination of the original ones.</p>
+<p>Use filter to get useful information from images or enhance the image.</p>
+<h4 id="Linear-Filter"><a href="#Linear-Filter" class="headerlink" title="Linear Filter"></a>Linear Filter</h4><p>Replace each pixel by a linear combination (weighted sums) of its neighbors.</p>
+<ol>
+<li><p>Cross-correlation</p>
+<p> Like a dot product - sum of the neighbor matrix multiplied by kernel for every exactly matching position. e.g. (5, 3) * (5, 3)</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>Convolution</p>
+<p> Like an outer product - compared with cross correlation, the kernel is flipped both horizontally and vertically.</p>
+<p> Convolution is commutative and associative. </p>
+<p> Why convolution: consider the situation between two identical images except one of them is flipped/turned/etc.</p>
+</li>
+<li><p>Blurring / Sharpening</p>
+<p> Mean filter, box filter</p>
+</li>
+</ol>
+<h4 id="Gaussian-filter"><a href="#Gaussian-filter" class="headerlink" title="Gaussian filter"></a>Gaussian filter</h4><p>Apply a Gaussian function. Recall that the weights should always be normalized to sum=1.</p>
+<p>Removes “high-frequency” components (low-pass filter).</p>
+<p>Convolution with itself will get another Gaussian filter.</p>
+<h3 id="Edge-Detection"><a href="#Edge-Detection" class="headerlink" title="Edge Detection"></a>Edge Detection</h3><p>Convert a 2D image into a set of curves.</p>
+<p>An edge is a place of rapid change in the image intensity function.</p>
+<p>Edges are caused by a variety of factors:</p>
+<ul>
+<li>surface normal discontinuity</li>
+<li>depth discontinuity</li>
+<li>surface color discontinuity</li>
+<li>illumination discontinuity</li>
+</ul>
+<p>To differentiate a digital image:</p>
+<ul>
+<li>reconstruct a continuous image, then compute the derivative</li>
+<li>take discrete derivative(find difference)</li>
+</ul>
+<p>For noisy input images, smooth them first with Gaussian filter(?).</p>
+<p><strong>Sobel Operator</strong>: Common approximation of derivative of Gaussian (need the 1/8 to get the right gradient magnitude)</p>
+<p>Thresholding edges - 2 thresholds, 3 cases (strong edge)</p>
+<p>Connecting edges - Weak edges are edges if they are connected to strong edges. Look in some neighborhood (usually 8 closest).</p>
+<h4 id="Canny-Edge-Detector"><a href="#Canny-Edge-Detector" class="headerlink" title="Canny Edge Detector"></a>Canny Edge Detector</h4><ol>
+<li>Filter image with derivative of Gaussian</li>
+<li>Find magnitude and orientation of gradient</li>
+<li>Non-maximum suppression</li>
+<li>Linking and thresholding (hysteresis): one low and one high threshold; use the high one to start edge curves and the low threshold to continue them</li>
+</ol>
+<p>Parameters: high threshold, low threshold, sigma(width of the Gaussian blur, large sigma detects large-scale edges)</p>
+<h3 id="Sampling"><a href="#Sampling" class="headerlink" title="Sampling"></a>Sampling</h3><h4 id="Down-sampling"><a href="#Down-sampling" class="headerlink" title="Down-sampling"></a>Down-sampling</h4><p>Making smaller images.</p>
+<p>e.g. throw away every other row and column to create a 1/2 size image.</p>
+<p><strong>Aliasing</strong>: Get a wrong image by sub-sampling (this problem occurs especially for synthetic images).</p>
+<p>Aliasing occurs when your sampling rate is not high enough to capture the amount of detail in your image.</p>
+<p>To avoid aliasing: sampling rate ≥ 2 * max frequency in the image</p>
+<p><strong>Nyquist Rate</strong>: minimum sampling rate</p>
+<p>Wagon-wheel effect: in video wheel appear to rotate backwards</p>
+<p>Fix aliasing: <strong>Gaussian pre-filtering</strong></p>
+<p><strong>Gaussian pyramid</strong>: Represent N<em>N image as a pyramid of $1</em>1, 2<em>2, 4</em>4, 2^k*2^k$ (assuming $N=2^k$)</p>
+<h4 id="Up-sampling-Image-Interpolation"><a href="#Up-sampling-Image-Interpolation" class="headerlink" title="Up-sampling / Image Interpolation"></a>Up-sampling / Image Interpolation</h4><p>Correspondingly, making bigger images.</p>
+<ol>
+<li>Nearest-neighbor interpolation (use neighbor value to replace)</li>
+<li>Linear interpolation (use a line to fit the gap)</li>
+<li>Gaussian reconstruction</li>
+<li>Bicubic interpolation</li>
+</ol>
+<h3 id="Feature-Detection"><a href="#Feature-Detection" class="headerlink" title="Feature Detection"></a>Feature Detection</h3><p>Can be used to conduct automatic panoramas.</p>
+<p>Combine two images:</p>
+<ol>
+<li>Extract features</li>
+<li>Match features</li>
+<li>Align images</li>
+</ol>
+<p>Find features that are invariant to transformations:</p>
+<ul>
+<li>Geometric invariance: translation, rotation, scale</li>
+<li>Photometric invariance: brightness, exposure, etc.</li>
+</ul>
+<p><strong>Local Features</strong> refer to a pattern or distinct structure found in an image, such as a point, edge, or small image patch.</p>
+<p>Advantages of local features:</p>
+<ul>
+<li>Locality: robust to occlusion (means some sort of blocking of an object[not sure]) and clutter (lots of objects in the image).</li>
+<li>Quantity: hundreds or thousands in a single image</li>
+<li>Distinctiveness: differentiate a large database of objects</li>
+<li>Efficiency: real-time performance achievable</li>
+</ul>
+<p>Good features - look for image regions that are “unusual”.</p>
+<h4 id="Harris-Corner-Detection"><a href="#Harris-Corner-Detection" class="headerlink" title="Harris Corner Detection"></a>Harris Corner Detection</h4><p>Consider shifting the window $W$ by $(u,v)$, compute the squared differences (SSD). Look for high SSDs. </p>
+<p>$E(u,v) \approx [ u \space v ] \begin{bmatrix}A &amp; B \ B &amp; C\end{bmatrix} \begin{bmatrix} u \ v \end{bmatrix}$</p>
+<p>$A = \Sigma I_x^2(dI/dx), B = \Sigma I_xI_y, C = \Sigma I_y^2(dI/dy)$</p>
+<p>$E(u,v)$ is locally approximated as a quadratic error function.</p>
+<p>Corner detection summary:</p>
+<ol>
+<li>Compute the gradient at each point in the image.</li>
+<li>Compute the “ABBC” matrix from the entries in the gradient.</li>
+<li>Compute the eigenvalues.</li>
+<li>Find points with large response ($\lambda_{max}&gt;threshold$).</li>
+<li>Choose these points where $\lambda_{min}$ is a local maximum as features.</li>
+</ol>
+<p>In practice, using a simple window $W$ doesn’t work too well. Instead, we’ll weight each derivative value based on its distance from the center pixel.</p>
+<h4 id="Image-Transformations"><a href="#Image-Transformations" class="headerlink" title="Image Transformations"></a>Image Transformations</h4><p>Geometric: Rotation, Scale</p>
+<p>Photometric: Intensity</p>
+<p>We want corner locations to be invariant to photometric transformations and covariant to geometric transformations.</p>
+<p><strong>Invariance</strong>: Image is transformed and corner locations do not change.</p>
+<p><strong>Covariance</strong>:  If we have two transformed versions of the same image, features should be detected in corresponding locations.</p>
+<p>In <em>Harris Detector</em>:</p>
+<ul>
+<li>Corner location is covariant w.r.t. translation.</li>
+<li>Corner location is covariant w.r.t. rotation.</li>
+<li>Partially invariant to affine intensity change.</li>
+<li>Not invariant to scaling.</li>
+</ul>
+<p><strong>Laplacian of Gaussian</strong> (LoG): Use a Gaussian filter first then Laplacian.</p>
+<p><strong>Difference of Gaussian</strong> (DoG): A Gaussian minus a slightly smaller Gaussian.</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -498,8 +634,8 @@
                          src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
             </div>
             <br/><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
-                       property="dct:title" rel="dct:type">《fonts》</span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/fonts/index.html"
+                       property="dct:title" rel="dct:type">《Notes for Computer Vision》</span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/12/notes-for-computer-vision/"
                property="cc:attributionName" rel="cc:attributionURL">FadingWinds
             </a> is licensed under a
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -538,9 +674,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://FadingWinds.github.io/fonts/index.html';
-        this.page.identifier = '/fonts/index.html';
-        this.page.title = 'fonts';
+        this.page.url = 'https://FadingWinds.github.io/2020/02/12/notes-for-computer-vision/';
+        this.page.identifier = '/2020/02/12/notes-for-computer-vision/';
+        this.page.title = 'Notes for Computer Vision';
     };
     let disqus_shortname = 'dovecode';
 
@@ -563,42 +699,57 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/fonts/index.html">
+                <a href="/2020/02/17/natural-language-processing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="fonts">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Natural Language Processing">
                         
-                        <span class="card-title">fonts</span>
+                        <span class="card-title">Natural Language Processing</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            Notes for NLP.
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-17
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            FadingWinds
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Machine-Learning-机器学习/" class="post-category" target="_blank">
+                                    Machine Learning | 机器学习
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                    <a href="/tags/CT-courses/" target="_blank">
+                        <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -606,40 +757,56 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="fa fa-dot-circle-o"></i>
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/fonts/index.html">
+                <a href="/2020/01/26/notes-for-behavioral-economics/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="fonts">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Notes for Behavioral Economics">
                         
-                        <span class="card-title">fonts</span>
+                        <span class="card-title">Notes for Behavioral Economics</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            Update as I learn.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-26
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            FadingWinds
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Psychological-Fun-心理/" class="post-category" target="_blank">
+                                    Psychological Fun | 心理
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                    <a href="/tags/CT-courses/" target="_blank">
+                        <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

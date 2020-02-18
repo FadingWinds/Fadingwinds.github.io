@@ -4,8 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="fonts, FadingWinds">
-    <meta name="description" content="fonts | DoveCode">
+    <meta name="keywords" content="Natural Language Processing, FadingWinds">
+    <meta name="description" content="OverviewThree type of models:
+
+Generative Models
+Discriminative Models, e.g. neural networks
+Graphical Models
+
+The funda">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>fonts | DoveCode</title>
+    <title>Natural Language Processing | DoveCode</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -291,13 +297,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        fonts
+                        Natural Language Processing
                     </div>
                 </div>
             </div>
@@ -406,12 +412,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/updating/" target="_blank">
+                                <span class="chip bg-color">updating</span>
+                            </a>
+                        
+                            <a href="/tags/notes/" target="_blank">
+                                <span class="chip bg-color">notes</span>
+                            </a>
+                        
+                            <a href="/tags/CT-courses/" target="_blank">
+                                <span class="chip bg-color">CT courses</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Machine-Learning-机器学习/" class="post-category" target="_blank">
+                                Machine Learning | 机器学习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -419,21 +446,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-09-25
+                    2020-02-17
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        52
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        1 Min
+                        6 Min
                     </div>
                     
                 
@@ -449,7 +476,124 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Three type of models:</p>
+<ul>
+<li>Generative Models</li>
+<li>Discriminative Models, e.g. neural networks</li>
+<li>Graphical Models</li>
+</ul>
+<p>The fundamental goal of NLP is to have <strong>deep understanding of broad language</strong>.</p>
+<p>End systems that we want to build:</p>
+<ul>
+<li><strong>Simple</strong>: spelling correction, text categorization, …</li>
+<li><strong>Complex</strong>: speech recognition, machine translation, information extraction, dialog interfaces, question answering, …</li>
+<li>Unknown: human-level comprehension (probably not just NLP)</li>
+</ul>
+<p><strong>Key problems</strong> in NLP:</p>
+<ol>
+<li><p>Ambiguity</p>
+<ul>
+<li><p>Syntactic ambiguity</p>
+<p>   e.g. <em>Stolen Painting Found by Tree</em> </p>
+<p>   In state-of-the-art ML, can reach ~95% accuracy for many languages when given many training examples</p>
+</li>
+<li><p>Semantic ambiguity </p>
+<p>   e.g. <em>Siri, call me an ambulance</em></p>
+</li>
+</ul>
+</li>
+<li><p>Scale  </p>
+</li>
+<li><p>Sparsity</p>
+<p><strong>Corpus</strong> is a collection of text. Often annotated in some way. </p>
+</li>
+</ol>
+<h3 id="Text-Classification"><a href="#Text-Classification" class="headerlink" title="Text Classification"></a>Text Classification</h3><p>Examples of classification problems: spam vs. non-spam, text genre, word sense, etc.</p>
+<p><strong>Supervised Learning</strong>:</p>
+<ul>
+<li>Naïve Bayes</li>
+<li>Log-linear models (Maximum Entropy Models)</li>
+<li>Weighted linear models and the Perceptron</li>
+<li>Neural networks</li>
+</ul>
+<p>Learning from annotated data problem:</p>
+<ul>
+<li>Annotation requires specific expertise.</li>
+<li>Annotation is expensive.</li>
+<li>Data is private and not accessible.</li>
+<li>Often difficult to define and be consistent.</li>
+</ul>
+<p><em>Always think about the data, and how much of it your model needs (even better: think of the data first, model second).</em></p>
+<p><strong>Training data, development data and held-out data</strong>: an important tool for estimating generalization is train on one set, evaluate during development on another, and use test data only once.</p>
+<p><strong>Main ideas of text classification</strong>:</p>
+<ul>
+<li>Representation as feature vectors</li>
+<li>Scoring by linear functions</li>
+<li>Learning by optimization</li>
+</ul>
+<p><strong>Probabilistic classifiers</strong>: two broad approaches to predict a class $y$</p>
+<p>a) Joint / Generative models (e.g. Naïve Bayes)</p>
+<ul>
+<li>Work with a joint probabilistic model of data $P(X,y)$, weights are (often) local conditional probabilities.</li>
+<li>Often assume functional form for $P(X|y), P(y)$; represent p(y,X) as Naïve Bayes model, compute $y*=argmax_y p(y,X)= argmax_y p(y)p(X|y)$.</li>
+<li>Estimate <em>probabilities</em> from data.</li>
+<li>Advantages: learning weights is easy and well understood.</li>
+</ul>
+<p>b) Conditional / Discriminative models (e.g. Logistic Regression)</p>
+<ul>
+<li>Work with conditional probability $p(y|X)$. We can then directly compute $y* = argmax_y p(y|X)$ (estimating $p(y|X)$ directly).</li>
+<li>Require numerical optimization methods.</li>
+<li>Estimate <em>parameters</em> from data.</li>
+<li>Advantages: Don’t have to model $p(X)$! Can develop feature rich models for $p(y|X)$.</li>
+<li>Popular in NLP.</li>
+</ul>
+<h4 id="Generative-Approach-Naive-Bayes-Models"><a href="#Generative-Approach-Naive-Bayes-Models" class="headerlink" title="Generative Approach: Naïve-Bayes Models"></a>Generative Approach: Naïve-Bayes Models</h4><p>The generative story: <strong>pick a topic, then generate a<br>document.</strong></p>
+<p><strong>Assumption: All words (features) are independent given the topic (label).</strong></p>
+<p>Order invariant for tokens.</p>
+<p>Issues: underflow; large number of topics (a lot of computing).</p>
+<p>NB Learning: <strong>Maximum Likelihood Estimate</strong></p>
+<p>In MLE, two parameters to estimate: 1) $𝑞(𝑦) = \theta_y$ for each topic $𝑦$; 2) $q(x|y) = \theta_{xy}$ for each topic $y$ and word $x$.</p>
+<p><strong>Zero frequency problem</strong> in MLE: if there is a zero in the calculation the whole product becomes zero, no matter how many other values you got which maybe would find another solution.</p>
+<p>Learning by <strong>count</strong>: $\theta_y = C(y)/N$, $\theta_{xy} = C(x,y)/C(y)$. The learning complexity is <strong>O(n)</strong>.</p>
+<p><em>Word sense</em>: bag-of-words classification works ok for nouns, but verbal senses are less topical and more sensitive to structure (argument choice).</p>
+<h4 id="Discriminative-Approach-Linear-Models"><a href="#Discriminative-Approach-Linear-Models" class="headerlink" title="Discriminative Approach: Linear Models"></a>Discriminative Approach: Linear Models</h4><p>Features are indicator functions which count the occurrences of certain patterns in the input. Initially we will have different feature values for every pair of input $X$ and class $y$.</p>
+<p><strong>Block Feature Vectors</strong>: Input has features, which are multiplied by outputs to form the candidates.</p>
+<p>Different candidates will often share features.</p>
+<p>In linear models, each feature gets a weight in $w$. We compute the scores and then according to the prediction rule, we choose the highest (positive) one.</p>
+<details>
+<summary>Example of Linear Model</summary>
+
+<p>$\Phi(X, SPORTS) = [1 0 1 0 \space 0 0 0 0 \space 0 0 0 0]$</p>
+<p>$\Phi(X, POLITICS) = [0 0 0 0 \space 1 0 1 0 \space 0 0 0 0]$</p>
+<p>$\Phi(X, OTHER) = [0 0 0 0 \space 0 0 0 0 \space 1 0 1 0]$</p>
+<p>$W = [1 \space 1 \space -1 \space 2, 1 \space -1 \space 1 \space -2, -2 \space -1 \space -1 \space 1]$</p>
+<p>Respectively $SCORE= 0;2;-3$, thus $prediction = POLITICS$</p>
+</details>
+
+<p>(Multinomial) Naïve-Bayes is a linear model.</p>
+<p><strong>Picking weights</strong>:</p>
+<ul>
+<li>Goal: choose “best” vector $w$ given training data.</li>
+<li>The best we can ask for are weights that give best training set accuracy, but it’s a hard optimization problem.</li>
+</ul>
+<h4 id="Discriminative-Approach-Maximum-Entropy-Models-Logistic-Regression"><a href="#Discriminative-Approach-Maximum-Entropy-Models-Logistic-Regression" class="headerlink" title="Discriminative Approach: Maximum Entropy Models (=Logistic Regression)"></a>Discriminative Approach: Maximum Entropy Models (=Logistic Regression)</h4><p>Use the scores as probabilities.</p>
+<p>Learning: maximize the (log) conditional likelihood of training data ${(X^{(i)}, y^{(i)})}^N_{i=1}$</p>
+<p>An equation is said to be a <strong>closed-form solution</strong> if it solves a given problem in terms of functions and mathematical operations from a given generally accepted set.</p>
+<p>$L(w) = \Sigma^{N}_{i=1}logP(y^{(i)}|X^{(i)}; w), w^*=argmax_wL(w)$</p>
+<p>– $w^<em>$ doesn’t have a closed-form solution. So the MaxEnt objective is an *unconstrained optimization problem</em>.</p>
+<ul>
+<li>Basic idea: move uphill from current guess.</li>
+<li>Gradient ascent / descent follows the gradient incrementally.</li>
+<li>At <strong>local optimum</strong>, derivative vector is <strong>zero</strong>.</li>
+<li>Will converge <strong>if step sizes are small enough</strong>, but <strong>not efficient</strong>.</li>
+<li>All we need is to be able to evaluate the function and its derivative. Once we have a function $f$, we can find a local optimum by iteratively following the gradient.</li>
+<li>For <strong>convex</strong> (curved or rounded outward) functions, <strong>a local optimum will be global</strong>. Convexity guarantees a single, global maximum value because any higher points are greedily reachable.</li>
+</ul>
+<p>Basic gradient ascent isn’t very efficient, but there are simple enhancements which take into account previous gradients: conjugate gradient, L-BFGS. There are special-purpose optimization techniques for MaxEnt, like<br>iterative scaling, but they aren’t better.</p>
+<p><strong>The optimum parameters are the ones for which each feature’s predicted expectation equals its empirical expectation.</strong></p>
+<p>In logistic regression, instead of worrying about zero count in MLE, we worry about <em>large feature weights</em>. Use regularization (smoothing) for log-linear models (add a L2 regularization term to the likelihood to push weights to zero).</p>
+<p>But even after regularization, MaxEnt still doesn’t have a closed-form solution. We will have to differentiate and use gradient ascent.</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -498,8 +642,8 @@
                          src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
             </div>
             <br/><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
-                       property="dct:title" rel="dct:type">《fonts》</span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/fonts/index.html"
+                       property="dct:title" rel="dct:type">《Natural Language Processing》</span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/17/natural-language-processing/"
                property="cc:attributionName" rel="cc:attributionURL">FadingWinds
             </a> is licensed under a
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -538,9 +682,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://FadingWinds.github.io/fonts/index.html';
-        this.page.identifier = '/fonts/index.html';
-        this.page.title = 'fonts';
+        this.page.url = 'https://FadingWinds.github.io/2020/02/17/natural-language-processing/';
+        this.page.identifier = '/2020/02/17/natural-language-processing/';
+        this.page.title = 'Natural Language Processing';
     };
     let disqus_shortname = 'dovecode';
 
@@ -563,18 +707,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/fonts/index.html">
+                <a href="/2020/02/17/the-chain-of-blocks/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="fonts">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="The Chain of Blocks">
                         
-                        <span class="card-title">fonts</span>
+                        <span class="card-title">The Chain of Blocks</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -587,9 +730,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -598,7 +741,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -606,40 +748,56 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="fa fa-dot-circle-o"></i>
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/fonts/index.html">
+                <a href="/2020/02/12/notes-for-computer-vision/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="fonts">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Notes for Computer Vision">
                         
-                        <span class="card-title">fonts</span>
+                        <span class="card-title">Notes for Computer Vision</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            Personal notes for computer vision.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            FadingWinds
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Machine-Learning-机器学习/" class="post-category" target="_blank">
+                                    Machine Learning | 机器学习
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                    <a href="/tags/CT-courses/" target="_blank">
+                        <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
