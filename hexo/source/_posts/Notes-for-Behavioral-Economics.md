@@ -51,3 +51,17 @@ To keep up the resolution, other things might help are:
 - **Do a "stress test" before it start to know how feasible it is.**
 
 
+#### Cognitive Biases
+
+The picture below has done a great work summarizing this topic. 
+
+<br>
+<div align = center><img src = "https://miro.medium.com/max/3072/1*71TzKnr7bzXU_l_pU6DCNA.jpeg" title = "Cognitive Bias Codex"/></div>
+<br>
+
+Some thoughts:
+
+- Will the biases cancel each other under certain circumstances?
+
+
+

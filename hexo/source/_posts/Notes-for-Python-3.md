@@ -24,7 +24,7 @@ password:
 
 #### Easy Ways
 - Remember to use lambda for simple functions and use `[x for x in statement if statement]` for iterating.
-- Python has a built-in dictionary `defaultdict()`, it provides default value given by the user 
+- Python has a dictionary `defaultdict()`, it provides default value given by the user. `collections.counter()` could be a substitute if the default value is $0$. 
 
 #### Possible Mistakes
 
@@ -36,6 +36,7 @@ password:
 
 - The time complexity for `sort()` is O(nlogn).
 
+****
 
 ### Useful Packages
 
@@ -54,5 +55,5 @@ password:
 
 #### Numpy
 
-- 
+- Use `np.zeros()` to create a n-d array with zeros as initial values.
 
