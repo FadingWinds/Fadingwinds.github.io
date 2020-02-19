@@ -12,9 +12,10 @@ summary: Notes for NLP.
 top:
 hidden:
 password:
+mathjax: true
 ---
 
-### Overview
+## Overview
 
 Three type of models:
 
@@ -48,7 +49,138 @@ End systems that we want to build:
    
    **Corpus** is a collection of text. Often annotated in some way. 
 
-### Text Classification
+### Meta NLP
+
+This section is about steps to conduct a NLP research.
+
+#### Literature review: should be done early
+
+- Avoid re-invent the wheel
+- Learn about common tricks, resources, and libraries
+
+1. Do a keyword search on *Google Scholar*, *Semantic Scholar*, or *the ACL Anthology*.
+2. Download the papers that seem most relevant.
+3. Skim the abstracts, intros, and previous work sections.
+4. Identify papers that look relevant, appear often, or have lots of citations on Google Scholar, and download them. Then repeat.
+
+Places to find the most trustworthy papers:
+
+- *NLP*: Proceedings of ACL conferences (ACL, NAACL, EACL, EMNLP, CoNLL, LREC), Journal of Computational Linguistics, TACL, COLING, arXiv*
+- *Machine Learning/AI*: Proceedings of NIPS, ICML, ICLR, AAAI, IJCAI, and arXiv*
+- *Computational Linguistics*: Journals like Linguistic Inquiry, NLLT, Semantics and Pragmatics
+
+What to mention in literature review:
+
+- General problem/task definition
+- Relevant methods and results
+- Comparisons with your work and other related work
+- Open issues
+
+#### Acquiring Datasets
+
+- Existing datasets
+  
+  ACL anthology, Linguistic Data Consortium (LDC), Look for datasheets when available (e.g. QuAC)
+- Wild datasets
+  
+  e.g. Ubuntu Dialogue Corpus, StackOverflow Data (warning: easy to violate copyright and terms of service)
+- Build own datasets
+  
+  Either write detailed guidelines, and work with experts; or write simple guidelines, and crowdsource
+
+- Generate datasets
+  
+  It's super easy, but artificial data does not reflect the real world.
+
+#### Quantitative Evaluation
+
+1. Follow prior work and use existing metrics
+   - If it's a new task, create a metric before you start testing. It must be independent of your model.
+2. Use ablations to study the effectiveness of your choices (and don’t adopt fancy solutions that don’t really help)
+   - e.g. MLP sentiment classifier with GloVe embeddings, MLP sentiment classifier with random embeddings, MaxEnt classifier with GloVe embeddings, MaxEnt classifier with random embeddings
+3. Consider controlled human evaluation when standard, and even when less standard
+   - e.g. summarization, machine translation, generation
+4. Test for statistical significance when differences are small and models are complex
+5. Consider extrinsic evaluation on *downstream tasks* (what the field calls those supervised-learning tasks that utilize a pre-trained model or component)
+6. Negative results are also important.
+
+#### Qualitative Evaluation and Error Analysis
+
+Goal: convince that your hypothesis is correct.
+
+Interesting hypotheses are often hard to evaluate with
+standard/intuitive quantitative metrics.
+
+Start with:
+
+- Look to prior work
+- Show examples of system output
+- Identify qualitative categories of system error and count them
+- Visualize your embedding spaces with tools like t-SNE or PCA
+- Visualize your hidden states with tools like LSTMVis
+- Plot how your model performance varies with amount of data
+- Build an online demo if ambitious (which I'm probably not :thinking:)
+
+**Formative evaluation**: guiding further investigations
+- Typically: lightweight, automatic, intrinsic
+- Compare design option A to option B
+- Tune *hyperparameters* (parameter whose value is set before the learning process begins): smoothing, weighting, learning rate
+
+**Summative evaluation**: reporting results
+- Compare your approach to previous approaches
+- Compare different major variants of your approach
+- Generally only bother with human or extrinsic evaluations here
+
+*Common mistake: Don’t save all your qualitative evaluation
+for the summative evaluation.*
+
+#### Hyperparameter Tuning
+
+- Must tune the hyperparameters of your baselines just as thoroughly as you tune them for any new model you propose
+- Failure to do this invalidates your comparisons
+- As always, don't tune on test set.
+- Read the fine print while you’re doing your literature review to get a sense of what hyperparameters to worry about and what values to expect.
+- If you’re not sure whether to tune a hyperparameter, you probably should.
+
+Methods:
+
+- Grid search: Inefficient (but common)
+- Bayesian optimization: Optimal, but public packages aren’t great.
+- Good read: random search - easy, and near-optimal
+  - Define distributions over all your hyperparameters.
+  - Sample N times for N experiments.
+  - Look for patterns in your results.
+  - Adjust the distributions and repeat until you run out of
+resources or performance stops improving.
+
+#### Other
+
+**Biases**
+
+Deploying biased models in the wrong places can lead to harms far worse than bad user experiences.
+
+Model de-biasing can be complex, political, and maybe even impossible to do fully, and it may harm performance on reasonable metrics.
+
+<details>
+<summary>Unfold to see a bias example</summary>
+
+In training data, women appear in cooking scenes 33% more
+often than men.
+
+In model’s labeling of similar test data, women are detected in cooking scenes 68% more often than men.
+</details>
+
+**Talk about data**
+
+- What your data looks like, why it was collected, and what kind of information your system learn from it
+- Who (country, region, gender, native language, etc.) produced the text and labels in your dataset
+- Any known biases in your dataset (including the obvious ones)
+
+
+
+
+
+## Text Classification
 
 Examples of classification problems: spam vs. non-spam, text genre, word sense, etc.
 
@@ -93,7 +225,7 @@ b) Conditional / Discriminative models (e.g. Logistic Regression)
 - Advantages: Don’t have to model $p(X)$! Can develop feature rich models for $p(y|X)$.
 - Popular in NLP.
 
-#### Generative Approach: Naïve-Bayes Models
+### Generative Approach: Naïve-Bayes Models
 
 The generative story: **pick a topic, then generate a
 document.**
@@ -114,7 +246,7 @@ Learning by **count**: $\theta_y = C(y)/N$, $\theta_{xy} = C(x,y)/C(y)$. The lea
 
 *Word sense*: bag-of-words classification works ok for nouns, but verbal senses are less topical and more sensitive to structure (argument choice).
 
-#### Discriminative Approach: Linear Models
+### Discriminative Approach: Linear Models
 
 Features are indicator functions which count the occurrences of certain patterns in the input. Initially we will have different feature values for every pair of input $X$ and class $y$.
 
@@ -145,7 +277,7 @@ Respectively $SCORE= 0;2;-3$, thus $prediction = POLITICS$
 - Goal: choose "best" vector $w$ given training data.
 - The best we can ask for are weights that give best training set accuracy, but it's a hard optimization problem.
 
-#### Discriminative Approach: Maximum Entropy Models (=Logistic Regression)
+### Discriminative Approach: Maximum Entropy Models (=Logistic Regression)
 
 Use the scores as probabilities.
 
@@ -172,3 +304,62 @@ iterative scaling, but they aren’t better.
 In logistic regression, instead of worrying about zero count in MLE, we worry about *large feature weights*. Use regularization (smoothing) for log-linear models (add a L2 regularization term to the likelihood to push weights to zero).
 
 But even after regularization, MaxEnt still doesn't have a closed-form solution. We will have to differentiate and use gradient ascent.
+
+### Perceptron Algorithm
+
+Iteratively processes the training set, reacting to training errors. Can be thought of as trying to drive down training error.
+
+- Online (or batch)
+- Error driven
+- Simple, additive updates
+
+#### Binary Class
+
+**Steps** for the online (binary $y = \plusmn1$) perceptron algorithm:
+
+1. Start with **zero** weights
+2. Visit training instances $(X^{(i)}, y^{(i)})$ one by one, until all correct
+   - Make a prediction: $y^* = sign(w ·\Phi(X^{(i)}))$ (sign means whether it >(=) 0)
+   - If correct ($y^*==y^{(i)}$): no change, go to next example!
+   - If wrong: adjust weights $w = w - y^* \Phi(X^{(i)})$
+
+The perceptron finds a separating hyperplane.
+
+If add bias, algorithm stays the same.
+
+#### Multiclass
+
+For multiclass situation, we will have:
+
+- A weight vector for each class
+- Score (activation) of a class $y$: $w_y·\Phi(x)$
+- Compare all possible outputs, prediction highest score wins
+
+**Perceptron learning traits**:
+
+- No counting or computing probabilities on training set
+- Separability: some parameters get the training set perfectly correct
+- Convergence: if the training is separable (e.g. could divide into two classes with 100% accuracy for binary case), perceptron will
+eventually converge
+- Mistake Bound: the maximum number of mistakes (binary case)
+related to the margin or degree of separability
+
+**Perceptron problems**:
+
+- Noise: if the data isn’t separable, weights might
+thrash
+  - Averaging weight vectors over time can help (averaged perceptron)
+- Mediocre generalization: finds a “barely” separating solution
+- Overtraining: test / held-out accuracy usually
+rises, then falls (overtraining is a kind of overfitting)
+
+### A Note for Features: TF/IDF
+
+- More frequent terms in a document are more important.
+- May want to normalize term frequency (TF) by dividing by the frequency of the most common term in the document.
+- Terms that appear in many different documents are less indicative (thus inverse document frequency) 
+
+### Neural Networks
+
+***Representation Learning***
+

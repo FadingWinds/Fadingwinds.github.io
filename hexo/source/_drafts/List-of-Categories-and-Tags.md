@@ -18,6 +18,7 @@ Categories:
 - Psychological Fun | 心理
 - Soft Skills | 综合能力
 - Coding | 编程
+- Blockchain | 区块链
 - Machine Learning | 机器学习
 - Game Production | 游戏制作
 - 风所去往的方向

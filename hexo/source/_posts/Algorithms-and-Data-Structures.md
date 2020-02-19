@@ -16,6 +16,7 @@ img:
 top:
 hidden:
 password:
+mathjax: true
 ---
 
 ## Theories and Methods

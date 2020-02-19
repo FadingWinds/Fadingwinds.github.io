@@ -12,6 +12,7 @@ summary: Personal notes for computer vision.
 top:
 hidden:
 password:
+mathjax: true
 ---
 ### Basic Concepts
 
