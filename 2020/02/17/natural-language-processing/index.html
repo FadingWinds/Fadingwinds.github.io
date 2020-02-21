@@ -414,16 +414,16 @@ The funda">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/updating/" target="_blank">
-                                <span class="chip bg-color">updating</span>
+                            <a href="/tags/CT-courses/" target="_blank">
+                                <span class="chip bg-color">CT courses</span>
                             </a>
                         
                             <a href="/tags/notes/" target="_blank">
                                 <span class="chip bg-color">notes</span>
                             </a>
                         
-                            <a href="/tags/CT-courses/" target="_blank">
-                                <span class="chip bg-color">CT courses</span>
+                            <a href="/tags/updating/" target="_blank">
+                                <span class="chip bg-color">updating</span>
                             </a>
                         
                     </div>
@@ -453,14 +453,14 @@ The funda">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        1.1k
+                        2.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        6 Min
+                        13 Min
                     </div>
                     
                 
@@ -476,7 +476,7 @@ The funda">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Three type of models:</p>
+                <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Three type of models:</p>
 <ul>
 <li>Generative Models</li>
 <li>Discriminative Models, e.g. neural networks</li>
@@ -508,7 +508,122 @@ The funda">
 <p><strong>Corpus</strong> is a collection of text. Often annotated in some way. </p>
 </li>
 </ol>
-<h3 id="Text-Classification"><a href="#Text-Classification" class="headerlink" title="Text Classification"></a>Text Classification</h3><p>Examples of classification problems: spam vs. non-spam, text genre, word sense, etc.</p>
+<h3 id="Meta-NLP"><a href="#Meta-NLP" class="headerlink" title="Meta NLP"></a>Meta NLP</h3><p>This section is about steps to conduct a NLP research.</p>
+<h4 id="Literature-review-should-be-done-early"><a href="#Literature-review-should-be-done-early" class="headerlink" title="Literature review: should be done early"></a>Literature review: should be done early</h4><ul>
+<li>Avoid re-invent the wheel</li>
+<li>Learn about common tricks, resources, and libraries</li>
+</ul>
+<ol>
+<li>Do a keyword search on <em>Google Scholar</em>, <em>Semantic Scholar</em>, or <em>the ACL Anthology</em>.</li>
+<li>Download the papers that seem most relevant.</li>
+<li>Skim the abstracts, intros, and previous work sections.</li>
+<li>Identify papers that look relevant, appear often, or have lots of citations on Google Scholar, and download them. Then repeat.</li>
+</ol>
+<p>Places to find the most trustworthy papers:</p>
+<ul>
+<li><em>NLP</em>: Proceedings of ACL conferences (ACL, NAACL, EACL, EMNLP, CoNLL, LREC), Journal of Computational Linguistics, TACL, COLING, arXiv*</li>
+<li><em>Machine Learning/AI</em>: Proceedings of NIPS, ICML, ICLR, AAAI, IJCAI, and arXiv*</li>
+<li><em>Computational Linguistics</em>: Journals like Linguistic Inquiry, NLLT, Semantics and Pragmatics</li>
+</ul>
+<p>What to mention in literature review:</p>
+<ul>
+<li>General problem/task definition</li>
+<li>Relevant methods and results</li>
+<li>Comparisons with your work and other related work</li>
+<li>Open issues</li>
+</ul>
+<h4 id="Acquiring-Datasets"><a href="#Acquiring-Datasets" class="headerlink" title="Acquiring Datasets"></a>Acquiring Datasets</h4><ul>
+<li><p>Existing datasets</p>
+<p>ACL anthology, Linguistic Data Consortium (LDC), Look for datasheets when available (e.g. QuAC)</p>
+</li>
+<li><p>Wild datasets</p>
+<p>e.g. Ubuntu Dialogue Corpus, StackOverflow Data (warning: easy to violate copyright and terms of service)</p>
+</li>
+<li><p>Build own datasets</p>
+<p>Either write detailed guidelines, and work with experts; or write simple guidelines, and crowdsource</p>
+</li>
+<li><p>Generate datasets</p>
+<p>It’s super easy, but artificial data does not reflect the real world.</p>
+</li>
+</ul>
+<h4 id="Quantitative-Evaluation"><a href="#Quantitative-Evaluation" class="headerlink" title="Quantitative Evaluation"></a>Quantitative Evaluation</h4><ol>
+<li>Follow prior work and use existing metrics<ul>
+<li>If it’s a new task, create a metric before you start testing. It must be independent of your model.</li>
+</ul>
+</li>
+<li>Use ablations to study the effectiveness of your choices (and don’t adopt fancy solutions that don’t really help)<ul>
+<li>e.g. MLP sentiment classifier with GloVe embeddings, MLP sentiment classifier with random embeddings, MaxEnt classifier with GloVe embeddings, MaxEnt classifier with random embeddings</li>
+</ul>
+</li>
+<li>Consider controlled human evaluation when standard, and even when less standard<ul>
+<li>e.g. summarization, machine translation, generation</li>
+</ul>
+</li>
+<li>Test for statistical significance when differences are small and models are complex</li>
+<li>Consider extrinsic evaluation on <em>downstream tasks</em> (what the field calls those supervised-learning tasks that utilize a pre-trained model or component)</li>
+<li>Negative results are also important.</li>
+</ol>
+<h4 id="Qualitative-Evaluation-and-Error-Analysis"><a href="#Qualitative-Evaluation-and-Error-Analysis" class="headerlink" title="Qualitative Evaluation and Error Analysis"></a>Qualitative Evaluation and Error Analysis</h4><p>Goal: convince that your hypothesis is correct.</p>
+<p>Interesting hypotheses are often hard to evaluate with<br>standard/intuitive quantitative metrics.</p>
+<p>Start with:</p>
+<ul>
+<li>Look to prior work</li>
+<li>Show examples of system output</li>
+<li>Identify qualitative categories of system error and count them</li>
+<li>Visualize your embedding spaces with tools like t-SNE or PCA</li>
+<li>Visualize your hidden states with tools like LSTMVis</li>
+<li>Plot how your model performance varies with amount of data</li>
+<li>Build an online demo if ambitious (which I’m probably not <span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f914.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png?v8">🤔</span>)</li>
+</ul>
+<p><strong>Formative evaluation</strong>: guiding further investigations</p>
+<ul>
+<li>Typically: lightweight, automatic, intrinsic</li>
+<li>Compare design option A to option B</li>
+<li>Tune <em>hyperparameters</em> (parameter whose value is set before the learning process begins): smoothing, weighting, learning rate</li>
+</ul>
+<p><strong>Summative evaluation</strong>: reporting results</p>
+<ul>
+<li>Compare your approach to previous approaches</li>
+<li>Compare different major variants of your approach</li>
+<li>Generally only bother with human or extrinsic evaluations here</li>
+</ul>
+<p><em>Common mistake: Don’t save all your qualitative evaluation<br>for the summative evaluation.</em></p>
+<h4 id="Hyperparameter-Tuning"><a href="#Hyperparameter-Tuning" class="headerlink" title="Hyperparameter Tuning"></a>Hyperparameter Tuning</h4><ul>
+<li>Must tune the hyperparameters of your baselines just as thoroughly as you tune them for any new model you propose</li>
+<li>Failure to do this invalidates your comparisons</li>
+<li>As always, don’t tune on test set.</li>
+<li>Read the fine print while you’re doing your literature review to get a sense of what hyperparameters to worry about and what values to expect.</li>
+<li>If you’re not sure whether to tune a hyperparameter, you probably should.</li>
+</ul>
+<p>Methods:</p>
+<ul>
+<li>Grid search: Inefficient (but common)</li>
+<li>Bayesian optimization: Optimal, but public packages aren’t great.</li>
+<li>Good read: random search - easy, and near-optimal<ul>
+<li>Define distributions over all your hyperparameters.</li>
+<li>Sample N times for N experiments.</li>
+<li>Look for patterns in your results.</li>
+<li>Adjust the distributions and repeat until you run out of<br>resources or performance stops improving.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h4><p><strong>Biases</strong></p>
+<p>Deploying biased models in the wrong places can lead to harms far worse than bad user experiences.</p>
+<p>Model de-biasing can be complex, political, and maybe even impossible to do fully, and it may harm performance on reasonable metrics.</p>
+<details>
+<summary>Unfold to see a bias example</summary>
+
+<p>In training data, women appear in cooking scenes 33% more<br>often than men.</p>
+<p>In model’s labeling of similar test data, women are detected in cooking scenes 68% more often than men.</p>
+</details>
+
+<p><strong>Talk about data</strong></p>
+<ul>
+<li>What your data looks like, why it was collected, and what kind of information your system learn from it</li>
+<li>Who (country, region, gender, native language, etc.) produced the text and labels in your dataset</li>
+<li>Any known biases in your dataset (including the obvious ones)</li>
+</ul>
+<h2 id="Text-Classification"><a href="#Text-Classification" class="headerlink" title="Text Classification"></a>Text Classification</h2><p>Examples of classification problems: spam vs. non-spam, text genre, word sense, etc.</p>
 <p><strong>Supervised Learning</strong>:</p>
 <ul>
 <li>Naïve Bayes</li>
@@ -547,7 +662,7 @@ The funda">
 <li>Advantages: Don’t have to model $p(X)$! Can develop feature rich models for $p(y|X)$.</li>
 <li>Popular in NLP.</li>
 </ul>
-<h4 id="Generative-Approach-Naive-Bayes-Models"><a href="#Generative-Approach-Naive-Bayes-Models" class="headerlink" title="Generative Approach: Naïve-Bayes Models"></a>Generative Approach: Naïve-Bayes Models</h4><p>The generative story: <strong>pick a topic, then generate a<br>document.</strong></p>
+<h3 id="Generative-Approach-Naive-Bayes-Models"><a href="#Generative-Approach-Naive-Bayes-Models" class="headerlink" title="Generative Approach: Naïve-Bayes Models"></a>Generative Approach: Naïve-Bayes Models</h3><p>The generative story: <strong>pick a topic, then generate a<br>document.</strong></p>
 <p><strong>Assumption: All words (features) are independent given the topic (label).</strong></p>
 <p>Order invariant for tokens.</p>
 <p>Issues: underflow; large number of topics (a lot of computing).</p>
@@ -556,7 +671,7 @@ The funda">
 <p><strong>Zero frequency problem</strong> in MLE: if there is a zero in the calculation the whole product becomes zero, no matter how many other values you got which maybe would find another solution.</p>
 <p>Learning by <strong>count</strong>: $\theta_y = C(y)/N$, $\theta_{xy} = C(x,y)/C(y)$. The learning complexity is <strong>O(n)</strong>.</p>
 <p><em>Word sense</em>: bag-of-words classification works ok for nouns, but verbal senses are less topical and more sensitive to structure (argument choice).</p>
-<h4 id="Discriminative-Approach-Linear-Models"><a href="#Discriminative-Approach-Linear-Models" class="headerlink" title="Discriminative Approach: Linear Models"></a>Discriminative Approach: Linear Models</h4><p>Features are indicator functions which count the occurrences of certain patterns in the input. Initially we will have different feature values for every pair of input $X$ and class $y$.</p>
+<h3 id="Discriminative-Approach-Linear-Models"><a href="#Discriminative-Approach-Linear-Models" class="headerlink" title="Discriminative Approach: Linear Models"></a>Discriminative Approach: Linear Models</h3><p>Features are indicator functions which count the occurrences of certain patterns in the input. Initially we will have different feature values for every pair of input $X$ and class $y$.</p>
 <p><strong>Block Feature Vectors</strong>: Input has features, which are multiplied by outputs to form the candidates.</p>
 <p>Different candidates will often share features.</p>
 <p>In linear models, each feature gets a weight in $w$. We compute the scores and then according to the prediction rule, we choose the highest (positive) one.</p>
@@ -576,7 +691,7 @@ The funda">
 <li>Goal: choose “best” vector $w$ given training data.</li>
 <li>The best we can ask for are weights that give best training set accuracy, but it’s a hard optimization problem.</li>
 </ul>
-<h4 id="Discriminative-Approach-Maximum-Entropy-Models-Logistic-Regression"><a href="#Discriminative-Approach-Maximum-Entropy-Models-Logistic-Regression" class="headerlink" title="Discriminative Approach: Maximum Entropy Models (=Logistic Regression)"></a>Discriminative Approach: Maximum Entropy Models (=Logistic Regression)</h4><p>Use the scores as probabilities.</p>
+<h3 id="Discriminative-Approach-Maximum-Entropy-Models-Logistic-Regression"><a href="#Discriminative-Approach-Maximum-Entropy-Models-Logistic-Regression" class="headerlink" title="Discriminative Approach: Maximum Entropy Models (=Logistic Regression)"></a>Discriminative Approach: Maximum Entropy Models (=Logistic Regression)</h3><p>Use the scores as probabilities.</p>
 <p>Learning: maximize the (log) conditional likelihood of training data ${(X^{(i)}, y^{(i)})}^N_{i=1}$</p>
 <p>An equation is said to be a <strong>closed-form solution</strong> if it solves a given problem in terms of functions and mathematical operations from a given generally accepted set.</p>
 <p>$L(w) = \Sigma^{N}_{i=1}logP(y^{(i)}|X^{(i)}; w), w^*=argmax_wL(w)$</p>
@@ -593,6 +708,52 @@ The funda">
 <p><strong>The optimum parameters are the ones for which each feature’s predicted expectation equals its empirical expectation.</strong></p>
 <p>In logistic regression, instead of worrying about zero count in MLE, we worry about <em>large feature weights</em>. Use regularization (smoothing) for log-linear models (add a L2 regularization term to the likelihood to push weights to zero).</p>
 <p>But even after regularization, MaxEnt still doesn’t have a closed-form solution. We will have to differentiate and use gradient ascent.</p>
+<h3 id="Perceptron-Algorithm"><a href="#Perceptron-Algorithm" class="headerlink" title="Perceptron Algorithm"></a>Perceptron Algorithm</h3><p>Iteratively processes the training set, reacting to training errors. Can be thought of as trying to drive down training error.</p>
+<ul>
+<li>Online (or batch)</li>
+<li>Error driven</li>
+<li>Simple, additive updates</li>
+</ul>
+<h4 id="Binary-Class"><a href="#Binary-Class" class="headerlink" title="Binary Class"></a>Binary Class</h4><p><strong>Steps</strong> for the online (binary $y = \plusmn1$) perceptron algorithm:</p>
+<ol>
+<li>Start with <strong>zero</strong> weights</li>
+<li>Visit training instances $(X^{(i)}, y^{(i)})$ one by one, until all correct<ul>
+<li>Make a prediction: $y^* = sign(w ·\Phi(X^{(i)}))$ (sign means whether it &gt;(=) 0)</li>
+<li>If correct ($y^*==y^{(i)}$): no change, go to next example!</li>
+<li>If wrong: adjust weights $w = w - y^* \Phi(X^{(i)})$</li>
+</ul>
+</li>
+</ol>
+<p>The perceptron finds a separating hyperplane.</p>
+<p>If add bias, algorithm stays the same.</p>
+<h4 id="Multiclass"><a href="#Multiclass" class="headerlink" title="Multiclass"></a>Multiclass</h4><p>For multiclass situation, we will have:</p>
+<ul>
+<li>A weight vector for each class</li>
+<li>Score (activation) of a class $y$: $w_y·\Phi(x)$</li>
+<li>Compare all possible outputs, prediction highest score wins</li>
+</ul>
+<p><strong>Perceptron learning traits</strong>:</p>
+<ul>
+<li>No counting or computing probabilities on training set</li>
+<li>Separability: some parameters get the training set perfectly correct</li>
+<li>Convergence: if the training is separable (e.g. could divide into two classes with 100% accuracy for binary case), perceptron will<br>eventually converge</li>
+<li>Mistake Bound: the maximum number of mistakes (binary case)<br>related to the margin or degree of separability</li>
+</ul>
+<p><strong>Perceptron problems</strong>:</p>
+<ul>
+<li>Noise: if the data isn’t separable, weights might<br>thrash<ul>
+<li>Averaging weight vectors over time can help (averaged perceptron)</li>
+</ul>
+</li>
+<li>Mediocre generalization: finds a “barely” separating solution</li>
+<li>Overtraining: test / held-out accuracy usually<br>rises, then falls (overtraining is a kind of overfitting)</li>
+</ul>
+<h3 id="A-Note-for-Features-TF-IDF"><a href="#A-Note-for-Features-TF-IDF" class="headerlink" title="A Note for Features: TF/IDF"></a>A Note for Features: TF/IDF</h3><ul>
+<li>More frequent terms in a document are more important.</li>
+<li>May want to normalize term frequency (TF) by dividing by the frequency of the most common term in the document.</li>
+<li>Terms that appear in many different documents are less indicative (thus inverse document frequency) </li>
+</ul>
+<h3 id="Neural-Networks"><a href="#Neural-Networks" class="headerlink" title="Neural Networks"></a>Neural Networks</h3><p><strong><em>Representation Learning</em></strong></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -714,8 +875,7 @@ The funda">
                 <a href="/2020/02/17/the-chain-of-blocks/">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="The Chain of Blocks">
+                        <img src="https://images.cointelegraph.com/images/1480_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy8wNmY3YTk1MDNiOWZiODg1ZGNlMjQ5ZDU3ZjA4OWIwMy5qcGc=.jpg" class="responsive-img" alt="The Chain of Blocks">
                         
                         <span class="card-title">The Chain of Blocks</span>
                     </div>
@@ -723,10 +883,7 @@ The funda">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            The story among Alice, Bob and Charlie(Carol). Sometimes more.
                         
                     </div>
                     <div class="publish-info">
@@ -735,11 +892,31 @@ The funda">
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            FadingWinds
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Blockchain-区块链/" class="post-category" target="_blank">
+                                    Blockchain | 区块链
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CT-courses/" target="_blank">
+                        <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -785,16 +962,16 @@ The funda">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/updating/" target="_blank">
-                        <span class="chip bg-color">updating</span>
+                    <a href="/tags/CT-courses/" target="_blank">
+                        <span class="chip bg-color">CT courses</span>
                     </a>
                     
                     <a href="/tags/notes/" target="_blank">
                         <span class="chip bg-color">notes</span>
                     </a>
                     
-                    <a href="/tags/CT-courses/" target="_blank">
-                        <span class="chip bg-color">CT courses</span>
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
                     </a>
                     
                 </div>
@@ -943,6 +1120,13 @@ The funda">
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -952,7 +1136,7 @@ The funda">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">6k</span>&nbsp;
+                class="white-color">7k</span>&nbsp;
             
             
             
