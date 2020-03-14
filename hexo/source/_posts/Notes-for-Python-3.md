@@ -1,5 +1,5 @@
 ---
-title: 'Become Pythonic'
+title: 'Becoming Pythonic'
 date: 2019-10-29 19:35:33
 author: FadingWinds
 img:
@@ -23,8 +23,11 @@ password:
 - Pay attention to the difference between `extend()` and `append()`, e.g. [1,2,4] vs. [[1,2],[4]].
 
 #### Easy Ways
-- Remember to use lambda for simple functions and use `[x for x in statement if statement]` for iterating.
+
+- Remember to use lambda for simple functions and use `[x for x in statement if statement]` for iterating. And this is called *list comprehension*.
 - Python has a dictionary `defaultdict()`, it provides default value given by the user. `collections.counter()` could be a substitute if the default value is $0$. 
+- Use `zip()` to make two lists into one with tuple: a, b -> (a,b) with len(a)/len(b). **Note**: need to convert to list manually in Python 3.
+- 
 
 #### Possible Mistakes
 
@@ -36,12 +39,20 @@ password:
 
 - The time complexity for `sort()` is O(nlogn).
 
+#### Differences Between Python 2 and 3
+
+- Calculation of integer is different. In python 2, sometimes need to use "2.0" instead of "2" to get correct answers.
+- Print, of course.
+
+
+
 ****
 
 ### Useful Packages
 
 #### Package List
 
+- Default packages: csv, math, re, ...
 - *"nltk"* is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).
 - The famous *"sklearn"*.
 
@@ -56,4 +67,5 @@ password:
 #### Numpy
 
 - Use `np.zeros()` to create a n-d array with zeros as initial values.
+- `np.nan != np.nan`! Which means if you assign `np.nan` to some variables, you can't use `==np.nan` to check it. Use `isna()` instead.
 

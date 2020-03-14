@@ -23,6 +23,7 @@ Categories:
 - Game Production | 游戏制作
 - 风所去往的方向
 - 只言片语
+- Bugs in the Wild
 - Ace!
 - Blue and Yellow of HIMYM | 蓝号与黄伞
 
@@ -43,3 +44,5 @@ Tags:
 - bilingual
 - self-taught
 - scribble
+- VS Code
+- Anaconda

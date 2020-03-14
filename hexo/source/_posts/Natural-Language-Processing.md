@@ -81,9 +81,11 @@ What to mention in literature review:
 - Existing datasets
   
   ACL anthology, Linguistic Data Consortium (LDC), Look for datasheets when available (e.g. QuAC)
+
 - Wild datasets
   
   e.g. Ubuntu Dialogue Corpus, StackOverflow Data (warning: easy to violate copyright and terms of service)
+
 - Build own datasets
   
   Either write detailed guidelines, and work with experts; or write simple guidelines, and crowdsource
@@ -95,11 +97,17 @@ What to mention in literature review:
 #### Quantitative Evaluation
 
 1. Follow prior work and use existing metrics
+   
    - If it's a new task, create a metric before you start testing. It must be independent of your model.
+
 2. Use ablations to study the effectiveness of your choices (and don’t adopt fancy solutions that don’t really help)
+   
    - e.g. MLP sentiment classifier with GloVe embeddings, MLP sentiment classifier with random embeddings, MaxEnt classifier with GloVe embeddings, MaxEnt classifier with random embeddings
+  
 3. Consider controlled human evaluation when standard, and even when less standard
+   
    - e.g. summarization, machine translation, generation
+  
 4. Test for statistical significance when differences are small and models are complex
 5. Consider extrinsic evaluation on *downstream tasks* (what the field calls those supervised-learning tasks that utilize a pre-trained model or component)
 6. Negative results are also important.
@@ -315,7 +323,7 @@ Iteratively processes the training set, reacting to training errors. Can be thou
 
 #### Binary Class
 
-**Steps** for the online (binary $y = \plusmn1$) perceptron algorithm:
+**Steps** for the online (binary $y = \plusmn 1$) perceptron algorithm:
 
 1. Start with **zero** weights
 2. Visit training instances $(X^{(i)}, y^{(i)})$ one by one, until all correct
