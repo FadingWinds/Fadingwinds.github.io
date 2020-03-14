@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Become Pythonic, FadingWinds">
+    <meta name="keywords" content="Becoming Pythonic, FadingWinds">
     <meta name="description" content="Note: This post doesn’t include detailed theories. For those, please refer to other posts.
 Built-inGrammar
 int() returns">
@@ -15,7 +15,7 @@ int() returns">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Become Pythonic | DoveCode</title>
+    <title>Becoming Pythonic | DoveCode</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -293,13 +293,13 @@ int() returns">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Become Pythonic
+                        Becoming Pythonic
                     </div>
                 </div>
             </div>
@@ -449,7 +449,7 @@ int() returns">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        351
+                        448
                     </div>
                     
 
@@ -478,8 +478,10 @@ int() returns">
 <li>Pay attention to the difference between <code>extend()</code> and <code>append()</code>, e.g. [1,2,4] vs. [[1,2],[4]].</li>
 </ul>
 <h4 id="Easy-Ways"><a href="#Easy-Ways" class="headerlink" title="Easy Ways"></a>Easy Ways</h4><ul>
-<li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating.</li>
+<li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating. And this is called <em>list comprehension</em>.</li>
 <li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.counter()</code> could be a substitute if the default value is $0$. </li>
+<li>Use <code>zip()</code> to make two lists into one with tuple: a, b -&gt; (a,b) with len(a)/len(b). <strong>Note</strong>: need to convert to list manually in Python 3.</li>
+<li></li>
 </ul>
 <h4 id="Possible-Mistakes"><a href="#Possible-Mistakes" class="headerlink" title="Possible Mistakes"></a>Possible Mistakes</h4><ul>
 <li><code>list.append()</code> will only return <strong>None</strong>, which indicates it has successfully complete the process. Use <code>list</code> to get to the changes.</li>
@@ -489,8 +491,13 @@ int() returns">
 <h4 id="Other-in-Doc"><a href="#Other-in-Doc" class="headerlink" title="Other in Doc"></a>Other in Doc</h4><ul>
 <li>The time complexity for <code>sort()</code> is O(nlogn).</li>
 </ul>
+<h4 id="Differences-Between-Python-2-and-3"><a href="#Differences-Between-Python-2-and-3" class="headerlink" title="Differences Between Python 2 and 3"></a>Differences Between Python 2 and 3</h4><ul>
+<li>Calculation of integer is different. In python 2, sometimes need to use “2.0” instead of “2” to get correct answers.</li>
+<li>Print, of course.</li>
+</ul>
 <hr>
 <h3 id="Useful-Packages"><a href="#Useful-Packages" class="headerlink" title="Useful Packages"></a>Useful Packages</h3><h4 id="Package-List"><a href="#Package-List" class="headerlink" title="Package List"></a>Package List</h4><ul>
+<li>Default packages: csv, math, re, …</li>
 <li>*”nltk”* is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li>
 <li>The famous *”sklearn”*.</li>
 </ul>
@@ -503,6 +510,7 @@ int() returns">
 </ul>
 <h4 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h4><ul>
 <li>Use <code>np.zeros()</code> to create a n-d array with zeros as initial values.</li>
+<li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can’t use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -553,7 +561,7 @@ int() returns">
                          src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
             </div>
             <br/><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
-                       property="dct:title" rel="dct:type">《Become Pythonic》</span> by
+                       property="dct:title" rel="dct:type">《Becoming Pythonic》</span> by
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/29/notes-for-python-3/"
                property="cc:attributionName" rel="cc:attributionURL">FadingWinds
             </a> is licensed under a
@@ -595,7 +603,7 @@ int() returns">
     disqus_config = function () {
         this.page.url = 'https://FadingWinds.github.io/2019/10/29/notes-for-python-3/';
         this.page.identifier = '/2019/10/29/notes-for-python-3/';
-        this.page.title = 'Become Pythonic';
+        this.page.title = 'Becoming Pythonic';
     };
     let disqus_shortname = 'dovecode';
 
@@ -698,12 +706,12 @@ int() returns">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CT-courses/" target="_blank">
-                        <span class="chip bg-color">CT courses</span>
-                    </a>
-                    
                     <a href="/tags/notes/" target="_blank">
                         <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                    <a href="/tags/CT-courses/" target="_blank">
+                        <span class="chip bg-color">CT courses</span>
                     </a>
                     
                     <a href="/tags/research/" target="_blank">
@@ -865,7 +873,7 @@ int() returns">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">7k</span>&nbsp;
+                class="white-color">7.5k</span>&nbsp;
             
             
             
