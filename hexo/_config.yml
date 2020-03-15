@@ -108,3 +108,6 @@ search:
 permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
+
+pandoc:
+  mathEngine: katex

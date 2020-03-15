@@ -12,7 +12,6 @@ summary: Notes for NLP.
 top:
 hidden:
 password:
-mathjax: true
 ---
 
 ## Overview
