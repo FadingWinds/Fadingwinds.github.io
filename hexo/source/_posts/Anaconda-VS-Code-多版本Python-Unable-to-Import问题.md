@@ -33,9 +33,16 @@ Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过`co
         "D:\\special\\Anaconda2\\Lib\\site-packages\\numpy"
     ],
 ~~~
-把其中的具体路径替换成自己的本地路径即可。实际应该只加入Lib文件夹路径就够了。如果是其他外部库，途径类似（Ref中的例子便是google-cloud-sdk的库）。
+把其中的具体路径替换成自己的本地路径即可。实际应该只加入Lib文件夹路径就够了。如果是其他外部库，途径类似（Ref中的例子是google-cloud-sdk的库）。
 
 **注意**：更改完毕设置后，需要重启电脑才能生效，只重启VS Code似乎不行。
+
+****
+
+更新：
+
+在某一次装了另一个版本的Python后不久，这个方法莫名失效了……:unamused::unamused::unamused:
+
 
 ****
 *Ref*:
