@@ -5,8 +5,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Anaconda+VS Code+多版本Python的&#34;Unable to Import&#34;问题解决方案, FadingWinds">
-    <meta name="description" content="问题描述Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过conda create --name py3 python=3.6命令安装了Python 3.6版本。
-这样可以在两个版本之间任意切换。以VS Co">
+    <meta name="description" content="问题描述
+Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过conda create --name py3 python=3.6命令安装了Python 3.6版本。
+这样可以在两个版本之间任意切换。以VS C">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -448,7 +449,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        421
+                        447
                     </div>
                     
 
@@ -471,17 +472,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过<code>conda create --name py3 python=3.6</code>命令安装了Python 3.6版本。</p>
+                <h4 id="问题描述">问题描述</h4>
+<p>Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过<code>conda create --name py3 python=3.6</code>命令安装了Python 3.6版本。</p>
 <p>这样可以在两个版本之间任意切换。以VS Code为例，只需使用<code>Ctrl + Shift + P</code> -&gt; <code>Python: Select Interpreter</code>即可。</p>
 <p>但在使用过程中遇到了问题，尽管Anaconda已经安装了绝大部分常用库，如果在VS Code使用Python 3.6版本，pylint会对诸如<code>import numpy</code>的命令进行报错，提示没有这个库（具体提示信息记不清了）。如果这时进行<code>pip install numpy</code>，又会提示已经有这个库了。切换回Python 2.7则一切正常。</p>
-<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>这个的原因在于pylint只搜索默认的路径。解决办法是打开<code>settings.json</code>（或在设置里搜索<code>python.autoComplete.extraPaths</code>），如果已经有<code>python.autoComplete.extraPaths</code>这一项，则在其中加入库所在的路径，如果没有则加入类似以下代码：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"python.autoComplete.extraPaths": [</span><br><span class="line">        "D:\\Special\\Anaconda2\\Lib",</span><br><span class="line">        "D:\\Special\\Anaconda2\\Library",</span><br><span class="line">        "D:\\Special\\Anaconda2\\libs",</span><br><span class="line">        "D:\\special\\Anaconda2\\Lib\\site-packages\\numpy"</span><br><span class="line">    ],</span><br></pre></td></tr></tbody></table></figure>
-
-<p>把其中的具体路径替换成自己的本地路径即可。实际应该只加入Lib文件夹路径就够了。如果是其他外部库，途径类似（Ref中的例子便是google-cloud-sdk的库）。</p>
+<h4 id="解决办法">解决办法</h4>
+<p>这个的原因在于pylint只搜索默认的路径。解决办法是打开<code>settings.json</code>（或在设置里搜索<code>python.autoComplete.extraPaths</code>），如果已经有<code>python.autoComplete.extraPaths</code>这一项，则在其中加入库所在的路径，如果没有则加入类似以下代码： </p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"python.autoComplete.extraPaths": [</span><br><span class="line">        "D:\\Special\\Anaconda2\\Lib",</span><br><span class="line">        "D:\\Special\\Anaconda2\\Library",</span><br><span class="line">        "D:\\Special\\Anaconda2\\libs",</span><br><span class="line">        "D:\\special\\Anaconda2\\Lib\\site-packages\\numpy"</span><br><span class="line">    ],</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>把其中的具体路径替换成自己的本地路径即可。实际应该只加入Lib文件夹路径就够了。如果是其他外部库，途径类似（Ref中的例子是google-cloud-sdk的库）。</p>
 <p><strong>注意</strong>：更改完毕设置后，需要重启电脑才能生效，只重启VS Code似乎不行。</p>
 <hr>
+<p>更新：</p>
+<p>在某一次装了另一个版本的Python后不久，这个方法莫名失效了……<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">😒</span><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">😒</span><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">😒</span></p>
+<hr>
 <p><em>Ref</em>:</p>
-<p><a href="https://stackoverflow.com/questions/43574995/visual-studio-code-pylint-unable-to-import-protorpc" target="_blank" rel="noopener">https://stackoverflow.com/questions/43574995/visual-studio-code-pylint-unable-to-import-protorpc</a></p>
+<p>https://stackoverflow.com/questions/43574995/visual-studio-code-pylint-unable-to-import-protorpc</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -692,16 +696,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
                     </a>
                     
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
                     </a>
                     
-                    <a href="/tags/updating/" target="_blank">
-                        <span class="chip bg-color">updating</span>
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                 </div>
@@ -859,7 +863,7 @@
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">7.5k</span>&nbsp;
+                class="white-color">7.6k</span>&nbsp;
             
             
             

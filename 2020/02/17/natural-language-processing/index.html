@@ -5,13 +5,14 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Natural Language Processing, FadingWinds">
-    <meta name="description" content="OverviewThree type of models:
+    <meta name="description" content="Overview
+Three type of models:
 
 Generative Models
 Discriminative Models, e.g. neural networks
 Graphical Models
 
-The funda">
+The fund">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -414,16 +415,16 @@ The funda">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/notes/" target="_blank">
-                                <span class="chip bg-color">notes</span>
+                            <a href="/tags/updating/" target="_blank">
+                                <span class="chip bg-color">updating</span>
                             </a>
                         
                             <a href="/tags/CT-courses/" target="_blank">
                                 <span class="chip bg-color">CT courses</span>
                             </a>
                         
-                            <a href="/tags/updating/" target="_blank">
-                                <span class="chip bg-color">updating</span>
+                            <a href="/tags/notes/" target="_blank">
+                                <span class="chip bg-color">notes</span>
                             </a>
                         
                     </div>
@@ -476,7 +477,8 @@ The funda">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Three type of models:</p>
+                <h2 id="overview">Overview</h2>
+<p>Three type of models:</p>
 <ul>
 <li>Generative Models</li>
 <li>Discriminative Models, e.g. neural networks</li>
@@ -485,35 +487,32 @@ The funda">
 <p>The fundamental goal of NLP is to have <strong>deep understanding of broad language</strong>.</p>
 <p>End systems that we want to build:</p>
 <ul>
-<li><strong>Simple</strong>: spelling correction, text categorization, …</li>
-<li><strong>Complex</strong>: speech recognition, machine translation, information extraction, dialog interfaces, question answering, …</li>
+<li><strong>Simple</strong>: spelling correction, text categorization, ...</li>
+<li><strong>Complex</strong>: speech recognition, machine translation, information extraction, dialog interfaces, question answering, ...</li>
 <li>Unknown: human-level comprehension (probably not just NLP)</li>
 </ul>
 <p><strong>Key problems</strong> in NLP:</p>
-<ol>
-<li><p>Ambiguity</p>
+<ol type="1">
+<li>Ambiguity
 <ul>
 <li><p>Syntactic ambiguity</p>
-<p>   e.g. <em>Stolen Painting Found by Tree</em> </p>
-<p>   In state-of-the-art ML, can reach ~95% accuracy for many languages when given many training examples</p>
-</li>
-<li><p>Semantic ambiguity </p>
-<p>   e.g. <em>Siri, call me an ambulance</em></p>
-</li>
-</ul>
-</li>
-<li><p>Scale  </p>
-</li>
+<p>e.g. <em>Stolen Painting Found by Tree</em></p>
+In state-of-the-art ML, can reach ~95% accuracy for many languages when given many training examples</li>
+<li><p>Semantic ambiguity</p>
+<p>e.g. <em>Siri, call me an ambulance</em></p></li>
+</ul></li>
+<li><p>Scale</p></li>
 <li><p>Sparsity</p>
-<p><strong>Corpus</strong> is a collection of text. Often annotated in some way. </p>
-</li>
+<p><strong>Corpus</strong> is a collection of text. Often annotated in some way.</p></li>
 </ol>
-<h3 id="Meta-NLP"><a href="#Meta-NLP" class="headerlink" title="Meta NLP"></a>Meta NLP</h3><p>This section is about steps to conduct a NLP research.</p>
-<h4 id="Literature-review-should-be-done-early"><a href="#Literature-review-should-be-done-early" class="headerlink" title="Literature review: should be done early"></a>Literature review: should be done early</h4><ul>
+<h3 id="meta-nlp">Meta NLP</h3>
+<p>This section is about steps to conduct a NLP research.</p>
+<h4 id="literature-review-should-be-done-early">Literature review: should be done early</h4>
+<ul>
 <li>Avoid re-invent the wheel</li>
 <li>Learn about common tricks, resources, and libraries</li>
 </ul>
-<ol>
+<ol type="1">
 <li>Do a keyword search on <em>Google Scholar</em>, <em>Semantic Scholar</em>, or <em>the ACL Anthology</em>.</li>
 <li>Download the papers that seem most relevant.</li>
 <li>Skim the abstracts, intros, and previous work sections.</li>
@@ -532,45 +531,38 @@ The funda">
 <li>Comparisons with your work and other related work</li>
 <li>Open issues</li>
 </ul>
-<h4 id="Acquiring-Datasets"><a href="#Acquiring-Datasets" class="headerlink" title="Acquiring Datasets"></a>Acquiring Datasets</h4><ul>
+<h4 id="acquiring-datasets">Acquiring Datasets</h4>
+<ul>
 <li><p>Existing datasets</p>
-<p>ACL anthology, Linguistic Data Consortium (LDC), Look for datasheets when available (e.g. QuAC)</p>
-</li>
+<p>ACL anthology, Linguistic Data Consortium (LDC), Look for datasheets when available (e.g. QuAC)</p></li>
 <li><p>Wild datasets</p>
-<p>e.g. Ubuntu Dialogue Corpus, StackOverflow Data (warning: easy to violate copyright and terms of service)</p>
-</li>
+<p>e.g. Ubuntu Dialogue Corpus, StackOverflow Data (warning: easy to violate copyright and terms of service)</p></li>
 <li><p>Build own datasets</p>
-<p>Either write detailed guidelines, and work with experts; or write simple guidelines, and crowdsource</p>
-</li>
+<p>Either write detailed guidelines, and work with experts; or write simple guidelines, and crowdsource</p></li>
 <li><p>Generate datasets</p>
-<p>It’s super easy, but artificial data does not reflect the real world.</p>
-</li>
+<p>It's super easy, but artificial data does not reflect the real world.</p></li>
 </ul>
-<h4 id="Quantitative-Evaluation"><a href="#Quantitative-Evaluation" class="headerlink" title="Quantitative Evaluation"></a>Quantitative Evaluation</h4><ol>
+<h4 id="quantitative-evaluation">Quantitative Evaluation</h4>
+<ol type="1">
 <li><p>Follow prior work and use existing metrics</p>
 <ul>
-<li>If it’s a new task, create a metric before you start testing. It must be independent of your model.</li>
-</ul>
-</li>
+<li>If it's a new task, create a metric before you start testing. It must be independent of your model.</li>
+</ul></li>
 <li><p>Use ablations to study the effectiveness of your choices (and don’t adopt fancy solutions that don’t really help)</p>
 <ul>
 <li>e.g. MLP sentiment classifier with GloVe embeddings, MLP sentiment classifier with random embeddings, MaxEnt classifier with GloVe embeddings, MaxEnt classifier with random embeddings</li>
-</ul>
-</li>
+</ul></li>
 <li><p>Consider controlled human evaluation when standard, and even when less standard</p>
 <ul>
 <li>e.g. summarization, machine translation, generation</li>
-</ul>
-</li>
-<li><p>Test for statistical significance when differences are small and models are complex</p>
-</li>
-<li><p>Consider extrinsic evaluation on <em>downstream tasks</em> (what the field calls those supervised-learning tasks that utilize a pre-trained model or component)</p>
-</li>
-<li><p>Negative results are also important.</p>
-</li>
+</ul></li>
+<li>Test for statistical significance when differences are small and models are complex</li>
+<li>Consider extrinsic evaluation on <em>downstream tasks</em> (what the field calls those supervised-learning tasks that utilize a pre-trained model or component)</li>
+<li><p>Negative results are also important.</p></li>
 </ol>
-<h4 id="Qualitative-Evaluation-and-Error-Analysis"><a href="#Qualitative-Evaluation-and-Error-Analysis" class="headerlink" title="Qualitative Evaluation and Error Analysis"></a>Qualitative Evaluation and Error Analysis</h4><p>Goal: convince that your hypothesis is correct.</p>
-<p>Interesting hypotheses are often hard to evaluate with<br>standard/intuitive quantitative metrics.</p>
+<h4 id="qualitative-evaluation-and-error-analysis">Qualitative Evaluation and Error Analysis</h4>
+<p>Goal: convince that your hypothesis is correct.</p>
+<p>Interesting hypotheses are often hard to evaluate with standard/intuitive quantitative metrics.</p>
 <p>Start with:</p>
 <ul>
 <li>Look to prior work</li>
@@ -579,25 +571,16 @@ The funda">
 <li>Visualize your embedding spaces with tools like t-SNE or PCA</li>
 <li>Visualize your hidden states with tools like LSTMVis</li>
 <li>Plot how your model performance varies with amount of data</li>
-<li>Build an online demo if ambitious (which I’m probably not <span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f914.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png?v8">🤔</span>)</li>
+<li>Build an online demo if ambitious (which I'm probably not <span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f914.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png?v8">🤔</span>)</li>
 </ul>
-<p><strong>Formative evaluation</strong>: guiding further investigations</p>
+<p><strong>Formative evaluation</strong>: guiding further investigations - Typically: lightweight, automatic, intrinsic - Compare design option A to option B - Tune <em>hyperparameters</em> (parameter whose value is set before the learning process begins): smoothing, weighting, learning rate</p>
+<p><strong>Summative evaluation</strong>: reporting results - Compare your approach to previous approaches - Compare different major variants of your approach - Generally only bother with human or extrinsic evaluations here</p>
+<p><em>Common mistake: Don’t save all your qualitative evaluation for the summative evaluation.</em></p>
+<h4 id="hyperparameter-tuning">Hyperparameter Tuning</h4>
 <ul>
-<li>Typically: lightweight, automatic, intrinsic</li>
-<li>Compare design option A to option B</li>
-<li>Tune <em>hyperparameters</em> (parameter whose value is set before the learning process begins): smoothing, weighting, learning rate</li>
-</ul>
-<p><strong>Summative evaluation</strong>: reporting results</p>
-<ul>
-<li>Compare your approach to previous approaches</li>
-<li>Compare different major variants of your approach</li>
-<li>Generally only bother with human or extrinsic evaluations here</li>
-</ul>
-<p><em>Common mistake: Don’t save all your qualitative evaluation<br>for the summative evaluation.</em></p>
-<h4 id="Hyperparameter-Tuning"><a href="#Hyperparameter-Tuning" class="headerlink" title="Hyperparameter Tuning"></a>Hyperparameter Tuning</h4><ul>
 <li>Must tune the hyperparameters of your baselines just as thoroughly as you tune them for any new model you propose</li>
 <li>Failure to do this invalidates your comparisons</li>
-<li>As always, don’t tune on test set.</li>
+<li>As always, don't tune on test set.</li>
 <li>Read the fine print while you’re doing your literature review to get a sense of what hyperparameters to worry about and what values to expect.</li>
 <li>If you’re not sure whether to tune a hyperparameter, you probably should.</li>
 </ul>
@@ -605,31 +588,31 @@ The funda">
 <ul>
 <li>Grid search: Inefficient (but common)</li>
 <li>Bayesian optimization: Optimal, but public packages aren’t great.</li>
-<li>Good read: random search - easy, and near-optimal<ul>
+<li>Good read: random search - easy, and near-optimal
+<ul>
 <li>Define distributions over all your hyperparameters.</li>
 <li>Sample N times for N experiments.</li>
 <li>Look for patterns in your results.</li>
-<li>Adjust the distributions and repeat until you run out of<br>resources or performance stops improving.</li>
+<li>Adjust the distributions and repeat until you run out of resources or performance stops improving.</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h4 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h4><p><strong>Biases</strong></p>
+<h4 id="other">Other</h4>
+<p><strong>Biases</strong></p>
 <p>Deploying biased models in the wrong places can lead to harms far worse than bad user experiences.</p>
 <p>Model de-biasing can be complex, political, and maybe even impossible to do fully, and it may harm performance on reasonable metrics.</p>
 <details>
-<summary>Unfold to see a bias example</summary>
-
-<p>In training data, women appear in cooking scenes 33% more<br>often than men.</p>
-<p>In model’s labeling of similar test data, women are detected in cooking scenes 68% more often than men.</p>
+<p></p><summary>Unfold to see a bias example</summary><p></p>
+<p>In training data, women appear in cooking scenes 33% more often than men.</p>
+In model’s labeling of similar test data, women are detected in cooking scenes 68% more often than men.
 </details>
-
 <p><strong>Talk about data</strong></p>
 <ul>
 <li>What your data looks like, why it was collected, and what kind of information your system learn from it</li>
 <li>Who (country, region, gender, native language, etc.) produced the text and labels in your dataset</li>
 <li>Any known biases in your dataset (including the obvious ones)</li>
 </ul>
-<h2 id="Text-Classification"><a href="#Text-Classification" class="headerlink" title="Text Classification"></a>Text Classification</h2><p>Examples of classification problems: spam vs. non-spam, text genre, word sense, etc.</p>
+<h2 id="text-classification">Text Classification</h2>
+<p>Examples of classification problems: spam vs. non-spam, text genre, word sense, etc.</p>
 <p><strong>Supervised Learning</strong>:</p>
 <ul>
 <li>Naïve Bayes</li>
@@ -652,114 +635,124 @@ The funda">
 <li>Scoring by linear functions</li>
 <li>Learning by optimization</li>
 </ul>
-<p><strong>Probabilistic classifiers</strong>: two broad approaches to predict a class $y$</p>
-<p>a) Joint / Generative models (e.g. Naïve Bayes)</p>
+<p><strong>Probabilistic classifiers</strong>: two broad approaches to predict a class <span class="math inline">\(y\)</span></p>
+<ol type="a">
+<li>Joint / Generative models (e.g. Naïve Bayes)</li>
+</ol>
 <ul>
-<li>Work with a joint probabilistic model of data $P(X,y)$, weights are (often) local conditional probabilities.</li>
-<li>Often assume functional form for $P(X|y), P(y)$; represent p(y,X) as Naïve Bayes model, compute $y*=argmax_y p(y,X)= argmax_y p(y)p(X|y)$.</li>
+<li>Work with a joint probabilistic model of data <span class="math inline">\(P(X,y)\)</span>, weights are (often) local conditional probabilities.</li>
+<li>Often assume functional form for <span class="math inline">\(P(X|y), P(y)\)</span>; represent p(y,X) as Naïve Bayes model, compute <span class="math inline">\(y*=argmax_y p(y,X)= argmax_y p(y)p(X|y)\)</span>.</li>
 <li>Estimate <em>probabilities</em> from data.</li>
 <li>Advantages: learning weights is easy and well understood.</li>
 </ul>
-<p>b) Conditional / Discriminative models (e.g. Logistic Regression)</p>
+<ol start="2" type="a">
+<li>Conditional / Discriminative models (e.g. Logistic Regression)</li>
+</ol>
 <ul>
-<li>Work with conditional probability $p(y|X)$. We can then directly compute $y* = argmax_y p(y|X)$ (estimating $p(y|X)$ directly).</li>
+<li>Work with conditional probability <span class="math inline">\(p(y|X)\)</span>. We can then directly compute <span class="math inline">\(y* = argmax_y p(y|X)\)</span> (estimating <span class="math inline">\(p(y|X)\)</span> directly).</li>
 <li>Require numerical optimization methods.</li>
 <li>Estimate <em>parameters</em> from data.</li>
-<li>Advantages: Don’t have to model $p(X)$! Can develop feature rich models for $p(y|X)$.</li>
+<li>Advantages: Don’t have to model <span class="math inline">\(p(X)\)</span>! Can develop feature rich models for <span class="math inline">\(p(y|X)\)</span>.</li>
 <li>Popular in NLP.</li>
 </ul>
-<h3 id="Generative-Approach-Naive-Bayes-Models"><a href="#Generative-Approach-Naive-Bayes-Models" class="headerlink" title="Generative Approach: Naïve-Bayes Models"></a>Generative Approach: Naïve-Bayes Models</h3><p>The generative story: <strong>pick a topic, then generate a<br>document.</strong></p>
+<h3 id="generative-approach-naïve-bayes-models">Generative Approach: Naïve-Bayes Models</h3>
+<p>The generative story: <strong>pick a topic, then generate a document.</strong></p>
 <p><strong>Assumption: All words (features) are independent given the topic (label).</strong></p>
 <p>Order invariant for tokens.</p>
 <p>Issues: underflow; large number of topics (a lot of computing).</p>
 <p>NB Learning: <strong>Maximum Likelihood Estimate</strong></p>
-<p>In MLE, two parameters to estimate: 1) $𝑞(𝑦) = \theta_y$ for each topic $𝑦$; 2) $q(x|y) = \theta_{xy}$ for each topic $y$ and word $x$.</p>
+<p>In MLE, two parameters to estimate: 1) <span class="math inline">\(𝑞(𝑦) = \theta_y\)</span> for each topic <span class="math inline">\(𝑦\)</span>; 2) <span class="math inline">\(q(x|y) = \theta_{xy}\)</span> for each topic <span class="math inline">\(y\)</span> and word <span class="math inline">\(x\)</span>.</p>
 <p><strong>Zero frequency problem</strong> in MLE: if there is a zero in the calculation the whole product becomes zero, no matter how many other values you got which maybe would find another solution.</p>
-<p>Learning by <strong>count</strong>: $\theta_y = C(y)/N$, $\theta_{xy} = C(x,y)/C(y)$. The learning complexity is <strong>O(n)</strong>.</p>
+<p>Learning by <strong>count</strong>: <span class="math inline">\(\theta_y = C(y)/N\)</span>, <span class="math inline">\(\theta_{xy} = C(x,y)/C(y)\)</span>. The learning complexity is <strong>O(n)</strong>.</p>
 <p><em>Word sense</em>: bag-of-words classification works ok for nouns, but verbal senses are less topical and more sensitive to structure (argument choice).</p>
-<h3 id="Discriminative-Approach-Linear-Models"><a href="#Discriminative-Approach-Linear-Models" class="headerlink" title="Discriminative Approach: Linear Models"></a>Discriminative Approach: Linear Models</h3><p>Features are indicator functions which count the occurrences of certain patterns in the input. Initially we will have different feature values for every pair of input $X$ and class $y$.</p>
+<h3 id="discriminative-approach-linear-models">Discriminative Approach: Linear Models</h3>
+<p>Features are indicator functions which count the occurrences of certain patterns in the input. Initially we will have different feature values for every pair of input <span class="math inline">\(X\)</span> and class <span class="math inline">\(y\)</span>.</p>
 <p><strong>Block Feature Vectors</strong>: Input has features, which are multiplied by outputs to form the candidates.</p>
 <p>Different candidates will often share features.</p>
-<p>In linear models, each feature gets a weight in $w$. We compute the scores and then according to the prediction rule, we choose the highest (positive) one.</p>
+<p>In linear models, each feature gets a weight in <span class="math inline">\(w\)</span>. We compute the scores and then according to the prediction rule, we choose the highest (positive) one.</p>
 <details>
-<summary>Example of Linear Model</summary>
-
-<p>$\Phi(X, SPORTS) = [1 0 1 0 \space 0 0 0 0 \space 0 0 0 0]$</p>
-<p>$\Phi(X, POLITICS) = [0 0 0 0 \space 1 0 1 0 \space 0 0 0 0]$</p>
-<p>$\Phi(X, OTHER) = [0 0 0 0 \space 0 0 0 0 \space 1 0 1 0]$</p>
-<p>$W = [1 \space 1 \space -1 \space 2, 1 \space -1 \space 1 \space -2, -2 \space -1 \space -1 \space 1]$</p>
-<p>Respectively $SCORE= 0;2;-3$, thus $prediction = POLITICS$</p>
+<p></p><summary>Example of Linear Model</summary><p></p>
+<p><span class="math inline">\(\Phi(X, SPORTS) = [1 0 1 0 \space 0 0 0 0 \space 0 0 0 0]\)</span></p>
+<p><span class="math inline">\(\Phi(X, POLITICS) = [0 0 0 0 \space 1 0 1 0 \space 0 0 0 0]\)</span></p>
+<p><span class="math inline">\(\Phi(X, OTHER) = [0 0 0 0 \space 0 0 0 0 \space 1 0 1 0]\)</span></p>
+<p><span class="math inline">\(W = [1 \space 1 \space -1 \space 2, 1 \space -1 \space 1 \space -2, -2 \space -1 \space -1 \space 1]\)</span></p>
+Respectively <span class="math inline">\(SCORE= 0;2;-3\)</span>, thus <span class="math inline">\(prediction = POLITICS\)</span>
 </details>
-
 <p>(Multinomial) Naïve-Bayes is a linear model.</p>
 <p><strong>Picking weights</strong>:</p>
 <ul>
-<li>Goal: choose “best” vector $w$ given training data.</li>
-<li>The best we can ask for are weights that give best training set accuracy, but it’s a hard optimization problem.</li>
+<li>Goal: choose "best" vector <span class="math inline">\(w\)</span> given training data.</li>
+<li>The best we can ask for are weights that give best training set accuracy, but it's a hard optimization problem.</li>
 </ul>
-<h3 id="Discriminative-Approach-Maximum-Entropy-Models-Logistic-Regression"><a href="#Discriminative-Approach-Maximum-Entropy-Models-Logistic-Regression" class="headerlink" title="Discriminative Approach: Maximum Entropy Models (=Logistic Regression)"></a>Discriminative Approach: Maximum Entropy Models (=Logistic Regression)</h3><p>Use the scores as probabilities.</p>
-<p>Learning: maximize the (log) conditional likelihood of training data ${(X^{(i)}, y^{(i)})}^N_{i=1}$</p>
+<h3 id="discriminative-approach-maximum-entropy-models-logistic-regression">Discriminative Approach: Maximum Entropy Models (=Logistic Regression)</h3>
+<p>Use the scores as probabilities.</p>
+<p>Learning: maximize the (log) conditional likelihood of training data <span class="math inline">\(\{(X^{(i)}, y^{(i)})\}^N_{i=1}\)</span></p>
 <p>An equation is said to be a <strong>closed-form solution</strong> if it solves a given problem in terms of functions and mathematical operations from a given generally accepted set.</p>
-<p>$L(w) = \Sigma^{N}_{i=1}logP(y^{(i)}|X^{(i)}; w), w^*=argmax_wL(w)$</p>
-<p>– $w^<em>$ doesn’t have a closed-form solution. So the MaxEnt objective is an *unconstrained optimization problem</em>.</p>
+<p><span class="math inline">\(L(w) = \Sigma^{N}_{i=1}logP(y^{(i)}|X^{(i)}; w), w^*=argmax_wL(w)\)</span></p>
+<p>-- <span class="math inline">\(w^*\)</span> doesn't have a closed-form solution. So the MaxEnt objective is an <em>unconstrained optimization problem</em>.</p>
 <ul>
 <li>Basic idea: move uphill from current guess.</li>
 <li>Gradient ascent / descent follows the gradient incrementally.</li>
 <li>At <strong>local optimum</strong>, derivative vector is <strong>zero</strong>.</li>
 <li>Will converge <strong>if step sizes are small enough</strong>, but <strong>not efficient</strong>.</li>
-<li>All we need is to be able to evaluate the function and its derivative. Once we have a function $f$, we can find a local optimum by iteratively following the gradient.</li>
+<li>All we need is to be able to evaluate the function and its derivative. Once we have a function <span class="math inline">\(f\)</span>, we can find a local optimum by iteratively following the gradient.</li>
 <li>For <strong>convex</strong> (curved or rounded outward) functions, <strong>a local optimum will be global</strong>. Convexity guarantees a single, global maximum value because any higher points are greedily reachable.</li>
 </ul>
-<p>Basic gradient ascent isn’t very efficient, but there are simple enhancements which take into account previous gradients: conjugate gradient, L-BFGS. There are special-purpose optimization techniques for MaxEnt, like<br>iterative scaling, but they aren’t better.</p>
+<p>Basic gradient ascent isn’t very efficient, but there are simple enhancements which take into account previous gradients: conjugate gradient, L-BFGS. There are special-purpose optimization techniques for MaxEnt, like iterative scaling, but they aren’t better.</p>
 <p><strong>The optimum parameters are the ones for which each feature’s predicted expectation equals its empirical expectation.</strong></p>
 <p>In logistic regression, instead of worrying about zero count in MLE, we worry about <em>large feature weights</em>. Use regularization (smoothing) for log-linear models (add a L2 regularization term to the likelihood to push weights to zero).</p>
-<p>But even after regularization, MaxEnt still doesn’t have a closed-form solution. We will have to differentiate and use gradient ascent.</p>
-<h3 id="Perceptron-Algorithm"><a href="#Perceptron-Algorithm" class="headerlink" title="Perceptron Algorithm"></a>Perceptron Algorithm</h3><p>Iteratively processes the training set, reacting to training errors. Can be thought of as trying to drive down training error.</p>
+<p>But even after regularization, MaxEnt still doesn't have a closed-form solution. We will have to differentiate and use gradient ascent.</p>
+<h3 id="perceptron-algorithm">Perceptron Algorithm</h3>
+<p>Iteratively processes the training set, reacting to training errors. Can be thought of as trying to drive down training error.</p>
 <ul>
 <li>Online (or batch)</li>
 <li>Error driven</li>
 <li>Simple, additive updates</li>
 </ul>
-<h4 id="Binary-Class"><a href="#Binary-Class" class="headerlink" title="Binary Class"></a>Binary Class</h4><p><strong>Steps</strong> for the online (binary $y = \plusmn 1$) perceptron algorithm:</p>
-<ol>
+<h4 id="binary-class">Binary Class</h4>
+<p><strong>Steps</strong> for the online (binary <span class="math inline">\(y = \plusmn 1\)</span>) perceptron algorithm:</p>
+<ol type="1">
 <li>Start with <strong>zero</strong> weights</li>
-<li>Visit training instances $(X^{(i)}, y^{(i)})$ one by one, until all correct<ul>
-<li>Make a prediction: $y^* = sign(w ·\Phi(X^{(i)}))$ (sign means whether it &gt;(=) 0)</li>
-<li>If correct ($y^*==y^{(i)}$): no change, go to next example!</li>
-<li>If wrong: adjust weights $w = w - y^* \Phi(X^{(i)})$</li>
-</ul>
-</li>
+<li>Visit training instances <span class="math inline">\((X^{(i)}, y^{(i)})\)</span> one by one, until all correct
+<ul>
+<li>Make a prediction: <span class="math inline">\(y^* = sign(w ·\Phi(X^{(i)}))\)</span> (sign means whether it &gt;(=) 0)</li>
+<li>If correct (<span class="math inline">\(y^*==y^{(i)}\)</span>): no change, go to next example!</li>
+<li>If wrong: adjust weights <span class="math inline">\(w = w - y^* \Phi(X^{(i)})\)</span></li>
+</ul></li>
 </ol>
 <p>The perceptron finds a separating hyperplane.</p>
 <p>If add bias, algorithm stays the same.</p>
-<h4 id="Multiclass"><a href="#Multiclass" class="headerlink" title="Multiclass"></a>Multiclass</h4><p>For multiclass situation, we will have:</p>
+<h4 id="multiclass">Multiclass</h4>
+<p>For multiclass situation, we will have:</p>
 <ul>
 <li>A weight vector for each class</li>
-<li>Score (activation) of a class $y$: $w_y·\Phi(x)$</li>
+<li>Score (activation) of a class <span class="math inline">\(y\)</span>: <span class="math inline">\(w_y·\Phi(x)\)</span></li>
 <li>Compare all possible outputs, prediction highest score wins</li>
 </ul>
 <p><strong>Perceptron learning traits</strong>:</p>
 <ul>
 <li>No counting or computing probabilities on training set</li>
 <li>Separability: some parameters get the training set perfectly correct</li>
-<li>Convergence: if the training is separable (e.g. could divide into two classes with 100% accuracy for binary case), perceptron will<br>eventually converge</li>
-<li>Mistake Bound: the maximum number of mistakes (binary case)<br>related to the margin or degree of separability</li>
+<li>Convergence: if the training is separable (e.g. could divide into two classes with 100% accuracy for binary case), perceptron will eventually converge</li>
+<li>Mistake Bound: the maximum number of mistakes (binary case) related to the margin or degree of separability</li>
 </ul>
 <p><strong>Perceptron problems</strong>:</p>
 <ul>
-<li>Noise: if the data isn’t separable, weights might<br>thrash<ul>
+<li>Noise: if the data isn’t separable, weights might thrash
+<ul>
 <li>Averaging weight vectors over time can help (averaged perceptron)</li>
-</ul>
-</li>
+</ul></li>
 <li>Mediocre generalization: finds a “barely” separating solution</li>
-<li>Overtraining: test / held-out accuracy usually<br>rises, then falls (overtraining is a kind of overfitting)</li>
+<li>Overtraining: test / held-out accuracy usually rises, then falls (overtraining is a kind of overfitting)</li>
 </ul>
-<h3 id="A-Note-for-Features-TF-IDF"><a href="#A-Note-for-Features-TF-IDF" class="headerlink" title="A Note for Features: TF/IDF"></a>A Note for Features: TF/IDF</h3><ul>
+<h3 id="a-note-for-features-tfidf">A Note for Features: TF/IDF</h3>
+<ul>
 <li>More frequent terms in a document are more important.</li>
 <li>May want to normalize term frequency (TF) by dividing by the frequency of the most common term in the document.</li>
-<li>Terms that appear in many different documents are less indicative (thus inverse document frequency) </li>
+<li>Terms that appear in many different documents are less indicative (thus inverse document frequency)</li>
 </ul>
-<h3 id="Neural-Networks"><a href="#Neural-Networks" class="headerlink" title="Neural Networks"></a>Neural Networks</h3><p><strong><em>Representation Learning</em></strong></p>
+<h3 id="neural-networks">Neural Networks</h3>
+<p><strong><em>Representation Learning</em></strong></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -911,16 +904,16 @@ The funda">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
                     </a>
                     
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
                     </a>
                     
-                    <a href="/tags/updating/" target="_blank">
-                        <span class="chip bg-color">updating</span>
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                 </div>
@@ -968,16 +961,16 @@ The funda">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
                     </a>
                     
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
                     </a>
                     
-                    <a href="/tags/updating/" target="_blank">
-                        <span class="chip bg-color">updating</span>
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                 </div>
@@ -1142,7 +1135,7 @@ The funda">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">7.5k</span>&nbsp;
+                class="white-color">7.6k</span>&nbsp;
             
             
             

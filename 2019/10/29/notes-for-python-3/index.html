@@ -5,9 +5,11 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Becoming Pythonic, FadingWinds">
-    <meta name="description" content="Note: This post doesn’t include detailed theories. For those, please refer to other posts.
-Built-inGrammar
-int() returns">
+    <meta name="description" content="Note: This post doesn&#39;t include detailed theories. For those, please refer to other posts.
+Built-in
+Grammar
+
+int() retur">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -410,16 +412,16 @@ int() returns">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/notes/" target="_blank">
-                                <span class="chip bg-color">notes</span>
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                             <a href="/tags/updating/" target="_blank">
                                 <span class="chip bg-color">updating</span>
                             </a>
                         
-                            <a href="/tags/Python/" target="_blank">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/notes/" target="_blank">
+                                <span class="chip bg-color">notes</span>
                             </a>
                         
                     </div>
@@ -449,7 +451,7 @@ int() returns">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        448
+                        450
                     </div>
                     
 
@@ -472,45 +474,55 @@ int() returns">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><em>Note: This post doesn’t include detailed theories. For those, please refer to other posts.</em></p>
-<h3 id="Built-in"><a href="#Built-in" class="headerlink" title="Built-in"></a>Built-in</h3><h4 id="Grammar"><a href="#Grammar" class="headerlink" title="Grammar"></a>Grammar</h4><ul>
+                <p><em>Note: This post doesn't include detailed theories. For those, please refer to other posts.</em></p>
+<h3 id="built-in">Built-in</h3>
+<h4 id="grammar">Grammar</h4>
+<ul>
 <li><code>int()</code> returns the lower bound.</li>
 <li>Pay attention to the difference between <code>extend()</code> and <code>append()</code>, e.g. [1,2,4] vs. [[1,2],[4]].</li>
 </ul>
-<h4 id="Easy-Ways"><a href="#Easy-Ways" class="headerlink" title="Easy Ways"></a>Easy Ways</h4><ul>
+<h4 id="easy-ways">Easy Ways</h4>
+<ul>
 <li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating. And this is called <em>list comprehension</em>.</li>
-<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.counter()</code> could be a substitute if the default value is $0$. </li>
+<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.counter()</code> could be a substitute if the default value is <span class="math inline">\(0\)</span>.</li>
 <li>Use <code>zip()</code> to make two lists into one with tuple: a, b -&gt; (a,b) with len(a)/len(b). <strong>Note</strong>: need to convert to list manually in Python 3.</li>
 <li></li>
 </ul>
-<h4 id="Possible-Mistakes"><a href="#Possible-Mistakes" class="headerlink" title="Possible Mistakes"></a>Possible Mistakes</h4><ul>
+<h4 id="possible-mistakes">Possible Mistakes</h4>
+<ul>
 <li><code>list.append()</code> will only return <strong>None</strong>, which indicates it has successfully complete the process. Use <code>list</code> to get to the changes.</li>
 <li>Things like a <code>range(0,n)</code> do NOT include n but do include 0.</li>
 <li>If let <code>a = b</code> where a,b are both lists, when you change a it will affect b too. Try <code>copy.deepcopy</code>(needs import) or <code>new = old[:]</code>.</li>
 </ul>
-<h4 id="Other-in-Doc"><a href="#Other-in-Doc" class="headerlink" title="Other in Doc"></a>Other in Doc</h4><ul>
+<h4 id="other-in-doc">Other in Doc</h4>
+<ul>
 <li>The time complexity for <code>sort()</code> is O(nlogn).</li>
 </ul>
-<h4 id="Differences-Between-Python-2-and-3"><a href="#Differences-Between-Python-2-and-3" class="headerlink" title="Differences Between Python 2 and 3"></a>Differences Between Python 2 and 3</h4><ul>
-<li>Calculation of integer is different. In python 2, sometimes need to use “2.0” instead of “2” to get correct answers.</li>
+<h4 id="differences-between-python-2-and-3">Differences Between Python 2 and 3</h4>
+<ul>
+<li>Calculation of integer is different. In python 2, sometimes need to use "2.0" instead of "2" to get correct answers.</li>
 <li>Print, of course.</li>
 </ul>
 <hr>
-<h3 id="Useful-Packages"><a href="#Useful-Packages" class="headerlink" title="Useful Packages"></a>Useful Packages</h3><h4 id="Package-List"><a href="#Package-List" class="headerlink" title="Package List"></a>Package List</h4><ul>
-<li>Default packages: csv, math, re, …</li>
-<li>*”nltk”* is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li>
-<li>The famous *”sklearn”*.</li>
+<h3 id="useful-packages">Useful Packages</h3>
+<h4 id="package-list">Package List</h4>
+<ul>
+<li>Default packages: csv, math, re, ...</li>
+<li><em>"nltk"</em> is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li>
+<li>The famous <em>"sklearn"</em>.</li>
 </ul>
-<h4 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h4><ul>
+<h4 id="pandas">Pandas</h4>
+<ul>
 <li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling.</li>
 <li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li>
 <li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li>
-<li><code>pandas.read_csv()</code> is good for loading a data file. The “csv” could be replaced with other type of file.</li>
-<li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>. </li>
+<li><code>pandas.read_csv()</code> is good for loading a data file. The "csv" could be replaced with other type of file.</li>
+<li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>.</li>
 </ul>
-<h4 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h4><ul>
+<h4 id="numpy">Numpy</h4>
+<ul>
 <li>Use <code>np.zeros()</code> to create a n-d array with zeros as initial values.</li>
-<li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can’t use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
+<li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can't use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -706,12 +718,12 @@ int() returns">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
-                    </a>
-                    
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                     <a href="/tags/research/" target="_blank">
@@ -873,7 +885,7 @@ int() returns">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">7.5k</span>&nbsp;
+                class="white-color">7.6k</span>&nbsp;
             
             
             

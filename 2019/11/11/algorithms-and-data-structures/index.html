@@ -5,8 +5,11 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Algorithms and Data Structures, FadingWinds">
-    <meta name="description" content="Theories and MethodsDynamic ProgrammingSituationA duplicate process, overlapping subproblems
-Recursion in brute force, o">
+    <meta name="description" content="Theories and Methods
+Dynamic Programming
+Situation
+A duplicate process, overlapping subproblems
+Recursion in brute force">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -409,20 +412,20 @@ Recursion in brute force, o">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/notes/" target="_blank">
-                                <span class="chip bg-color">notes</span>
-                            </a>
-                        
-                            <a href="/tags/CT-courses/" target="_blank">
-                                <span class="chip bg-color">CT courses</span>
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                             <a href="/tags/updating/" target="_blank">
                                 <span class="chip bg-color">updating</span>
                             </a>
                         
-                            <a href="/tags/Python/" target="_blank">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/CT-courses/" target="_blank">
+                                <span class="chip bg-color">CT courses</span>
+                            </a>
+                        
+                            <a href="/tags/notes/" target="_blank">
+                                <span class="chip bg-color">notes</span>
                             </a>
                         
                             <a href="/tags/Leetcode/" target="_blank">
@@ -456,7 +459,7 @@ Recursion in brute force, o">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        212
+                        219
                     </div>
                     
 
@@ -479,22 +482,33 @@ Recursion in brute force, o">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Theories-and-Methods"><a href="#Theories-and-Methods" class="headerlink" title="Theories and Methods"></a>Theories and Methods</h2><h3 id="Dynamic-Programming"><a href="#Dynamic-Programming" class="headerlink" title="Dynamic Programming"></a>Dynamic Programming</h3><h4 id="Situation"><a href="#Situation" class="headerlink" title="Situation"></a>Situation</h4><p>A duplicate process, overlapping subproblems</p>
+                <h2 id="theories-and-methods">Theories and Methods</h2>
+<h3 id="dynamic-programming">Dynamic Programming</h3>
+<h4 id="situation">Situation</h4>
+<p>A duplicate process, overlapping subproblems</p>
 <p>Recursion in brute force, optimal substructure</p>
-<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><ul>
+<h4 id="methods">Methods</h4>
+<ul>
 <li>Memorization</li>
 <li>Table filling</li>
 </ul>
-<h3 id="Other-Frequently-Encountered-Skills"><a href="#Other-Frequently-Encountered-Skills" class="headerlink" title="Other Frequently Encountered Skills"></a>Other Frequently Encountered Skills</h3><h4 id="“Walker”-and-“runner”-Solution"><a href="#“Walker”-and-“runner”-Solution" class="headerlink" title="“Walker” and “runner” Solution"></a>“Walker” and “runner” Solution</h4><p>The former move one step every time while the latter move two. Use to detect cycles.</p>
-<h4 id="Prefix-Sums"><a href="#Prefix-Sums" class="headerlink" title="Prefix Sums"></a>Prefix Sums</h4><p>A new array in which <code>new[i] = sum(old[:i])</code>. Take O(n) to construct, but can make it constant time for the following operations.</p>
-<p>e.g. Find subarrays of $k$ elements that has average value more than $t$.</p>
-<h2 id="Examples-of-Problem-Solution"><a href="#Examples-of-Problem-Solution" class="headerlink" title="Examples of Problem/Solution"></a>Examples of Problem/Solution</h2><ul>
-<li>Find the $N^{th}$ fibonacci number. [Dynamic Programming]</li>
-<li>Given two strings s and t, find the longest subsequence (same order but can skip some letters) common to both strings. [Dynamic Programming]</li>
-<li>Given array $a$ containing integers $[x_1, …, x_n]$, find integers $i, j$ such that $1 ≤ i ≤ j ≤ n$ and $\Sigma^{j}_{i}a$ is maximal. [Dynamic Programming]</li>
+<h3 id="other-frequently-encountered-skills">Other Frequently Encountered Skills</h3>
+<h4 id="walker-and-runner-solution">"Walker" and "runner" Solution</h4>
+<p>The former move one step every time while the latter move two. Use to detect cycles.</p>
+<h4 id="prefix-sums">Prefix Sums</h4>
+<p>A new array in which <code>new[i] = sum(old[:i])</code>. Take O(n) to construct, but can make it constant time for the following operations.</p>
+<p>e.g. Find subarrays of <span class="math inline">\(k\)</span> elements that has average value more than <span class="math inline">\(t\)</span>.</p>
+<h2 id="examples-of-problemsolution">Examples of Problem/Solution</h2>
+<ul>
+<li>Find the <span class="math inline">\(N^{th}\)</span> fibonacci number. <a href="#dynamic-programming">Dynamic Programming</a></li>
+<li>Given two strings s and t, find the longest subsequence (same order but can skip some letters) common to both strings. <a href="#dynamic-programming">Dynamic Programming</a></li>
+<li>Given array <span class="math inline">\(a\)</span> containing integers <span class="math inline">\([x_1, …, x_n]\)</span>, find integers <span class="math inline">\(i, j\)</span> such that <span class="math inline">\(1 ≤ i ≤ j ≤ n\)</span> and <span class="math inline">\(\Sigma^{j}_{i}a\)</span> is maximal. <a href="#dynamic-programming">Dynamic Programming</a></li>
 </ul>
-<h2 id="Application-Reflex"><a href="#Application-Reflex" class="headerlink" title="Application Reflex"></a>Application Reflex</h2><h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul>
-<li>Usually recursion takes more space and runs faster, while the “for” loop is the opposite.</li>
+<h2 id="application-reflex">Application Reflex</h2>
+<h2 id="others">Others</h2>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Usually recursion takes more space and runs faster, while the "for" loop is the opposite.</li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -648,12 +662,12 @@ Recursion in brute force, o">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
-                    </a>
-                    
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                     <a href="/tags/UI/" target="_blank">
@@ -705,12 +719,12 @@ Recursion in brute force, o">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
-                    </a>
-                    
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                     <a href="/tags/UX/" target="_blank">
@@ -879,7 +893,7 @@ Recursion in brute force, o">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">7.5k</span>&nbsp;
+                class="white-color">7.6k</span>&nbsp;
             
             
             
