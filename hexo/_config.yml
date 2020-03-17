@@ -113,13 +113,11 @@ pandoc:
   mathEngine: katex
 
 math:
-  engine:  'katex' # or 'mathjax'
-  mathjax:
-    src: custom_mathjax_source
-    config:
-      # MathJax config
+  engine: katex
   katex:
-    css: custom_css_source
-    js: custom_js_source # not used
+    css: https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css
+    js: https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js
     config:
       # KaTeX config
+      throwOnError: false
+      errorColor: "#FFA500"
