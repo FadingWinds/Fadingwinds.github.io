@@ -112,3 +112,8 @@ permalink_pinyin:
 pandoc:
   mathEngine: katex
 
+katex:
+  css: true
+  macros:
+    "\\foo": "\\mathrm{foo}"
+    "\\set": "\\left\\{ #1 \\right\\}"
