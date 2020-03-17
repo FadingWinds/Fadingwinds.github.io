@@ -3,11 +3,10 @@
 
 
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Anaconda+VS Code+多版本Python的&#34;Unable to Import&#34;问题解决方案, FadingWinds">
-    <meta name="description" content="问题描述
-Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过conda create --name py3 python=3.6命令安装了Python 3.6版本。
-这样可以在两个版本之间任意切换。以VS C">
+    <meta name="description" content="&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;
+Win10&amp;#x7CFB;&amp;#x7EDF;&amp;#xFF0C;&amp;#x501F;&amp;#x52A9;Anaconda2&amp;#x5B89;&amp;#x88C5;&amp;#x4E86;Python&amp;#x">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,13 +28,13 @@ Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过con
         
     </style>
 
-    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 <body>
 
-<header class="navbar-fixed">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -449,14 +448,14 @@ Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过con
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        447
+                        504
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        1 Min
+                        3 Min
                     </div>
                     
                 
@@ -472,17 +471,17 @@ Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过con
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="问题描述">问题描述</h4>
-<p>Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过<code>conda create --name py3 python=3.6</code>命令安装了Python 3.6版本。</p>
-<p>这样可以在两个版本之间任意切换。以VS Code为例，只需使用<code>Ctrl + Shift + P</code> -&gt; <code>Python: Select Interpreter</code>即可。</p>
-<p>但在使用过程中遇到了问题，尽管Anaconda已经安装了绝大部分常用库，如果在VS Code使用Python 3.6版本，pylint会对诸如<code>import numpy</code>的命令进行报错，提示没有这个库（具体提示信息记不清了）。如果这时进行<code>pip install numpy</code>，又会提示已经有这个库了。切换回Python 2.7则一切正常。</p>
-<h4 id="解决办法">解决办法</h4>
-<p>这个的原因在于pylint只搜索默认的路径。解决办法是打开<code>settings.json</code>（或在设置里搜索<code>python.autoComplete.extraPaths</code>），如果已经有<code>python.autoComplete.extraPaths</code>这一项，则在其中加入库所在的路径，如果没有则加入类似以下代码： </p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"python.autoComplete.extraPaths": [</span><br><span class="line">        "D:\\Special\\Anaconda2\\Lib",</span><br><span class="line">        "D:\\Special\\Anaconda2\\Library",</span><br><span class="line">        "D:\\Special\\Anaconda2\\libs",</span><br><span class="line">        "D:\\special\\Anaconda2\\Lib\\site-packages\\numpy"</span><br><span class="line">    ],</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>把其中的具体路径替换成自己的本地路径即可。实际应该只加入Lib文件夹路径就够了。如果是其他外部库，途径类似（Ref中的例子是google-cloud-sdk的库）。</p>
-<p><strong>注意</strong>：更改完毕设置后，需要重启电脑才能生效，只重启VS Code似乎不行。</p>
+                <h4 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;">&#x95EE;&#x9898;&#x63CF;&#x8FF0;</h4>
+<p>Win10&#x7CFB;&#x7EDF;&#xFF0C;&#x501F;&#x52A9;Anaconda2&#x5B89;&#x88C5;&#x4E86;Python&#xFF08;2.7&#x7248;&#x672C;&#xFF09;&#xFF0C;&#x540C;&#x65F6;&#x53C8;&#x901A;&#x8FC7;<code>conda create --name py3 python=3.6</code>&#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x4E86;Python 3.6&#x7248;&#x672C;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5728;&#x4E24;&#x4E2A;&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x4EFB;&#x610F;&#x5207;&#x6362;&#x3002;&#x4EE5;VS Code&#x4E3A;&#x4F8B;&#xFF0C;&#x53EA;&#x9700;&#x4F7F;&#x7528;<code>Ctrl + Shift + P</code> -&gt; <code>Python: Select Interpreter</code>&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x4F46;&#x5728;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x4E86;&#x95EE;&#x9898;&#xFF0C;&#x5C3D;&#x7BA1;Anaconda&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x5E38;&#x7528;&#x5E93;&#xFF0C;&#x5982;&#x679C;&#x5728;VS Code&#x4F7F;&#x7528;Python 3.6&#x7248;&#x672C;&#xFF0C;pylint&#x4F1A;&#x5BF9;&#x8BF8;&#x5982;<code>import numpy</code>&#x7684;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x62A5;&#x9519;&#xFF0C;&#x63D0;&#x793A;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x5E93;&#xFF08;&#x5177;&#x4F53;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x8BB0;&#x4E0D;&#x6E05;&#x4E86;&#xFF09;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x65F6;&#x8FDB;&#x884C;<code>pip install numpy</code>&#xFF0C;&#x53C8;&#x4F1A;&#x63D0;&#x793A;&#x5DF2;&#x7ECF;&#x6709;&#x8FD9;&#x4E2A;&#x5E93;&#x4E86;&#x3002;&#x5207;&#x6362;&#x56DE;Python 2.7&#x5219;&#x4E00;&#x5207;&#x6B63;&#x5E38;&#x3002;</p>
+<h4 id="&#x89E3;&#x51B3;&#x529E;&#x6CD5;">&#x89E3;&#x51B3;&#x529E;&#x6CD5;</h4>
+<p>&#x8FD9;&#x4E2A;&#x7684;&#x539F;&#x56E0;&#x5728;&#x4E8E;pylint&#x53EA;&#x641C;&#x7D22;&#x9ED8;&#x8BA4;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x662F;&#x6253;&#x5F00;<code>settings.json</code>&#xFF08;&#x6216;&#x5728;&#x8BBE;&#x7F6E;&#x91CC;&#x641C;&#x7D22;<code>python.autoComplete.extraPaths</code>&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x6709;<code>python.autoComplete.extraPaths</code>&#x8FD9;&#x4E00;&#x9879;&#xFF0C;&#x5219;&#x5728;&#x5176;&#x4E2D;&#x52A0;&#x5165;&#x5E93;&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5219;&#x52A0;&#x5165;&#x7C7B;&#x4F3C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A; </p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;python.autoComplete.extraPaths&quot;: [</span><br><span class="line">        &quot;D:\\Special\\Anaconda2\\Lib&quot;,</span><br><span class="line">        &quot;D:\\Special\\Anaconda2\\Library&quot;,</span><br><span class="line">        &quot;D:\\Special\\Anaconda2\\libs&quot;,</span><br><span class="line">        &quot;D:\\special\\Anaconda2\\Lib\\site-packages\\numpy&quot;</span><br><span class="line">    ],</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>&#x628A;&#x5176;&#x4E2D;&#x7684;&#x5177;&#x4F53;&#x8DEF;&#x5F84;&#x66FF;&#x6362;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x672C;&#x5730;&#x8DEF;&#x5F84;&#x5373;&#x53EF;&#x3002;&#x5B9E;&#x9645;&#x5E94;&#x8BE5;&#x53EA;&#x52A0;&#x5165;Lib&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;&#x5C31;&#x591F;&#x4E86;&#x3002;&#x5982;&#x679C;&#x662F;&#x5176;&#x4ED6;&#x5916;&#x90E8;&#x5E93;&#xFF0C;&#x9014;&#x5F84;&#x7C7B;&#x4F3C;&#xFF08;Ref&#x4E2D;&#x7684;&#x4F8B;&#x5B50;&#x662F;google-cloud-sdk&#x7684;&#x5E93;&#xFF09;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x66F4;&#x6539;&#x5B8C;&#x6BD5;&#x8BBE;&#x7F6E;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x542F;&#x7535;&#x8111;&#x624D;&#x80FD;&#x751F;&#x6548;&#xFF0C;&#x53EA;&#x91CD;&#x542F;VS Code&#x4F3C;&#x4E4E;&#x4E0D;&#x884C;&#x3002;</p>
 <hr>
-<p>更新：</p>
-<p>在某一次装了另一个版本的Python后不久，这个方法莫名失效了……<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">😒</span><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">😒</span><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">😒</span></p>
+<p>&#x66F4;&#x65B0;&#xFF1A;</p>
+<p>&#x5728;&#x67D0;&#x4E00;&#x6B21;&#x88C5;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x7684;Python&#x540E;&#x4E0D;&#x4E45;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x83AB;&#x540D;&#x5931;&#x6548;&#x4E86;&#x2026;&#x2026;<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">&#x1F612;</span><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">&#x1F612;</span><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f612.png?v8">&#x1F612;</span></p>
 <hr>
 <p><em>Ref</em>:</p>
 <p>https://stackoverflow.com/questions/43574995/visual-studio-code-pylint-unable-to-import-protorpc</p>
@@ -700,12 +699,12 @@ Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过con
                         <span class="chip bg-color">updating</span>
                     </a>
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
-                    </a>
-                    
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                 </div>
@@ -863,7 +862,7 @@ Win10系统，借助Anaconda2安装了Python（2.7版本），同时又通过con
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">7.6k</span>&nbsp;
+                class="white-color">8.4k</span>&nbsp;
             
             
             
@@ -982,7 +981,7 @@ $(function () {
     <script src="/libs/others/clicklove.js"></script>
 
 
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 </body>

@@ -3,13 +3,13 @@
 
 
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Becoming Pythonic, FadingWinds">
-    <meta name="description" content="Note: This post doesn&#39;t include detailed theories. For those, please refer to other posts.
+    <meta name="description" content="Note: This post doesn&amp;apos;t include detailed theories. For those, please refer to other posts.
 Built-in
 Grammar
 
-int() retur">
+int() ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -31,13 +31,13 @@ int() retur">
         
     </style>
 
-    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 <body>
 
-<header class="navbar-fixed">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -412,16 +412,16 @@ int() retur">
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
                             <a href="/tags/updating/" target="_blank">
                                 <span class="chip bg-color">updating</span>
                             </a>
                         
                             <a href="/tags/notes/" target="_blank">
                                 <span class="chip bg-color">notes</span>
-                            </a>
-                        
-                            <a href="/tags/Python/" target="_blank">
-                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -451,7 +451,7 @@ int() retur">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        450
+                        463
                     </div>
                     
 
@@ -474,7 +474,7 @@ int() retur">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><em>Note: This post doesn't include detailed theories. For those, please refer to other posts.</em></p>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous"><p><em>Note: This post doesn&apos;t include detailed theories. For those, please refer to other posts.</em></p>
 <h3 id="built-in">Built-in</h3>
 <h4 id="grammar">Grammar</h4>
 <ul>
@@ -484,7 +484,7 @@ int() retur">
 <h4 id="easy-ways">Easy Ways</h4>
 <ul>
 <li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating. And this is called <em>list comprehension</em>.</li>
-<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.counter()</code> could be a substitute if the default value is <span class="math inline">\(0\)</span>.</li>
+<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.counter()</code> could be a substitute if the default value is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>.</li>
 <li>Use <code>zip()</code> to make two lists into one with tuple: a, b -&gt; (a,b) with len(a)/len(b). <strong>Note</strong>: need to convert to list manually in Python 3.</li>
 <li></li>
 </ul>
@@ -500,7 +500,7 @@ int() retur">
 </ul>
 <h4 id="differences-between-python-2-and-3">Differences Between Python 2 and 3</h4>
 <ul>
-<li>Calculation of integer is different. In python 2, sometimes need to use "2.0" instead of "2" to get correct answers.</li>
+<li>Calculation of integer is different. In python 2, sometimes need to use &quot;2.0&quot; instead of &quot;2&quot; to get correct answers.</li>
 <li>Print, of course.</li>
 </ul>
 <hr>
@@ -508,21 +508,21 @@ int() retur">
 <h4 id="package-list">Package List</h4>
 <ul>
 <li>Default packages: csv, math, re, ...</li>
-<li><em>"nltk"</em> is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li>
-<li>The famous <em>"sklearn"</em>.</li>
+<li><em>&quot;nltk&quot;</em> is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs &#x2192; run).</li>
+<li>The famous <em>&quot;sklearn&quot;</em>.</li>
 </ul>
 <h4 id="pandas">Pandas</h4>
 <ul>
 <li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling.</li>
 <li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li>
 <li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li>
-<li><code>pandas.read_csv()</code> is good for loading a data file. The "csv" could be replaced with other type of file.</li>
+<li><code>pandas.read_csv()</code> is good for loading a data file. The &quot;csv&quot; could be replaced with other type of file.</li>
 <li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>.</li>
 </ul>
 <h4 id="numpy">Numpy</h4>
 <ul>
 <li>Use <code>np.zeros()</code> to create a n-d array with zeros as initial values.</li>
-<li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can't use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
+<li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can&apos;t use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -653,9 +653,7 @@ int() retur">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            凌晨五点钟是Queensborough大桥桥架上的灯光准时熄灭的时间。
-——这是我在今天知道的新信息。我甚至还为此发布了一条朋友圈，仿佛一个困扰许久的谜题得到了解答，而我在把它公诸于世。
-实际上也并不是没有这么说的道理。在许多个夜晚，我在黑
+                            &#x51CC;&#x6668;&#x4E94;&#x70B9;&#x949F;&#x662F;Queensborough&#x5927;&#x6865;&#x6865;&#x67B6;&#x4E0A;&#x7684;&#x706F;&#x
                         
                     </div>
                     <div class="publish-info">
@@ -718,12 +716,12 @@ int() retur">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
-                    </a>
-                    
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
+                    </a>
+                    
+                    <a href="/tags/notes/" target="_blank">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                     <a href="/tags/research/" target="_blank">
@@ -885,7 +883,7 @@ int() retur">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">7.6k</span>&nbsp;
+                class="white-color">8.4k</span>&nbsp;
             
             
             
@@ -1004,7 +1002,7 @@ $(function () {
     <script src="/libs/others/clicklove.js"></script>
 
 
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 </body>
