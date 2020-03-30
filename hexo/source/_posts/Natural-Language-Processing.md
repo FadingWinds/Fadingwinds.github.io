@@ -14,6 +14,8 @@ hidden:
 password:
 ---
 
+[TOC]
+
 ## Overview
 
 Three type of models:
@@ -50,7 +52,10 @@ End systems that we want to build:
 
 ### Meta NLP
 
-This section is about steps to conduct a NLP research.
+<details>
+<summary>
+This section is about steps to conduct a NLP research. Unfold to see details.
+</summary>
 
 #### Literature review: should be done early
 
@@ -183,8 +188,55 @@ In model’s labeling of similar test data, women are detected in cooking scenes
 - Who (country, region, gender, native language, etc.) produced the text and labels in your dataset
 - Any known biases in your dataset (including the obvious ones)
 
+</details>
 
+### Computation Graphs
 
+Computation graphs are the descriptive language of deep learning models.
+
+Functional description of the required computation.
+
+Can be instantiated to do two types of computation: forward and backward computation.
+
+#### Structure
+
+- A *node* is a {tensor, matrix, vector, scalar} value
+- An *edge* represents a function argument (and also data dependency).
+- A node with an incoming edge is a *function* of that edge’s tail node.
+- A node knows how to compute its value and the value of its derivative w.r.t each argument (edge) times a derivative of an arbitrary input $\frac{dF}{df(u)}$.
+
+#### Algorithms
+
+**Forward propagation**
+
+- Loop over nodes in topological order
+- Compute the value of the node given its inputs
+- Given my inputs, make a prediction (or compute an "error" with respect to a "target output")
+
+**Backward propagation**
+
+- Loop over the nodes in reverse topological order starting with a final goal node
+- Compute derivatives of final goal node value with respect to each edge’s tail node
+- How does the output change if I make a small change to the inputs?
+
+**Static declaration**
+
+- Phase 1: define an architecture (maybe with some primitive flow control like loops and conditionals)
+- Phase 2: run a bunch of data through it to train the model and/or make predictions
+
+**Dynamic declaration**
+
+- Graph is defined implicitly (e.g., using operator overloading) as the forward computation is executed
+
+**Batching**
+
+- Packing a few examples together has significant computational benefits
+- CPU is helpful, but with GPU you get to use all the GPU cores, which is world changing. 
+- Easy with simple networks, but gets harder as the architecture becomes more complex
+
+  - Complex networks may include different parts with varying length
+  - It is very hard to batch complete examples this way
+  - But you can still batch sub-parts across examples, so you alternate between batched and non-batched computations
 
 
 ## Text Classification
@@ -208,6 +260,8 @@ Learning from annotated data problem:
 *Always think about the data, and how much of it your model needs (even better: think of the data first, model second).*
 
 **Training data, development data and held-out data**: an important tool for estimating generalization is train on one set, evaluate during development on another, and use test data only once.
+
+\* My understanding of dev vs. test: dev data is the one that you have correct labels to, while test data is like real new data coming in.
 
 **Main ideas of text classification**:
 
@@ -368,5 +422,307 @@ rises, then falls (overtraining is a kind of overfitting)
 
 ### Neural Networks
 
-***Representation Learning***
+#### Two types of machine learning
 
+***Representation Learning*** attempts to automatically learn good features and representations.
+
+***Deep Learning*** attempts to learn multiple levels of representation of increasing complexity/abstraction.
+
+#### Parameters
+
+- Weights: $w$ and  $b$
+- Activation function (If dropped and single neuron, becomes perceptron)
+- Hidden layer numbers and neuron numbers
+
+#### Process
+
+Neural net -> several MaxEnt models
+
+Hidden layer figures out what to do by *learning*.
+
+Training:
+
+- Without hidden layer: supervised, just like MaxEnt
+- With hidden layer: latent units -> not convex; back propagate the gradient, about the same but no guarantee
+  
+#### Probabilistic Output from Neural Nets
+
+Normalize the output activations with ***softmax***:
+
+$$
+y = softmax(o) \\
+softmax(o_i) = \frac{exp(o_i)}{\Sigma^k_{j=1}exp(o_j)}
+$$
+
+\* $o$ is the output layer.
+
+Usually no non-linearity before softmax.
+
+#### Word Embeddings
+
+Representing words with **one-hot** vectors.
+
+<details>
+<summary>Dimensionality (unfold)</summary>
+
+- Size of vocabulary
+- 20K for speech
+- 500K for broad-converage domains
+- 13M for Google corpora
+
+</details>
+
+The word embeddings should represent each word with a *dense low-dimensional vector*.
+
+Low-dimensional << vocabulary size
+
+If trained well, similar words will have similar vectors.
+
+Word embeddings as features, e.g. sentiment classification.
+
+Feature based models: bag of words
+
+<details>
+<summary>Practical Tips (unfold)</summary>
+- Select network structure appropriate for the problem, e.g. window vs. recurrent vs. recursive
+- Gradient checks to identify bugs
+- Parameter initialization
+- If model isn't powerful enough, make it larger; else regularize to avoid overfitting
+- Know your non-linearity function and its gradient 
+</details>
+
+**Debugging**
+
+- Verify value of initial loss when using softmax.
+- Perfectly fit a single mini-batch.
+- If learning fails completely, maybe gradients stuck.
+
+  - Check learning rate
+  - Verify parameter initialization
+  - Change non-linearity functions
+
+**Avoid overfitting**
+
+- Reduce model size a little
+- L1 and L2 regularization
+- Early stopping
+- Dropout
+
+Word embeddings vs. sparse vectors:
+
+- Count vectors: sparse and large
+- Embedded vectors: small dense
+- More contested advantage other than dimensionality: better generalization
+
+## Lexical Semantics
+
+### Word Sense Disambiguation (WSD)
+
+**Lemma (citation form)**: Basic part of the word, same stem, rough semantics. One lemma can have many meanings.
+
+**Wordform**: The "inflected" word as it appears in text.
+
+<details>
+<summary>Examples (click to unfold)</summary>
+
+Wordform: banks, sung
+
+Lemma: bank, sing
+
+</details>
+
+**Sense (word sense)**: A discrete representation of an aspect of a word’s meaning.
+
+**Homonyms**: Words that share a form but have unrelated, distinct meanings.
+
+- Homographs: bank/bank
+- Homophones: write/right
+
+Homonyms in NLP: Information retrieval, machine translation, text-to-speech
+
+**Synonyms**: Different words that have same meanings in some or all contexts.
+
+- Very few examples for perfect synonyms
+
+**Antonyms**: Senses that are opposites with respect to one feature of meaning.
+
+**Hyponymy and Hypernymy**: One sense is a hyponym/subordinate of another if the first sense is more specific, denoting a subclass of the other; On the contrary, the other will be hypernym/superordinate.
+
+<details>
+<summary>Examples (click to unfold)</summary>
+- Car is a hyponym of vehicle
+- Fruit is a hypernym of mango
+</details>
+
+#### Wordnet
+
+A hierarchically organized lexical database.
+
+- Each word in WordNet has at least one sense
+- Each sense has a gloss (textual description)
+- The synset (synonym set), the set of near-synonyms, is a set of senses with a shared gloss
+
+<details>
+<summary>Example (click to unfold)</summary>
+
+Chump as a noun with the gloss: "a person who is gullible and easy to take advantage of"
+
+This sense of "chump" is shared with 9 words: chump1, fool2, gull1, mark9, patsy1, fall guy1, sucker1, soft touch1, mug2
+
+All these senses have the same gloss -> they form a synset
+</details>
+
+#### Supervised WSD
+
+Given a lexicon (e.g., WordNet) and a word in a sentence, the goal is to classify the sense of the word.
+
+Linear model:
+
+$$
+p(sense | word, context) \propto e^{\theta *\phi(sense, word, context)}\\
+p(sense | word, context) \frac{e^{\theta *\phi(sense, word, context)}}{\Sigma_{s'}e^{\theta *\phi(s', word, context)}} \\
+$$
+
+#### Unsupervised WSD
+
+Goal: induce the senses of each word and classify in context
+
+1. For each word in context, compute some features
+2. Cluster each instance using a clustering algorithm
+3. Cluster labels are word senses
+
+### Semantic role labeling (SRL)
+
+- Some word senses (a.k.a. predicates) represent events
+- Events have participants that have specific roles (as arguments)
+- Predicate-argument structure at the type level can be stored in a lexicon
+
+#### PropBank
+
+A semantic role lexicon.
+
+run.01 (operate) ---- Frame
+
+- ARG0 (operator) 
+- ARG1 (machine/operation)
+- ARG2 (employer)
+- ARG3 (co-worker)
+- ARG4 (instrument)
+----Semantic roles
+
+\*FrameNet, an alternative role lexicon
+
+Task for semantic role labeling: given a sentence, disambiguate predicate frames and annotate semantic roles
+
+#### Role Identification
+
+Classification models similar to WSD
+
+Sentence spans -> potential roles
+
+Score can come from any classifier (linear, SVM, NN)
+
+#### Word Similarity
+
+Given two words, predict how similar they are.
+
+The Distributional Hypothesis: You shall know a word by the company it keeps.
+
+Given a vocabulary of $n$ words, represent a word $w$ as: $w =(f_1, f_2, f_3, ..., f_n)$
+
+$f_i$: Binary (or count) features indicating the presence of the $i^{th}$ word in the vocabulary in the word’s context
+
+Similarity can be measured using vector distance metrics. e.g. cosine similarity, gives values between -1 (completely different), 0 (orthogonal), and 1 (the same).
+
+**Vector-space Models**
+
+- Words represented by vectors
+- In contrast to the discrete class representation of word senses
+- Common methods (and packages): Word2Vec, GloVe
+
+#### Word2Vec
+
+- Method (and open-source package) for learning word vectors from raw text
+- Widely used across academia/industry
+- Goal: good word embeddings, aka. embeddings are vectors in a low dimensional space; similar words should be close to one another
+- Two models: skip-gram, CBOW
+
+#### Skip-Gram Model
+
+Given: corpus $D$ of pairs $(w, c)$ where $w$ is a word and $c$ is context.
+
+Context may be a single neighboring word (in window of size $k$).
+Consider the parameterized probability $p(c|w;\theta)$.
+
+Goal: maximize the corpus probability:
+
+$argmax_{\theta} \Pi_{(w,c)\in D}p(c|w;\theta)$
+
+The important thing is **how we parametrize the probability distribution**.
+
+If $d$ is the dimensionality of the vectors, we have $d \times |V| + d \times |C|$ parameters.
+
+The log of the objective sums over all context is **not tractable in practice**. It can be approximated with ***negative sampling***.
+
+Negative sampling for skip-gram:
+
+- Efficient way of deriving word embeddings
+- Consider a word-context pair $(w,c)$, the probability that it was not observed is $1-p(D=1|w,c)$.
+- Parameterization: $p(D=1|w,c)=\frac{1}{1+e^{-v_cv_w}}$
+- New learning objective： $argmax_\theta\Pi_{(w,c)\in D}p(D=1|w,c)\Pi_{(w,c)\in D'}p(D=0|w,c)$
+- For a given $k$, the size of $D'$ is $k$ times bigger than $D$
+- Each context c is a word
+- For each observed word-context pair, $k$ samples are generated based on unigram distribution
+
+Intuition for skip-gram model: **words that share many contexts will be similar**.
+
+## Language Model
+
+### Problem Overview
+
+**Setup**: assume a (finite) vocabulary of words $V=\{ the, a, man, telescope, Beckham, two, Madrid,...\}$, We can construct an (infinite) set of strings
+
+**Data**: given a training set of example sentences
+
+**Problem**: estimate a probability distribution over sentences
+
+*Why would we ever want to do this?*
+
+Answer: (Automatic) Speech Recognition (ASR): audio in, text out
+
+<details>
+  <summary>Click to unfold and see some funny examples</summary>
+  Wreck a nice beach? -- Recognize speech
+
+  Eye eight uh Jerry? -- I ate a cherry
+</details> 
+
+#### Learning language models
+
+**Goal**: 
+
+### Models
+
+#### The Noisy Channel Model
+
+Goal: predict sentence given acoustics
+
+$$
+w^* = argmax_XP(X|a)
+= argmax_XP(a|X)P(X)
+$$
+
+- Language model: Distributions over sequences of words (sentences) -- $P(X)$
+- Acoustic model: Distributions over acoustic waves given a sentence -- $P(a|X)$
+
+ASR Noisy Channel System:
+
+Language Model: source $P(X)$ -> $X$ -> Acoustic Model: channel $P(a|X)$ -> $a$
+
+observed $a$ -> decoder (LM&AM) -> best $X$
+
+Other systems with similar structure: *MT Noisy Channel System (translation)*, *Caption Generation Noisy Channel System*
+
+
+
+### Continuous representations

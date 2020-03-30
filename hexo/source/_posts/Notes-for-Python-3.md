@@ -2,7 +2,7 @@
 title: 'Becoming Pythonic'
 date: 2019-10-29 19:35:33
 author: FadingWinds
-img:
+img: https://od.lk/s/MzBfMjA0OTgxNzJf/Python.jpg
 categories: Coding | 编程
 tags: 
 	- Python
@@ -25,9 +25,9 @@ password:
 #### Easy Ways
 
 - Remember to use lambda for simple functions and use `[x for x in statement if statement]` for iterating. And this is called *list comprehension*.
-- Python has a dictionary `defaultdict()`, it provides default value given by the user. `collections.counter()` could be a substitute if the default value is $0$. 
+- Python has a dictionary `defaultdict()`, it provides default value given by the user. `collections.Counter()` could be a substitute if the default value is $0$. 
 - Use `zip()` to make two lists into one with tuple: a, b -> (a,b) with len(a)/len(b). **Note**: need to convert to list manually in Python 3.
-- 
+- Use `del` and `gc.collect()` to free RAM storage.
 
 #### Possible Mistakes
 
@@ -44,21 +44,18 @@ password:
 - Calculation of integer is different. In python 2, sometimes need to use "2.0" instead of "2" to get correct answers.
 - Print, of course.
 
-
-
 ****
 
 ### Useful Packages
 
-#### Package List
+#### Overall
 
 - Default packages: csv, math, re, ...
-- *"nltk"* is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs → run).
-- The famous *"sklearn"*.
+- **tqdm**: progress bar package. For iPython Notebook, remember to use `tqdm_notebook` instead.
 
 #### Pandas
 
-- Do not iterate through rows of a *pandas* dataframe unless really necessary. Usually, just define a function and use `.apply(func)` instead. No parameter needed when calling.
+- Do not iterate through rows of a *pandas* dataframe unless really necessary. Usually, just define a function and use `.apply(func)` instead. No parameter needed when calling. It will pass either the selected column or the entire row (select column inside the function instead).
 - If want to make changes to an existing *pandas* dataframe, remember to write `inplace = True`.
 - Combine *pandas* dataframes: `pandas.concat()`
 - `pandas.read_csv()` is good for loading a data file. The "csv" could be replaced with other type of file.
@@ -68,4 +65,16 @@ password:
 
 - Use `np.zeros()` to create a n-d array with zeros as initial values.
 - `np.nan != np.nan`! Which means if you assign `np.nan` to some variables, you can't use `==np.nan` to check it. Use `isna()` instead.
+
+#### NLTK
+
+- For natural language processing.
+- Tokenizer to split sentences into words.
+- Lemmatizer to eliminate the effects between different word senses (convert different forms of a word into one, e.g. run, ran, running, runs → run).
+
+#### PyTorch
+
+- If loss is `NaN`, the most possible reason is something's wrong with the data.
+- `cuda()` needs GPU.
+- To convert `cuda()` object to numpy arrays, need to add `.detach().cpu().clone().numpy()`
 

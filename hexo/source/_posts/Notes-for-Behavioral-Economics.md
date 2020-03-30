@@ -13,6 +13,20 @@ top:
 hidden:
 password:
 ---
+### Cognitive Biases
+
+The picture below has done a great work summarizing this topic. 
+
+<br>
+<div align = center><img src = "https://miro.medium.com/max/3072/1*71TzKnr7bzXU_l_pU6DCNA.jpeg" title = "Cognitive Bias Codex"/></div>
+<br>
+
+[TODO]
+
+Some thoughts:
+
+- Will the biases cancel each other under certain circumstances?
+
 #### Making a resolution?
 
 A resolution may be wrong for one of three main reasons:
@@ -50,18 +64,4 @@ To keep up the resolution, other things might help are:
 - Find a group to get some good peer pressure.
 - **Do a "stress test" before it start to know how feasible it is.**
 
-
-#### Cognitive Biases
-
-The picture below has done a great work summarizing this topic. 
-
-<br>
-<div align = center><img src = "https://miro.medium.com/max/3072/1*71TzKnr7bzXU_l_pU6DCNA.jpeg" title = "Cognitive Bias Codex"/></div>
-<br>
-
-Some thoughts:
-
-- Will the biases cancel each other under certain circumstances?
-
-
-
+### Mental Accounting
