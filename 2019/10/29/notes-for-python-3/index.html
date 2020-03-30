@@ -295,7 +295,7 @@ int() ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://od.lk/s/MzBfMjA0OTgxNzJf/Python.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -412,16 +412,16 @@ int() ">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python/" target="_blank">
-                                <span class="chip bg-color">Python</span>
-                            </a>
-                        
                             <a href="/tags/updating/" target="_blank">
                                 <span class="chip bg-color">updating</span>
                             </a>
                         
                             <a href="/tags/notes/" target="_blank">
                                 <span class="chip bg-color">notes</span>
+                            </a>
+                        
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -451,14 +451,14 @@ int() ">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        463
+                        523
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        2 Min
+                        3 Min
                     </div>
                     
                 
@@ -484,9 +484,9 @@ int() ">
 <h4 id="easy-ways">Easy Ways</h4>
 <ul>
 <li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating. And this is called <em>list comprehension</em>.</li>
-<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.counter()</code> could be a substitute if the default value is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>.</li>
+<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.Counter()</code> could be a substitute if the default value is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>.</li>
 <li>Use <code>zip()</code> to make two lists into one with tuple: a, b -&gt; (a,b) with len(a)/len(b). <strong>Note</strong>: need to convert to list manually in Python 3.</li>
-<li></li>
+<li>Use <code>del</code> and <code>gc.collect()</code> to free RAM storage.</li>
 </ul>
 <h4 id="possible-mistakes">Possible Mistakes</h4>
 <ul>
@@ -505,15 +505,14 @@ int() ">
 </ul>
 <hr>
 <h3 id="useful-packages">Useful Packages</h3>
-<h4 id="package-list">Package List</h4>
+<h4 id="overall">Overall</h4>
 <ul>
 <li>Default packages: csv, math, re, ...</li>
-<li><em>&quot;nltk&quot;</em> is a useful package for natural language processing. The functions include tokenize (divide a sentence into words), strip stop words and punctuations, lemmatize (convert different forms of a word into one, e.g. run, ran, running, runs &#x2192; run).</li>
-<li>The famous <em>&quot;sklearn&quot;</em>.</li>
+<li><strong>tqdm</strong>: progress bar package. For iPython Notebook, remember to use <code>tqdm_notebook</code> instead.</li>
 </ul>
 <h4 id="pandas">Pandas</h4>
 <ul>
-<li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling.</li>
+<li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling. It will pass either the selected column or the entire row (select column inside the function instead).</li>
 <li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li>
 <li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li>
 <li><code>pandas.read_csv()</code> is good for loading a data file. The &quot;csv&quot; could be replaced with other type of file.</li>
@@ -523,6 +522,18 @@ int() ">
 <ul>
 <li>Use <code>np.zeros()</code> to create a n-d array with zeros as initial values.</li>
 <li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can&apos;t use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
+</ul>
+<h4 id="nltk">NLTK</h4>
+<ul>
+<li>For natural language processing.</li>
+<li>Tokenizer to split sentences into words.</li>
+<li>Lemmatizer to eliminate the effects between different word senses (convert different forms of a word into one, e.g. run, ran, running, runs &#x2192; run).</li>
+</ul>
+<h4 id="pytorch">PyTorch</h4>
+<ul>
+<li>If loss is <code>NaN</code>, the most possible reason is something&apos;s wrong with the data.</li>
+<li><code>cuda()</code> needs GPU.</li>
+<li>To convert <code>cuda()</code> object to numpy arrays, need to add <code>.detach().cpu().clone().numpy()</code></li>
 </ul>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -716,12 +727,12 @@ int() ">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CT-courses/" target="_blank">
-                        <span class="chip bg-color">CT courses</span>
-                    </a>
-                    
                     <a href="/tags/notes/" target="_blank">
                         <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                    <a href="/tags/CT-courses/" target="_blank">
+                        <span class="chip bg-color">CT courses</span>
                     </a>
                     
                     <a href="/tags/research/" target="_blank">
@@ -883,7 +894,7 @@ int() ">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">8.4k</span>&nbsp;
+                class="white-color">10.4k</span>&nbsp;
             
             
             
