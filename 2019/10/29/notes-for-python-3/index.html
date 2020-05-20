@@ -412,12 +412,12 @@ int() ">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/updating/" target="_blank">
-                                <span class="chip bg-color">updating</span>
-                            </a>
-                        
                             <a href="/tags/notes/" target="_blank">
                                 <span class="chip bg-color">notes</span>
+                            </a>
+                        
+                            <a href="/tags/updating/" target="_blank">
+                                <span class="chip bg-color">updating</span>
                             </a>
                         
                             <a href="/tags/Python/" target="_blank">
@@ -451,7 +451,7 @@ int() ">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        523
+                        549
                     </div>
                     
 
@@ -517,6 +517,7 @@ int() ">
 <li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li>
 <li><code>pandas.read_csv()</code> is good for loading a data file. The &quot;csv&quot; could be replaced with other type of file.</li>
 <li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>.</li>
+<li>Sometimes when reloading an output DataFrame file, by default <em>pandas</em> will <strong>convert lists to strings</strong>. Solution: add parameters: <code>converters={&apos;column_name&apos;: eval}</code> in <code>read_csv()</code> function.</li>
 </ul>
 <h4 id="numpy">Numpy</h4>
 <ul>
@@ -894,7 +895,7 @@ int() ">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">10.4k</span>&nbsp;
+                class="white-color">13.8k</span>&nbsp;
             
             
             
