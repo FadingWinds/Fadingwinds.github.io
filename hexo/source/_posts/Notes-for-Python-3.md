@@ -60,6 +60,7 @@ password:
 - Combine *pandas* dataframes: `pandas.concat()`
 - `pandas.read_csv()` is good for loading a data file. The "csv" could be replaced with other type of file.
 - A *pandas* object could be converted to a numpy array using `to_numpy()`. 
+- Sometimes when reloading an output DataFrame file, by default *pandas* will **convert lists to strings**. Solution: add parameters: `converters={'column_name': eval}` in `read_csv()` function.
 
 #### Numpy
 
@@ -77,4 +78,5 @@ password:
 - If loss is `NaN`, the most possible reason is something's wrong with the data.
 - `cuda()` needs GPU.
 - To convert `cuda()` object to numpy arrays, need to add `.detach().cpu().clone().numpy()`
+
 
