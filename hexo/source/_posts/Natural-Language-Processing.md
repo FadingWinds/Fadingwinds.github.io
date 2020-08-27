@@ -1,6 +1,6 @@
 ---
 title: Natural Language Processing
-date: 2020-02-17 17:39:55
+date: 2020-04-16 17:39:55
 author: FadingWinds
 img:
 categories: Machine Learning | 机器学习
@@ -699,9 +699,36 @@ Answer: (Automatic) Speech Recognition (ASR): audio in, text out
 
 #### Learning language models
 
-**Goal**: 
+**Goal**: Assign useful probabilities $P(X)$ to sentences $X$
+
+*Input*: many observations of training sentences $X$
+
+*Output*: system that can compute $P(X)$
+
+Probabilities should broadly indicate plausibility of sentences, e.g. P("I saw a van") >> P("eyes awe of an")
+
+This is not only about grammar, e.g. P("infected curly chair") =(almost) 0 (yes, I made this one up)
 
 ### Models
+
+Empirical distribution over training sentences...
+
+- Doesn't generalize at all
+- Need to assign non-zero probability to previously unseen sentences
+
+Decompose Probability...
+
+- Assume word choice depends on previous words only
+- Not really better because last word still represents complete event
+
+Markov assumption
+
+- P(english | this is written in)
+- P(english | is written in)
+- P(english | written in)
+- P(english | in)
+- P(english)
+
 
 #### The Noisy Channel Model
 
@@ -723,6 +750,40 @@ observed $a$ -> decoder (LM&AM) -> best $X$
 
 Other systems with similar structure: *MT Noisy Channel System (translation)*, *Caption Generation Noisy Channel System*
 
+#### N-gram Models
+
+**Unigram**
+
+- Generative process: pick a word, pick a word, repeat...until you pick STOP
+- Big **problem**: P(the the the the) >> P(a real sentence)
+
+**Bigram (and more)**
+
+- Generative process: pick start, pick a word conditioned on previous one, repeat until to pick STOP
+- k-gram: conditioning on k-1 previous words
+- Learning: estimate the distribution
+
+***Well-defined Distributions - proof for unigrams***
+
+For all string $X$ (of any length), $P(X) \geq 0$.
+
+Claim: the sum over string of all length is 1: $\Sigma_XP(X)=1$
+
+RNN language models are surprisingly not necessarily well defined distributions.
+
+***Parameters for n-gram models*** 
+
+Maximum likelihood estimate - relative frequency
+
+$$
+q_{ML}(w) = \frac{c(w)}{c()}, q_{ML}(w|v) = \frac{c(v,w)}{c(v)}, q_{ML}(w|u,v) = \frac{c(u,v,w)}{c(u,v)}, ...
+$$
+
+where $c$ is the empirical counts on a training set.
+
+General approach:
+
+- Take a training set $D$ 
 
 
 ### Continuous representations
