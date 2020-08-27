@@ -416,16 +416,16 @@ Th">
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/updating/" target="_blank">
+                                <span class="chip bg-color">updating</span>
+                            </a>
+                        
                             <a href="/tags/notes/" target="_blank">
                                 <span class="chip bg-color">notes</span>
                             </a>
                         
                             <a href="/tags/CT-courses/" target="_blank">
                                 <span class="chip bg-color">CT courses</span>
-                            </a>
-                        
-                            <a href="/tags/updating/" target="_blank">
-                                <span class="chip bg-color">updating</span>
                             </a>
                         
                     </div>
@@ -448,21 +448,21 @@ Th">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-02-17
+                    2020-04-16
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        4.5k
+                        4.9k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        28 Min
+                        30 Min
                     </div>
                     
                 
@@ -993,8 +993,30 @@ p(sense | word, context) \frac{e^{\theta *\phi(sense, word, context)}}{\Sigma_{s
 Eye eight uh Jerry? -- I ate a cherry
 </details>
 <h4 id="learning-language-models">Learning language models</h4>
-<p><strong>Goal</strong>:</p>
+<p><strong>Goal</strong>: Assign useful probabilities <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> to sentences <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span></p>
+<p><em>Input</em>: many observations of training sentences <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span></p>
+<p><em>Output</em>: system that can compute <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span></p>
+<p>Probabilities should broadly indicate plausibility of sentences, e.g. P(&quot;I saw a van&quot;) &gt;&gt; P(&quot;eyes awe of an&quot;)</p>
+<p>This is not only about grammar, e.g. P(&quot;infected curly chair&quot;) =(almost) 0 (yes, I made this one up)</p>
 <h3 id="models">Models</h3>
+<p>Empirical distribution over training sentences...</p>
+<ul>
+<li>Doesn&apos;t generalize at all</li>
+<li>Need to assign non-zero probability to previously unseen sentences</li>
+</ul>
+<p>Decompose Probability...</p>
+<ul>
+<li>Assume word choice depends on previous words only</li>
+<li>Not really better because last word still represents complete event</li>
+</ul>
+<p>Markov assumption</p>
+<ul>
+<li>P(english | this is written in)</li>
+<li>P(english | is written in)</li>
+<li>P(english | written in)</li>
+<li>P(english | in)</li>
+<li>P(english)</li>
+</ul>
 <h4 id="the-noisy-channel-model">The Noisy Channel Model</h4>
 <p>Goal: predict sentence given acoustics</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>w</mi><mo>&#x2217;</mo></msup><mo>=</mo><mi>a</mi><mi>r</mi><mi>g</mi><mi>m</mi><mi>a</mi><msub><mi>x</mi><mi>X</mi></msub><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mi mathvariant="normal">&#x2223;</mi><mi>a</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mi>r</mi><mi>g</mi><mi>m</mi><mi>a</mi><msub><mi>x</mi><mi>X</mi></msub><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">&#x2223;</mi><mi>X</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">
@@ -1009,6 +1031,32 @@ w^* = argmax_XP(X|a)
 <p>Language Model: source <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span> -&gt; Acoustic Model: channel <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">&#x2223;</mi><mi>X</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(a|X)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mord">&#x2223;</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose">)</span></span></span></span> -&gt; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span></p>
 <p>observed <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> -&gt; decoder (LM&amp;AM) -&gt; best <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span></p>
 <p>Other systems with similar structure: <em>MT Noisy Channel System (translation)</em>, <em>Caption Generation Noisy Channel System</em></p>
+<h4 id="n-gram-models">N-gram Models</h4>
+<p><strong>Unigram</strong></p>
+<ul>
+<li>Generative process: pick a word, pick a word, repeat...until you pick STOP</li>
+<li>Big <strong>problem</strong>: P(the the the the) &gt;&gt; P(a real sentence)</li>
+</ul>
+<p><strong>Bigram (and more)</strong></p>
+<ul>
+<li>Generative process: pick start, pick a word conditioned on previous one, repeat until to pick STOP</li>
+<li>k-gram: conditioning on k-1 previous words</li>
+<li>Learning: estimate the distribution</li>
+</ul>
+<p><strong><em>Well-defined Distributions - proof for unigrams</em></strong></p>
+<p>For all string <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span> (of any length), <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo><mo>&#x2265;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">P(X) \geq 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2265;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>.</p>
+<p>Claim: the sum over string of all length is 1: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">&#x3A3;</mi><mi>X</mi></msub><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\Sigma_XP(X)=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">&#x3A3;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
+<p>RNN language models are surprisingly not necessarily well defined distributions.</p>
+<p><strong><em>Parameters for n-gram models</em></strong></p>
+<p>Maximum likelihood estimate - relative frequency</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mrow><mi>M</mi><mi>L</mi></mrow></msub><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mrow><mi>c</mi><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></mfrac><mo separator="true">,</mo><msub><mi>q</mi><mrow><mi>M</mi><mi>L</mi></mrow></msub><mo stretchy="false">(</mo><mi>w</mi><mi mathvariant="normal">&#x2223;</mi><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>v</mi><mo separator="true">,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mfrac><mo separator="true">,</mo><msub><mi>q</mi><mrow><mi>M</mi><mi>L</mi></mrow></msub><mo stretchy="false">(</mo><mi>w</mi><mi mathvariant="normal">&#x2223;</mi><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo separator="true">,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mfrac><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">
+q_{ML}(w) = \frac{c(w)}{c()}, q_{ML}(w|v) = \frac{c(v,w)}{c(v)}, q_{ML}(w|u,v) = \frac{c(u,v,w)}{c(u,v)}, ...
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span><span class="mord mathdefault mtight">L</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span><span class="mord mathdefault mtight">L</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord">&#x2223;</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span><span class="mord mathdefault mtight">L</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord">&#x2223;</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span></span></p>
+<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span> is the empirical counts on a training set.</p>
+<p>General approach:</p>
+<ul>
+<li>Take a training set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span></li>
+</ul>
 <h3 id="continuous-representations">Continuous representations</h3>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1060,7 +1108,7 @@ w^* = argmax_XP(X|a)
             </div>
             <br/><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                        property="dct:title" rel="dct:type">《Natural Language Processing》</span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/17/natural-language-processing/"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/04/16/natural-language-processing/"
                property="cc:attributionName" rel="cc:attributionURL">FadingWinds
             </a> is licensed under a
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -1099,8 +1147,8 @@ w^* = argmax_XP(X|a)
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://FadingWinds.github.io/2020/02/17/natural-language-processing/';
-        this.page.identifier = '/2020/02/17/natural-language-processing/';
+        this.page.url = 'https://FadingWinds.github.io/2020/04/16/natural-language-processing/';
+        this.page.identifier = '/2020/04/16/natural-language-processing/';
         this.page.title = 'Natural Language Processing';
     };
     let disqus_shortname = 'dovecode';
@@ -1128,7 +1176,7 @@ w^* = argmax_XP(X|a)
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/02/17/the-chain-of-blocks/">
+                <a href="/2020/08/17/the-chain-of-blocks/">
                     <div class="card-image">
                         
                         <img src="https://images.cointelegraph.com/images/1480_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy8wNmY3YTk1MDNiOWZiODg1ZGNlMjQ5ZDU3ZjA4OWIwMy5qcGc=.jpg" class="responsive-img" alt="The Chain of Blocks">
@@ -1144,7 +1192,7 @@ w^* = argmax_XP(X|a)
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-17
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-17
                         </span>
                         <span class="publish-author">
                             
@@ -1161,16 +1209,16 @@ w^* = argmax_XP(X|a)
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
+                    </a>
+                    
                     <a href="/tags/notes/" target="_blank">
                         <span class="chip bg-color">notes</span>
                     </a>
                     
                     <a href="/tags/CT-courses/" target="_blank">
                         <span class="chip bg-color">CT courses</span>
-                    </a>
-                    
-                    <a href="/tags/updating/" target="_blank">
-                        <span class="chip bg-color">updating</span>
                     </a>
                     
                 </div>
@@ -1184,31 +1232,31 @@ w^* = argmax_XP(X|a)
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/12/notes-for-computer-vision/">
+                <a href="/2020/02/27/anaconda-vs-code-duo-ban-ben-python-unable-to-import-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Notes for Computer Vision">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Anaconda+VS Code+多版本Python的"Unable to Import"问题解决方案">
                         
-                        <span class="card-title">Notes for Computer Vision</span>
+                        <span class="card-title">Anaconda+VS Code+多版本Python的"Unable to Import"问题解决方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Personal notes for computer vision.
+                            如题。自行研究（Google）后得到的解决方案。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-12
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Machine-Learning-机器学习/" class="post-category" target="_blank">
-                                    Machine Learning | 机器学习
+                            <a href="/categories/Bugs-in-the-Wild/" class="post-category" target="_blank">
+                                    Bugs in the Wild
                                 </a>
                             
                             
@@ -1218,16 +1266,16 @@ w^* = argmax_XP(X|a)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/" target="_blank">
-                        <span class="chip bg-color">notes</span>
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/CT-courses/" target="_blank">
-                        <span class="chip bg-color">CT courses</span>
+                    <a href="/tags/VS-Code/" target="_blank">
+                        <span class="chip bg-color">VS Code</span>
                     </a>
                     
-                    <a href="/tags/updating/" target="_blank">
-                        <span class="chip bg-color">updating</span>
+                    <a href="/tags/Anaconda/" target="_blank">
+                        <span class="chip bg-color">Anaconda</span>
                     </a>
                     
                 </div>
@@ -1385,7 +1433,7 @@ w^* = argmax_XP(X|a)
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">13.8k</span>&nbsp;
+                class="white-color">14.2k</span>&nbsp;
             
             
             

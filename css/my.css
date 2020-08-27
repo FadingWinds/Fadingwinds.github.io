@@ -79,6 +79,17 @@
     src: url('../fonts/Handlee-Regular.ttf') format('TrueType');
 }
 
+@font-face {
+    font-family: "Kaiti";
+    src: url('../fonts/KaiTi-ChineseOnly.ttf') format('TrueType');
+}
+
+@font-face {
+    font-family: "xx";
+    src: url('../fonts/xxlxs.ttf') format('TrueType');
+}
+
+
 
 .bannerdiy{
     font-family: "banner-IF";
