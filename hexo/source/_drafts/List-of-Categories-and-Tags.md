@@ -14,19 +14,19 @@ password:
 
 Categories:
 
-- Design ∥ 设计
-- Psychological Fun ∥ 心理
-- Soft Skills ∥ 综合能力
-- Coding ∥ 编程
-- Blockchain ∥ 区块链
-- Machine Learning ∥ 机器学习
-- Game Production ∥ 游戏制作
+- Design · 设计
+- Psychological Fun · 心理
+- Soft Skills · 综合能力
+- Coding · 编程
+- Blockchain · 区块链
+- Machine Learning · 机器学习
+- Game Production · 游戏制作
 - 风所去往的方向
 - 只言片语
 - Bugs in the Wild
 - Ace!
-- Blue and Yellow of HIMYM ∥ 蓝号与黄伞
-- Economics ∥ 经济学
+- Blue and Yellow of HIMYM · 蓝号与黄伞
+- Economics · 经济学
 
 Tags:
 
