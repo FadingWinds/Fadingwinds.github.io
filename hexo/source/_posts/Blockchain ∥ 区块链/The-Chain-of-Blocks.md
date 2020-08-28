@@ -14,9 +14,8 @@ hidden:
 password:
 ---
 
-*A slightly different writing style for notes. Somehow it just feels right for Blockchain.
+**A slightly different writing style for notes. Somehow it just feels right for Blockchain.*
 
-[TOC]
 
 ### Chronicle
 

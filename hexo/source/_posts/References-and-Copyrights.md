@@ -1,13 +1,15 @@
 ---
 title: References and Copyrights
-date: 2019-09-24 01:05:36
 author: FadingWinds
 img: /medias/featureimages/17.jpg
-categories: 
+categories: []
 tags:
-    - updating
-summary: The post explains the regulations follows and lists all the references and copyrights in DoveCode. It will be updated as needed.
+  - updating
+summary: >-
+  The post explains the regulations follows and lists all the references and
+  copyrights in DoveCode. It will be updated as needed.
 top: true
+date: 2019-09-24 01:05:36
 password:
 ---
 ### <font color = #7cd175> REGULATIONS </font>
