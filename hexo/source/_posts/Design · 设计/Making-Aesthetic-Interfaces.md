@@ -3,7 +3,7 @@ title: Making Aesthetic Interfaces
 date: 2019-11-25 00:23:04
 author: FadingWinds
 img: 
-categories: Design | 设计
+categories: 
 tags:
     - CT courses
     - UI

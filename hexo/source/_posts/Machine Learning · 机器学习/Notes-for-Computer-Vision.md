@@ -3,7 +3,7 @@ title: Notes for Computer Vision
 date: 2020-02-12 02:14:17
 author: FadingWinds
 img:
-categories: Machine Learning | 机器学习
+categories: 
 tags:
     - notes
     - CT courses

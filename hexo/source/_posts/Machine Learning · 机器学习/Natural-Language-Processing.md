@@ -3,7 +3,7 @@ title: Natural Language Processing
 date: 2020-04-16 17:39:55
 author: FadingWinds
 img:
-categories: Machine Learning | 机器学习
+categories: 
 tags: 
     - notes
     - updating

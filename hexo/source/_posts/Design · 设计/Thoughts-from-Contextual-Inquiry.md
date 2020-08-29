@@ -3,7 +3,7 @@ title: Thoughts from Contextual Inquiry
 date: 2019-11-09 11:49:44
 author: FadingWinds
 img:
-categories: Design | 设计
+categories: 
 tags:
     - CT courses
     - research

@@ -3,7 +3,7 @@ title: 'Becoming Pythonic'
 date: 2019-10-29 19:35:33
 author: FadingWinds
 img: https://od.lk/s/MzBfMjA0OTgxNzJf/Python.jpg
-categories: Coding | 编程
+categories: 
 tags: 
 	- Python
 	- notes

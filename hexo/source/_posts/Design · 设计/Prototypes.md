@@ -3,7 +3,7 @@ title: Prototypes
 date: 2019-11-10 22:19:08
 author: FadingWinds
 img:
-categories: Design | 设计
+categories: 
 tags:
     - notes
     - CT courses

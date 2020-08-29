@@ -3,7 +3,7 @@ title: Common Research Methods
 date: 2019-10-15 13:54:32
 author: FadingWinds
 img:
-categories: Design | 设计
+categories: 
 tags:
 	- CT courses
 	- notes

@@ -3,7 +3,7 @@ title: Notes for Behavioral Economics
 date: 2020-01-26 17:56:36
 author: FadingWinds
 img:
-categories: Psychological Fun | 心理
+categories: 
 tags:
     - notes
     - CT courses

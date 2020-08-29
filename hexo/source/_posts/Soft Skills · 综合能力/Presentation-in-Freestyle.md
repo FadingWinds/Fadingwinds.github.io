@@ -1,7 +1,7 @@
 ---
 title: Presentation in Freestyle
 author: FadingWinds
-categories: Soft Skills | 综合能力
+categories: 
 tags:
   - CT courses
   - presentation

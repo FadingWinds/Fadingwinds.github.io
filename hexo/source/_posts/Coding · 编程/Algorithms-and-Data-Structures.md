@@ -1,7 +1,7 @@
 ---
 title: Algorithms and Data Structures
 author: FadingWinds
-categories: Coding | 编程
+categories: 
 tags:
   - updating
   - CT courses
