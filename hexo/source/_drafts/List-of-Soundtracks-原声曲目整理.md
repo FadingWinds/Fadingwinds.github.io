@@ -1,7 +1,7 @@
 ---
 title: HIMYM - List of Soundtracks | 原声曲目整理
 author: FadingWinds
-categories: Blue and Yellow of HIMYM | 蓝号与黄伞
+categories: 
 tags:
   - updating
   - bilingual

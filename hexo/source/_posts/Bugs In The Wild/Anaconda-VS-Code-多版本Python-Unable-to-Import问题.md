@@ -3,7 +3,7 @@ title: Anaconda+VS Code+多版本Python的"Unable to Import"问题解决方案
 date: 2020-02-27 12:18:43
 author:
 img:
-categories: Bugs in the Wild
+categories: Bugs In The Wild
 tags:
     - Python
     - VS Code

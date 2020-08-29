@@ -3,7 +3,7 @@ title: Punk Applied^2 Stats
 date: 2019-10-21 17:28:14
 author: 
 img:
-categories: Machine Learning | 机器学习
+categories: 
 tags:
 	- notes
 	- CT courses

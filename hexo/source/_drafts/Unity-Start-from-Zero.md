@@ -3,7 +3,7 @@ title: 'Unity: Start from Zero'
 date: 2019-10-16 16:39:26
 author: FadingWinds
 img: https://od.lk/s/MzBfMTgwMDQzOTFf/unity-flipping-death-2.5D.jpg
-categories: Unity
+categories: 
 tags:
     - log
     - self-taught
