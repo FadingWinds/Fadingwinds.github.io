@@ -299,7 +299,7 @@ Issues: underflow; large number of topics (a lot of computing).
 
 NB Learning: **Maximum Likelihood Estimate**
 
-In MLE, two parameters to estimate: 1) $𝑞(𝑦) = \theta_y$ for each topic $𝑦$; 2) $q(x|y) = \theta_{xy}$ for each topic $y$ and word $x$.
+In MLE, two parameters to estimate: 1) $q(y) = \theta_y$ for each topic $𝑦$; 2) $q(x|y) = \theta_{xy}$ for each topic $y$ and word $x$.
 
 **Zero frequency problem** in MLE: if there is a zero in the calculation the whole product becomes zero, no matter how many other values you got which maybe would find another solution.
 
