@@ -5,11 +5,11 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Becoming Pythonic, FadingWinds">
-    <meta name="description" content="Note: This post doesn&amp;apos;t include detailed theories. For those, please refer to other posts.
+    <meta name="description" content="Note: This post doesn&#39;t include detailed theories. For those, please refer to other posts.
 Built-in
 Grammar
 
-int() ">
+int() retur">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -132,7 +132,7 @@ int() ">
         <div class="logo-name">DoveCode</div>
         <div class="logo-desc">
             
-            Everything could be a story to write, and every story has a whole world inside.
+            Everything could be a story to write, and every story has a whole world inside. UPDATE - FINALLY FIXED A PLUGIN ISSUE AND CAN WORK ON WEBSITE AGAIN!
             
         </div>
     </div>
@@ -451,7 +451,7 @@ int() ">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        549
+                        537
                     </div>
                     
 
@@ -474,7 +474,7 @@ int() ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous"><p><em>Note: This post doesn&apos;t include detailed theories. For those, please refer to other posts.</em></p>
+                <p><em>Note: This post doesn't include detailed theories. For those, please refer to other posts.</em></p>
 <h3 id="built-in">Built-in</h3>
 <h4 id="grammar">Grammar</h4>
 <ul>
@@ -484,7 +484,7 @@ int() ">
 <h4 id="easy-ways">Easy Ways</h4>
 <ul>
 <li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating. And this is called <em>list comprehension</em>.</li>
-<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.Counter()</code> could be a substitute if the default value is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>.</li>
+<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.Counter()</code> could be a substitute if the default value is <span class="math inline">0</span>.</li>
 <li>Use <code>zip()</code> to make two lists into one with tuple: a, b -&gt; (a,b) with len(a)/len(b). <strong>Note</strong>: need to convert to list manually in Python 3.</li>
 <li>Use <code>del</code> and <code>gc.collect()</code> to free RAM storage.</li>
 </ul>
@@ -500,7 +500,7 @@ int() ">
 </ul>
 <h4 id="differences-between-python-2-and-3">Differences Between Python 2 and 3</h4>
 <ul>
-<li>Calculation of integer is different. In python 2, sometimes need to use &quot;2.0&quot; instead of &quot;2&quot; to get correct answers.</li>
+<li>Calculation of integer is different. In python 2, sometimes need to use "2.0" instead of "2" to get correct answers.</li>
 <li>Print, of course.</li>
 </ul>
 <hr>
@@ -515,24 +515,24 @@ int() ">
 <li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling. It will pass either the selected column or the entire row (select column inside the function instead).</li>
 <li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li>
 <li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li>
-<li><code>pandas.read_csv()</code> is good for loading a data file. The &quot;csv&quot; could be replaced with other type of file.</li>
+<li><code>pandas.read_csv()</code> is good for loading a data file. The "csv" could be replaced with other type of file.</li>
 <li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>.</li>
-<li>Sometimes when reloading an output DataFrame file, by default <em>pandas</em> will <strong>convert lists to strings</strong>. Solution: add parameters: <code>converters={&apos;column_name&apos;: eval}</code> in <code>read_csv()</code> function.</li>
+<li>Sometimes when reloading an output DataFrame file, by default <em>pandas</em> will <strong>convert lists to strings</strong>. Solution: add parameters: <code>converters={'column_name': eval}</code> in <code>read_csv()</code> function.</li>
 </ul>
 <h4 id="numpy">Numpy</h4>
 <ul>
 <li>Use <code>np.zeros()</code> to create a n-d array with zeros as initial values.</li>
-<li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can&apos;t use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
+<li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can't use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
 </ul>
 <h4 id="nltk">NLTK</h4>
 <ul>
 <li>For natural language processing.</li>
 <li>Tokenizer to split sentences into words.</li>
-<li>Lemmatizer to eliminate the effects between different word senses (convert different forms of a word into one, e.g. run, ran, running, runs &#x2192; run).</li>
+<li>Lemmatizer to eliminate the effects between different word senses (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li>
 </ul>
 <h4 id="pytorch">PyTorch</h4>
 <ul>
-<li>If loss is <code>NaN</code>, the most possible reason is something&apos;s wrong with the data.</li>
+<li>If loss is <code>NaN</code>, the most possible reason is something's wrong with the data.</li>
 <li><code>cuda()</code> needs GPU.</li>
 <li>To convert <code>cuda()</code> object to numpy arrays, need to add <code>.detach().cpu().clone().numpy()</code></li>
 </ul>
@@ -665,7 +665,9 @@ int() ">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            &#x51CC;&#x6668;&#x4E94;&#x70B9;&#x949F;&#x662F;Queensborough&#x5927;&#x6865;&#x6865;&#x67B6;&#x4E0A;&#x7684;&#x706F;&#x
+                            凌晨五点钟是Queensborough大桥桥架上的灯光准时熄灭的时间。
+——这是我在今天知道的新信息。我甚至还为此发布了一条朋友圈，仿佛一个困扰许久的谜题得到了解答，而我在把它公诸于世。
+实际上也并不是没有这么说的道理。在许多个夜晚，我在黑
                         
                     </div>
                     <div class="publish-info">
@@ -895,7 +897,7 @@ int() ">
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;Total words:&nbsp;<span
-                class="white-color">14.2k</span>&nbsp;
+                class="white-color">12.6k</span>&nbsp;
             
             
             
@@ -960,6 +962,10 @@ int() ">
 
 
 
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=AceWinds#9853" class="tooltipped" data-tooltip="Add me on Discord: AceWinds#9853" data-position="top" data-delay="50">
+        <i class="fa fa-discord"></i>
+    </a>
 
 
 
