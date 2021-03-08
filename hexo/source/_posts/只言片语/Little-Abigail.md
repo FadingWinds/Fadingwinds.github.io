@@ -5,7 +5,7 @@ author: FadingWinds
 img: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea663fcf-9a39-4a2d-835f-3a0272c58694/d79fyqk-2db313a9-5e8c-4c0b-a5ac-96481fd64977.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZWE2NjNmY2YtOWEzOS00YTJkLTgzNWYtM2EwMjcyYzU4Njk0XC9kNzlmeXFrLTJkYjMxM2E5LTVlOGMtNGMwYi1hNWFjLTk2NDgxZmQ2NDk3Ny5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.c1fxH1HkOp3kRcxxOubXPIB0W8Q5FL-1aC8SccPtd-o
 categories:
 tags:
-	- Poet
+	- Poem
 summary: For the time shared without starving.
 top:
 hidden:
