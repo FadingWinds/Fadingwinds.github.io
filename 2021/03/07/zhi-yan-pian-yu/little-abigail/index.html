@@ -4,12 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Becoming Pythonic, FadingWinds">
-    <meta name="description" content="Note: This post doesn&#39;t include detailed theories. For those, please refer to other posts.
-Built-in
-Grammar
-
-int() retur">
+    <meta name="keywords" content="Little Abigail, FadingWinds">
+    <meta name="description" content="Little Abigail, just a bit younger
+Silently floating without a feather
+How did you even let her get in your space
+Don&#39;t ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@ int() retur">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Becoming Pythonic | DoveCode</title>
+    <title>Little Abigail | DoveCode</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -295,13 +294,13 @@ int() retur">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://od.lk/s/MzBfMjA0OTgxNzJf/Python.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea663fcf-9a39-4a2d-835f-3a0272c58694/d79fyqk-2db313a9-5e8c-4c0b-a5ac-96481fd64977.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZWE2NjNmY2YtOWEzOS00YTJkLTgzNWYtM2EwMjcyYzU4Njk0XC9kNzlmeXFrLTJkYjMxM2E5LTVlOGMtNGMwYi1hNWFjLTk2NDgxZmQ2NDk3Ny5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.c1fxH1HkOp3kRcxxOubXPIB0W8Q5FL-1aC8SccPtd-o')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Becoming Pythonic
+                        Little Abigail
                     </div>
                 </div>
             </div>
@@ -412,16 +411,8 @@ int() retur">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/notes/" target="_blank">
-                                <span class="chip bg-color">notes</span>
-                            </a>
-                        
-                            <a href="/tags/updating/" target="_blank">
-                                <span class="chip bg-color">updating</span>
-                            </a>
-                        
-                            <a href="/tags/Python/" target="_blank">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/Poet/" target="_blank">
+                                <span class="chip bg-color">Poet</span>
                             </a>
                         
                     </div>
@@ -432,8 +423,8 @@ int() retur">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Coding-·-编程/" class="post-category" target="_blank">
-                                Coding · 编程
+                            <a href="/categories/只言片语/" class="post-category" target="_blank">
+                                只言片语
                             </a>
                         
                     </div>
@@ -444,21 +435,21 @@ int() retur">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-10-29
+                    2021-03-07
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        537
+                        244
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        3 Min
+                        1 Min
                     </div>
                     
                 
@@ -474,68 +465,42 @@ int() retur">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><em>Note: This post doesn't include detailed theories. For those, please refer to other posts.</em></p>
-<h3 id="built-in">Built-in</h3>
-<h4 id="grammar">Grammar</h4>
-<ul>
-<li><code>int()</code> returns the lower bound.</li>
-<li>Pay attention to the difference between <code>extend()</code> and <code>append()</code>, e.g. [1,2,4] vs. [[1,2],[4]].</li>
-</ul>
-<h4 id="easy-ways">Easy Ways</h4>
-<ul>
-<li>Remember to use lambda for simple functions and use <code>[x for x in statement if statement]</code> for iterating. And this is called <em>list comprehension</em>.</li>
-<li>Python has a dictionary <code>defaultdict()</code>, it provides default value given by the user. <code>collections.Counter()</code> could be a substitute if the default value is <span class="math inline">0</span>.</li>
-<li>Use <code>zip()</code> to make two lists into one with tuple: a, b -&gt; (a,b) with len(a)/len(b). <strong>Note</strong>: need to convert to list manually in Python 3.</li>
-<li>Use <code>del</code> and <code>gc.collect()</code> to free RAM storage.</li>
-</ul>
-<h4 id="possible-mistakes">Possible Mistakes</h4>
-<ul>
-<li><code>list.append()</code> will only return <strong>None</strong>, which indicates it has successfully complete the process. Use <code>list</code> to get to the changes.</li>
-<li>Things like a <code>range(0,n)</code> do NOT include n but do include 0.</li>
-<li>If let <code>a = b</code> where a,b are both lists, when you change a it will affect b too. Try <code>copy.deepcopy</code>(needs import) or <code>new = old[:]</code>.</li>
-</ul>
-<h4 id="other-in-doc">Other in Doc</h4>
-<ul>
-<li>The time complexity for <code>sort()</code> is O(nlogn).</li>
-</ul>
-<h4 id="differences-between-python-2-and-3">Differences Between Python 2 and 3</h4>
-<ul>
-<li>Calculation of integer is different. In python 2, sometimes need to use "2.0" instead of "2" to get correct answers.</li>
-<li>Print, of course.</li>
-</ul>
-<hr>
-<h3 id="useful-packages">Useful Packages</h3>
-<h4 id="overall">Overall</h4>
-<ul>
-<li>Default packages: csv, math, re, ...</li>
-<li><strong>tqdm</strong>: progress bar package. For iPython Notebook, remember to use <code>tqdm_notebook</code> instead.</li>
-</ul>
-<h4 id="pandas">Pandas</h4>
-<ul>
-<li>Do not iterate through rows of a <em>pandas</em> dataframe unless really necessary. Usually, just define a function and use <code>.apply(func)</code> instead. No parameter needed when calling. It will pass either the selected column or the entire row (select column inside the function instead).</li>
-<li>If want to make changes to an existing <em>pandas</em> dataframe, remember to write <code>inplace = True</code>.</li>
-<li>Combine <em>pandas</em> dataframes: <code>pandas.concat()</code></li>
-<li><code>pandas.read_csv()</code> is good for loading a data file. The "csv" could be replaced with other type of file.</li>
-<li>A <em>pandas</em> object could be converted to a numpy array using <code>to_numpy()</code>.</li>
-<li>Sometimes when reloading an output DataFrame file, by default <em>pandas</em> will <strong>convert lists to strings</strong>. Solution: add parameters: <code>converters={'column_name': eval}</code> in <code>read_csv()</code> function.</li>
-</ul>
-<h4 id="numpy">Numpy</h4>
-<ul>
-<li>Use <code>np.zeros()</code> to create a n-d array with zeros as initial values.</li>
-<li><code>np.nan != np.nan</code>! Which means if you assign <code>np.nan</code> to some variables, you can't use <code>==np.nan</code> to check it. Use <code>isna()</code> instead.</li>
-</ul>
-<h4 id="nltk">NLTK</h4>
-<ul>
-<li>For natural language processing.</li>
-<li>Tokenizer to split sentences into words.</li>
-<li>Lemmatizer to eliminate the effects between different word senses (convert different forms of a word into one, e.g. run, ran, running, runs → run).</li>
-</ul>
-<h4 id="pytorch">PyTorch</h4>
-<ul>
-<li>If loss is <code>NaN</code>, the most possible reason is something's wrong with the data.</li>
-<li><code>cuda()</code> needs GPU.</li>
-<li>To convert <code>cuda()</code> object to numpy arrays, need to add <code>.detach().cpu().clone().numpy()</code></li>
-</ul>
+                <p>Little Abigail, just a bit younger</p>
+<p>Silently floating without a feather</p>
+<p>How did you even let her get in your space</p>
+<p>Don't you know she belongs to another place</p>
+<p><br></p>
+<p>You always stare, into those eyes</p>
+<p>But they won't give away</p>
+<p>What's on her mind</p>
+<p>Little Abigail, is she doomed to fail</p>
+<p>To let her slow pace make you left her behind</p>
+<p><br></p>
+<p>One piece of existence</p>
+<p>Expected as assistance</p>
+<p>Present for distance</p>
+<p>Excuse for disappearance</p>
+<p>Sent to your hand now</p>
+<p>Abigail's flower</p>
+<p>If somehow</p>
+<p>This world still needs her little power</p>
+<p><br></p>
+<p>She will send away the darkness</p>
+<p>On a fireless night</p>
+<p>Hounds and spiders are no longer your threat</p>
+<p>She'd take a deerclops if it dares to attack</p>
+<p>Please do not fret</p>
+<p>If she's out of your sight</p>
+<p>It's just she always gets another battle to fight</p>
+<p>Soon before you know, she will come back</p>
+<p>Never miss a day to protect, not in this life</p>
+<p><br></p>
+<p>Little Abigail, dear sister</p>
+<p>Ongoing time heals or generates sorrow</p>
+<p>Vermilion petals preserve her smile no matter</p>
+<p>Everywhere and every tomorrow</p>
+<p><br> <br></p>
+<p><em>Banner Ref: "Don't Starve: Wendy" by Bielek on DevianArt</em></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -585,8 +550,8 @@ int() retur">
                          src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
             </div>
             <br/><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
-                       property="dct:title" rel="dct:type">《Becoming Pythonic》</span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/29/coding-bian-cheng/becoming-pythonic/"
+                       property="dct:title" rel="dct:type">《Little Abigail》</span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/03/07/zhi-yan-pian-yu/little-abigail/"
                property="cc:attributionName" rel="cc:attributionURL">FadingWinds
             </a> is licensed under a
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
@@ -625,9 +590,9 @@ int() retur">
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://FadingWinds.github.io/2019/10/29/coding-bian-cheng/becoming-pythonic/';
-        this.page.identifier = '/2019/10/29/coding-bian-cheng/becoming-pythonic/';
-        this.page.title = 'Becoming Pythonic';
+        this.page.url = 'https://FadingWinds.github.io/2021/03/07/zhi-yan-pian-yu/little-abigail/';
+        this.page.identifier = '/2021/03/07/zhi-yan-pian-yu/little-abigail/';
+        this.page.title = 'Little Abigail';
     };
     let disqus_shortname = 'dovecode';
 
@@ -650,30 +615,29 @@ int() retur">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/10/30/zhi-yan-pian-yu/qian-yu-chuang-jian-de-qiao-hui/">
+                <a href="/2021/03/07/zhi-yan-pian-yu/little-abigail/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="嵌于窗间的桥辉">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea663fcf-9a39-4a2d-835f-3a0272c58694/d79fyqk-2db313a9-5e8c-4c0b-a5ac-96481fd64977.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZWE2NjNmY2YtOWEzOS00YTJkLTgzNWYtM2EwMjcyYzU4Njk0XC9kNzlmeXFrLTJkYjMxM2E5LTVlOGMtNGMwYi1hNWFjLTk2NDgxZmQ2NDk3Ny5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.c1fxH1HkOp3kRcxxOubXPIB0W8Q5FL-1aC8SccPtd-o" class="responsive-img" alt="Little Abigail">
                         
-                        <span class="card-title">嵌于窗间的桥辉</span>
+                        <span class="card-title">Little Abigail</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            凌晨五点钟是Queensborough大桥桥架上的灯光准时熄灭的时间。
-——这是我在今天知道的新信息。我甚至还为此发布了一条朋友圈，仿佛一个困扰许久的谜题得到了解答，而我在把它公诸于世。
-实际上也并不是没有这么说的道理。在许多个夜晚，我在黑
+                            For the time shared without starving.
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-03-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -686,6 +650,15 @@ int() retur">
                         </span>
                     </div>
                 </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Poet/" target="_blank">
+                        <span class="chip bg-color">Poet</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -696,31 +669,30 @@ int() retur">
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/15/design-she-ji/common-research-methods/">
+                <a href="/2020/08/17/blockchain-qu-kuai-lian/the-chain-of-blocks/">
                     <div class="card-image">
                         
+                        <img src="https://images.cointelegraph.com/images/1480_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy8wNmY3YTk1MDNiOWZiODg1ZGNlMjQ5ZDU3ZjA4OWIwMy5qcGc=.jpg" class="responsive-img" alt="The Chain of Blocks">
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Common Research Methods">
-                        
-                        <span class="card-title">Common Research Methods</span>
+                        <span class="card-title">The Chain of Blocks</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            The article is about two most common research methods -- surveys and interviews.
+                            The story among Alice, Bob and Charlie(Carol). Sometimes more.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Design-·-设计/" class="post-category" target="_blank">
-                                    Design · 设计
+                            <a href="/categories/Blockchain-·-区块链/" class="post-category" target="_blank">
+                                    Blockchain · 区块链
                                 </a>
                             
                             
@@ -738,8 +710,8 @@ int() retur">
                         <span class="chip bg-color">CT courses</span>
                     </a>
                     
-                    <a href="/tags/research/" target="_blank">
-                        <span class="chip bg-color">research</span>
+                    <a href="/tags/updating/" target="_blank">
+                        <span class="chip bg-color">updating</span>
                     </a>
                     
                 </div>
