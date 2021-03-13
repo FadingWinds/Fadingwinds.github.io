@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>Spark: Now It&#39;s Real Big Data</title>
+      <link href="/2021/03/09/data-science-shu-ju-ke-xue/spark-now-it-s-real-big-data/"/>
+      <url>/2021/03/09/data-science-shu-ju-ke-xue/spark-now-it-s-real-big-data/</url>
+      
+        <content type="html"><![CDATA[<p>Ever since I started to study information systems / information science, the term "big data" has long been used to explain what my major is doing, but the actual entity it represents is hardly ever reachable, at least to me.</p><p>Now I'm learning Spark, and hopefully after this I don't have to feel guilty for saying "big data" as if it's something I know more than "that's what Excel couldn't store" (a professor once said this during a class) any more.</p><p><em>Most notes are based on Udemy course: <img src="https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/" alt="Apache Spark with Scala: Hands on with Big Data"></em></p><h3 id="overview">Overview</h3><ul><li>Spark is 100x faster in memory and 10x faster on disk compared with Hadoop MapReduce because of its DAG (directed acyclic graph) engine. Still, Spark and Hadoop can co-exist and not necessarily a substitute for each other.</li><li>Using Spark Datasets and DataFrames is similar to using SQL.</li><li>Why Scala?<ul><li>Spark is written in Scala.</li><li>Scala forces you to use functional programming (a good fit for distributed processing).</li><li>(Now only a little) faster than Python, more simple than Java.</li></ul></li><li>Spark 3 can integrate with TensorFlow to do deep learning.</li><li>Scala runs on JVM.</li></ul><h3 id="scala-basics">Scala Basics</h3><h4 id="syntax">Syntax</h4><p><em>Just refer to the file <code>LearningScala*.sc</code>(</em> = {1 ,2 ,3, 4}) and you should be fine.*</p><ul><li><code>val</code>s are immutable, in contrast to <code>var</code>s. Using immutable constants as much as possible to achieve thread safety and avoid race conditions.</li><li>Different prefix (e.g. "s") can allow you to e.g. use variables and expressions in the <code>println("")</code> string.</li><li>Regular expression: use triple parentheses and add <code>.r</code> at the end.</li><li>No ";" in Scala!</li><li><code>_</code> is a catch-all symbol in "match-case" expressions.</li><li>For loop in Scala is not like Java or Python...or even a mix of them.</li><li><strong>Having an expression in Scala will give an output of the result of the last thing.</strong></li><li>Functions syntax in Scala is similar to Python (sort of), with curly brackets and an extra <code>=</code>.</li><li><strong>Indexing</strong><ul><li><strong>Tuple index starts with 1, writen as <code>tuple._1</code> for getting the first element.</strong></li><li><strong>List index starts with 0: <code>list(0)</code></strong></li></ul></li><li><code>list.head</code> gives the first element, but <strong><code>list.tail</code> gives all the remaining elements except the first one</strong>.</li><li>Concatenate list: <code>listA ++ listB</code>.</li><li>Add element to list: <code>x :: list</code>.</li><li><strong>If there's no <code>return</code> in the function, the last expression will be taken as the return value.</strong></li><li><code>object</code> is like a <code>class</code>, but there's also a <code>case class</code> which used in DataSets to define a schema first.</li></ul><h4 id="functional-programming">Functional Programming</h4><p>Similar to what I learned on <em>Machine Learning Engineering</em> class, functional programming in Scala looks like this:</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def transformInt(x: Int, f: Int =&gt; Int) Int = {f(x)}</span><br></pre></td></tr></tbody></table></figure><h4 id="lambda-expression">Lambda Expression</h4><p>Similar to that in Java and Python:</p><p><code>transformInt(3, x =&gt; x * x * x)</code></p><p>Or:</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">val ex1 = (x:Int) =&gt; x + 2</span><br><span class="line">println(ex1(7)) \\ output: 9</span><br></pre></td></tr></tbody></table></figure><h4 id="data-structures">Data Structures</h4><ul><li>Tuples can have different data typles, but lists can't.</li><li>Functions like Map, Reduce, Filter are good for being parallelizable. (Spark has its own Map, Reduce Filter other than Scala's)</li><li>Maps: dictionaries in Scala. A special function is <code>utils.Try(map("x")) getOrElse "Unknown"</code></li><li>In Java terms, Scala's <code>Seq</code> would be Java's <code>List</code>, and Scala's <code>List</code> would be Java's <code>LinkedList</code>. (Ref: <img src="https://stackoverflow.com/questions/10866639/difference-between-a-seq-and-a-list-in-scala" alt="Stack Overflow">)</li></ul><h4 id="built-in-functions">Built-in Functions</h4><ul><li>String related functions, e.g. <code>string.toUpperCase</code>, <code>string.reverse</code></li><li>Reduce: <code>val sum = numberList.reduce( (x: Int, y: Int) =&gt; x + y)</code></li><li>Filter: <code>val iHateThrees = numberList.filter(_ != 3)</code></li><li>List related functions: <code>list.reverse</code>, <code>list.sorted</code>, <code>list.max</code>, <code>list.sum</code>, <code>list.distinct</code>(producing a set), <code>list.contains()</code>(returns a boolean)</li></ul><h3 id="rdd-resilient-distributed-dataset">RDD (Resilient Distributed Dataset)</h3><p>RDD is a lower level API. Seems like it's getting less popular.</p><p>Rows of data can be divided and sent to different computer to process in parallel.</p><p>RDDs can be created from text file, hadoop(hdfs), hive context, sql commands, etc.</p><p>Transforming RDDs:</p><ul><li>map and flatMap (1 <strong>row</strong> to multiple <strong>rows</strong>)</li><li>filter</li><li>distinct</li><li>sample</li><li>union, intersection, subtract, cartesian</li></ul><p>RDD common actions:</p><ul><li>Collect</li><li>Count</li><li>countByValue</li><li>take</li><li>top</li><li>reduce</li></ul><p><strong>Nothing actually happens in your driver program until an action is called.</strong> <del>Which can lead to tricky debuggings</del>:raised_eyebrow:.</p><p>SparkContext(from Doc): Main entry point for Spark functionality. A SparkContext represents the connection to a Spark cluster, and can be used to create RDDs, accumulators and broadcast variables on that cluster.</p><p>Only one SparkContext should be active per JVM.</p><p>Process: Job -&gt; Stages (reorganized data will be a new stage) -&gt; Tasks (distributed across cluster, scheduled and executed)</p><p><strong>Key/Value RDD Specific Functions</strong></p><ul><li>reduceByKey(): the (x, y) in example "FriendsByAge" is actually representing two rows (entries).</li><li>groupByKey()</li><li>sortByKey()</li><li>keys(), values()</li><li>SQL style joins</li><li>mapValues() / flatMapValues()</li></ul><h3 id="sparksql">SparkSQL</h3><p>DataFrames:</p><ul><li>Contains raw objects</li><li>Can run SQL queries</li><li>Has a schema</li><li>R/W to JSON, Hive, etc.</li><li>Communicates with JDBC/ODBC, Tableau</li></ul><p>Technically, a DataFrame is just a DataSet with raw objects. DataSets wraps a given struct or type. DataSets will know its schema at compile time (Python can't do this, only have DataFrames).</p><p>RDD can be converted to DataSets and vice versa.</p><p>When using SparkSQL, create SparkSession instead of SparkContext, and need to stop the session when finish.</p><p>DataSets have similar functions to SQL queries in which it doesn't need a database view to execute. (Personally I think it's easier to use than passing SQL commands, ~~definitely not because I've forgotten so much about SQL, ~~ except for the weird syntax <code>=!=</code> and <code>===</code> in <code>.filter()</code>)</p><p>DataSets work best with structured data.</p><p>For loading unstructured data, the default column name should be set to "value" for the schema to be inferred.</p><p>*Default <code>show()</code> will display 20 rows and truncate. Use <code>show(NUM OF ROWS, false)</code>.</p><p>For files with no headers, schema can't be inferred so a new schema need to be defined first: <code>val schema = new StructType.add("COLUMN NAME", TYPE)</code></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Science · 数据科学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> updating </tag>
+            
+            <tag> notes </tag>
+            
+            <tag> Python </tag>
+            
+            <tag> Udemy </tag>
+            
+            <tag> Scala </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Little Abigail</title>
       <link href="/2021/03/07/zhi-yan-pian-yu/little-abigail/"/>
       <url>/2021/03/07/zhi-yan-pian-yu/little-abigail/</url>
@@ -20,7 +53,7 @@
       
         <tags>
             
-            <tag> Poet </tag>
+            <tag> Poem </tag>
             
         </tags>
       
@@ -45,11 +78,11 @@
       
         <tags>
             
+            <tag> updating </tag>
+            
             <tag> notes </tag>
             
             <tag> CT courses </tag>
-            
-            <tag> updating </tag>
             
         </tags>
       
@@ -74,11 +107,11 @@
       
         <tags>
             
+            <tag> updating </tag>
+            
             <tag> notes </tag>
             
             <tag> CT courses </tag>
-            
-            <tag> updating </tag>
             
         </tags>
       
@@ -132,11 +165,11 @@
       
         <tags>
             
+            <tag> updating </tag>
+            
             <tag> notes </tag>
             
             <tag> CT courses </tag>
-            
-            <tag> updating </tag>
             
         </tags>
       
@@ -161,11 +194,11 @@
       
         <tags>
             
+            <tag> updating </tag>
+            
             <tag> notes </tag>
             
             <tag> CT courses </tag>
-            
-            <tag> updating </tag>
             
         </tags>
       
@@ -219,11 +252,11 @@
       
         <tags>
             
+            <tag> updating </tag>
+            
             <tag> notes </tag>
             
             <tag> CT courses </tag>
-            
-            <tag> updating </tag>
             
             <tag> Python </tag>
             
@@ -327,9 +360,9 @@
       
         <tags>
             
-            <tag> notes </tag>
-            
             <tag> updating </tag>
+            
+            <tag> notes </tag>
             
             <tag> Python </tag>
             
